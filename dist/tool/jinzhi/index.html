@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+		
+	<title>任意进制转换-柳夏南的小窝</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="任意进制转换">
+	<link rel="shortcut icon" href="//liuxianan.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap-theme.css">
+
+	<style>
+	.form-inline{margin: 20px 0;}
+	#result{font-size: 20px; color: red;}
+	</style>
+
+<link href="//res.liuxianan.com/js/common.css" rel="stylesheet"></head>
+<body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_navbar">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="//liuxianan.com">柳夏南的小窝</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="top_navbar">
+				<ul class="nav navbar-nav nav-hover-dropdown">
+					<li class="dropdown">
+						<a href="//tool.liuxianan.com">首页</a>
+					</li>
+					
+						<li class="dropdown">
+							
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+									格式化 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									
+										
+										<li  >
+											<a href="/json-format/" class="nav-menu-item-icon"  >
+												<i class="fa fa-thumbs-up"></i>JSON格式化
+											</a>
+										</li>
+									
+										 <li class="divider"></li> 
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>CSS格式化
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>HTML格式化
+											</a>
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+									编码/转换 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									
+										
+										<li  >
+											<a href="/base64/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>base64编码
+											</a>
+										</li>
+									
+										
+										<li class="active" >
+											<a href="/jinzhi/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>任意进制转换
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/url-encode/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>URL编码
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/md5/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>MD5加密
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/pinyin/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>汉语拼音
+											</a>
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="/idcard/"  >身份证</a>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="//post.liuxianan.com/" target="_blank" >API调用</a>
+							
+						</li>
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="//tool.liuxianan.com">工具首页</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<section>
+			<ol class="breadcrumb">
+				<li><a href="//liuxianan.com">首页</a></li>
+				<li><a href="//tool.liuxianan.com">工具</a></li>
+				
+					<li class="active">任意进制转换</li>
+				
+			</ol>
+		</section>
+	</div>
+
+
+	<div class="container">
+		<h2>任意进制转换（支持2-36进制）</h2>
+		<div class="form-inline">
+			<div class="input-group">
+				<span class="input-group-addon">将</span>
+				<input id="input_radix" type="number" class="form-control" value="10" style="width: 80px;"/>
+				<span class="input-group-addon">进制的</span>
+				<input id="number" type="text" class="form-control" value="60721192594031"/>
+				<span class="input-group-addon">转成</span>
+				<input id="output_radix" type="number" class="form-control" value="36" style="width: 80px;"/>
+				<span class="input-group-addon">进制 </span>
+			</div>
+		</div>
+		<div>结果为：<span id="result"></span></div>
+	</div>
+	
+		<script src="//res.liuxianan.com/lib/jquery/2.1.1/jquery.js"></script>
+	<script src="//res.liuxianan.com/lib/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//res.liuxianan.com/lib/xei/xei.js"></script>
+<script type="text/javascript" src="//res.liuxianan.com/js/common.js"></script><script type="text/javascript" src="/jinzhi/index.js"></script></body>
+</html>

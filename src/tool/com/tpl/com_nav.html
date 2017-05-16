@@ -1,0 +1,72 @@
+﻿<%
+	var menus = require('../js/menus');
+	var menuMap = {};
+	menus.forEach(menu => {
+		if(menu.children) {
+			menu.children.forEach(submenu => {
+				menuMap[submenu.value] = submenu.name;
+			});
+		}
+		else if(menu.value) {
+			menuMap[menu.value] = menu.name;
+		}
+	});
+	var config = require('config');
+%>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_navbar">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="//<%=config.domain%>"><%=config.siteName%></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="top_navbar">
+				<ul class="nav navbar-nav nav-hover-dropdown">
+					<li class="dropdown">
+						<a href="//tool.<%=config.domain%>">首页</a>
+					</li>
+					<% menus.forEach((menu) => { %>
+						<li class="dropdown">
+							<% if(!menu.children) { %>
+								<a href="/<%= menu.value %>/" <%= menu._blank ? 'target="_blank"' : '' %> ><%=menu.name%></a>
+							<% } else { %>
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+									<%= menu.name %> <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									<% menu.children.forEach((submenu) => { %>
+										<% if(submenu.splitter) { %> <li class="divider"></li> <% } %>
+										<li <%=submenu.value==pageName?'class="active"':''%> >
+											<a href="/<%=submenu.value%>/" class="nav-menu-item-icon" <%= submenu._blank ? 'target="_blank"' : '' %> >
+												<i class="fa fa-<%=submenu.icon%>"></i><%=submenu.name%>
+											</a>
+										</li>
+									<% }); %>
+								</ul>
+							<% } %>
+						</li>
+					<% }); %>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="//tool.<%=config.domain%>">工具首页</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<section>
+			<ol class="breadcrumb">
+				<li><a href="//<%=config.domain%>">首页</a></li>
+				<li><a href="//tool.<%=config.domain%>">工具</a></li>
+				<% if(pageName != 'index') { %>
+					<li class="active"><%=menuMap[pageName]%></li>
+				<% } %>
+			</ol>
+		</section>
+	</div>

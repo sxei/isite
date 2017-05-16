@@ -1,0 +1,13 @@
+﻿	<% 
+		var config = require('config');
+		var title = title || config.siteName;
+		var desc = desc || title;
+		var merge = merge || false;
+	%>
+	<title><%= title %><%= merge?('-'+config.siteName):''%></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="<%= desc %>">
+	<link rel="shortcut icon" href="//liuxianan.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap-theme.css">

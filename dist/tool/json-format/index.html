@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+		
+	<title>JSON格式化-柳夏南的小窝</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="description" content="JSON格式化">
+	<link rel="shortcut icon" href="//liuxianan.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//res.liuxianan.com/lib/bootstrap/3.3.1/css/bootstrap-theme.css">
+
+	<style>
+	textarea[name="content"] {
+		font-family: "courier new";
+		font-size: 16px;
+		tab-size: 4;
+		color: #000;
+	}
+	.alert-success .red {
+	    color: #B20000;
+	    margin: 0 5px;
+	}
+	</style>
+
+<link href="//res.liuxianan.com/js/common.css" rel="stylesheet"></head>
+<body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_navbar">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="//liuxianan.com">柳夏南的小窝</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="top_navbar">
+				<ul class="nav navbar-nav nav-hover-dropdown">
+					<li class="dropdown">
+						<a href="//tool.liuxianan.com">首页</a>
+					</li>
+					
+						<li class="dropdown">
+							
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+									格式化 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									
+										
+										<li class="active" >
+											<a href="/json-format/" class="nav-menu-item-icon"  >
+												<i class="fa fa-thumbs-up"></i>JSON格式化
+											</a>
+										</li>
+									
+										 <li class="divider"></li> 
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>CSS格式化
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>HTML格式化
+											</a>
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+									编码/转换 <span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu">
+									
+										
+										<li  >
+											<a href="/base64/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>base64编码
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/jinzhi/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>任意进制转换
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/url-encode/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>URL编码
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/md5/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>MD5加密
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/pinyin/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>汉语拼音
+											</a>
+										</li>
+									
+								</ul>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="/idcard/"  >身份证</a>
+							
+						</li>
+					
+						<li class="dropdown">
+							
+								<a href="//post.liuxianan.com/" target="_blank" >API调用</a>
+							
+						</li>
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="//tool.liuxianan.com">工具首页</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<section>
+			<ol class="breadcrumb">
+				<li><a href="//liuxianan.com">首页</a></li>
+				<li><a href="//tool.liuxianan.com">工具</a></li>
+				
+					<li class="active">JSON格式化</li>
+				
+			</ol>
+		</section>
+	</div>
+
+
+	<div class="container">
+		<h2 class="page-title">JSON格式化</h2>
+		<div class="alert alert-success">一款支持<span class="red">缩进方式选择</span>和<span class="red">花括号(大括号)是否换行</span>的JSON格式化工具，支持非标准JSON串。</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p>输入：</p>
+				<textarea id="input_content" class="form-control" style="height:400px;" placeholder="粘贴到这里的json代码将会自动被格式化"></textarea>
+			</div>
+			<div class="col-md-6">
+				<p>输出：</p>
+				<textarea id="output_content" class="form-control" style="height:400px;" placeholder="这里展示格式化后的JSON"></textarea>
+			</div>
+			<div class="col-md-12" style="margin-top: 10px;">
+				<div class="form-inline">
+					<a href="javascript:;" class="btn btn-primary" id="btn_format_json">格式化</a>
+					<a href="javascript:alert('偷懒还没来得及做呢，先自己复制吧！');" class="btn btn-default">复制到剪贴板</a>
+					<a href="javascript:;" class="btn btn-default" id="btn_paste_test">粘贴示例JSON</a>
+					<a href="javascript:;" class="btn btn-default" id="btn_clear">清空</a>
+					<label for="format_json_indent">缩进：</label>
+					<select id="format_json_indent" class="form-control">
+						<option value="	">tab</option>
+						<option value="  ">2个空格</option>
+						<option value="    ">4个空格</option>
+					</select>
+					<label><input id="format_json_new_line" type="checkbox" checked="checked"/>花括号换行</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<script src="//res.liuxianan.com/lib/jquery/2.1.1/jquery.js"></script>
+	<script src="//res.liuxianan.com/lib/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="//res.liuxianan.com/lib/xei/xei.js"></script>
+<script type="text/javascript" src="//res.liuxianan.com/js/common.js"></script><script type="text/javascript" src="/json-format/index.js"></script></body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: '工具', merge: true}) %>
+</head>
+<body>
+	<%= require('tool/com/tpl/com_nav.html')({pageName: 'index'}) %>
+
+	<div class="container">
+		<h1>实用工具集合</h1>
+		<%
+			var _menus = require('./com/js/menus');
+			var menus = [];
+			var others = {name: '其它', children: []};
+			_menus.forEach((menu, idx) => {
+				if(!menu.children) others.children.push(menu);
+				else menus.push(menu);
+			});
+			// 只有其它超过1个才显示
+			if(others.children.length > 0) menus.push(others);
+		%>
+		<% menus.forEach((menu) => { 
+			if(menu.children) {
+		%>
+			<div class="row">
+				<div class="col-md-12">
+					<h3><%=menu.name%></h3>
+				</div>
+				<div class="col-md-12 tool-guide-wrapper">
+					<% menu.children.forEach((submenu) => { %>
+						<a href="/<%=submenu.value%>/" class="tool-item" <%= submenu._blank ? 'target="_blank"' : '' %> ><i class="fa fa-<%=submenu.icon%>"></i> <%=submenu.name%></a> 
+					<% }); %>
+				</div>
+			</div>
+		<% }}); %>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+</body>
+</html>

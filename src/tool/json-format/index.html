@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: 'JSON格式化', merge: true}) %>
+
+	<style>
+	textarea[name="content"] {
+		font-family: "courier new";
+		font-size: 16px;
+		tab-size: 4;
+		color: #000;
+	}
+	.alert-success .red {
+	    color: #B20000;
+	    margin: 0 5px;
+	}
+	</style>
+
+</head>
+<body>
+	<%= require('tool/com/tpl/com_nav.html')({pageName: 'json-format'}) %>
+
+	<div class="container">
+		<h2 class="page-title">JSON格式化</h2>
+		<div class="alert alert-success">一款支持<span class="red">缩进方式选择</span>和<span class="red">花括号(大括号)是否换行</span>的JSON格式化工具，支持非标准JSON串。</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p>输入：</p>
+				<textarea id="input_content" class="form-control" style="height:400px;" placeholder="粘贴到这里的json代码将会自动被格式化"></textarea>
+			</div>
+			<div class="col-md-6">
+				<p>输出：</p>
+				<textarea id="output_content" class="form-control" style="height:400px;" placeholder="这里展示格式化后的JSON"></textarea>
+			</div>
+			<div class="col-md-12" style="margin-top: 10px;">
+				<div class="form-inline">
+					<a href="javascript:;" class="btn btn-primary" id="btn_format_json">格式化</a>
+					<a href="javascript:alert('偷懒还没来得及做呢，先自己复制吧！');" class="btn btn-default">复制到剪贴板</a>
+					<a href="javascript:;" class="btn btn-default" id="btn_paste_test">粘贴示例JSON</a>
+					<a href="javascript:;" class="btn btn-default" id="btn_clear">清空</a>
+					<label for="format_json_indent">缩进：</label>
+					<select id="format_json_indent" class="form-control">
+						<option value="	">tab</option>
+						<option value="  ">2个空格</option>
+						<option value="    ">4个空格</option>
+					</select>
+					<label><input id="format_json_new_line" type="checkbox" checked="checked"/>花括号换行</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+</body>
+</html>
