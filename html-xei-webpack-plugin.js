@@ -17,17 +17,23 @@ HtmlXeiWebpackPlugin.prototype.apply = function(compiler)
 			// <script type="text/javascript" src="/index.js"></script>
 			for(var i in entry)
 			{
-				htmlPluginData.html = htmlPluginData.html.replace(new RegExp('(src="/)('+i+')(\.js"></script>)', 'gim'), function(m, $1, $2, $3)
+				htmlPluginData.html = htmlPluginData.html.replace(new RegExp('(src="/)('+i+')(\\.js(\\?.*?){0,1}"></script>)', 'gim'), function(m, $1, $2, $3)
 				{
 					return $1 + $2.replace(/^.+?\//, '') + $3;
 				});
-				htmlPluginData.html = htmlPluginData.html.replace(new RegExp('(<link href="/)('+i+')(\.css")', 'gim'), function(m, $1, $2, $3)
+				htmlPluginData.html = htmlPluginData.html.replace(new RegExp('(<link href="/)('+i+')(\\.css(\\?.*?)?")', 'gim'), function(m, $1, $2, $3)
 				{
 					return $1 + $2.replace(/^.+?\//, '') + $3;
 				});
 			}
-			htmlPluginData.html = htmlPluginData.html.replace(/src="\/res\/js\/common\.js">/g, 'src="//res.liuxianan.com/js/common.js">');
-			htmlPluginData.html = htmlPluginData.html.replace(/link href="\/res\/js\/common\.css"/g, 'link href="//res.liuxianan.com/js/common.css"');
+			htmlPluginData.html = htmlPluginData.html.replace(/(src=")\/res\/bundle\/common\.js((\?.*?)?">)/g, function(m, $1, $2, $3)
+			{
+				return $1 + '//res.liuxianan.com/bundle/common.js' + $2;
+			});
+			htmlPluginData.html = htmlPluginData.html.replace(/(link href=")\/res\/bundle\/common\.css((\?.*?)?")/g, function(m, $1, $2, $3)
+			{
+				return $1 + '//res.liuxianan.com/bundle/common.css' + $2;
+			});
 			callback();
 		});
 	});

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: 'JSON格式化', merge: true}) %>
+
+	<style>
+	.form-inline{margin: 20px 0;}
+	#result{font-size: 20px; color: red;}
+	#make_idcard select{width: 180px;  display: inline-block;}
+	#idcard_list{resize:none;height: 500px;}
+	</style>
+
+</head>
+<body>
+	<%= require('tool/com/tpl/com_nav.html')({pageName: 'json-format'}) %>
+
+	<div class="container">
+		<h2 class="page-title">身份证</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#idcard_validate" data-toggle="tab">身份证校验</a></li>
+					<li><a href="#make_idcard" data-toggle="tab">批量生成身份证</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="idcard_validate" class="tab-pane active">
+						<h2>本功能可以校验身份证是否合法，以及获取身份证号码相关信息。暂不清楚公安系统是否对日期有做校验，以及是否允许农历存在，如2月30日，所以本校验工具不会校验生日。</h2>
+						<div class="form-inline">
+							<div class="form-group">
+								<label for="input_idcard">身份证号</label>
+								<input type="text" class="form-control" id="input_idcard" placeholder="请输入要校验的身份证号">
+							</div>
+							<a href="javascript:;" class="btn btn-primary" id="btn_validate">校验</a>
+							<a href="javascript:;" class="btn btn-default" id="btn_random_idcard">随机生成一个</a>
+						</div>
+						<div>
+							<label>校验结果：</label><span id="validate_result"></span>
+						</div>
+					</div>
+					<div id="make_idcard" class="tab-pane">
+						<div class="form-horizontal" style="margin-top: 20px;">
+							<div class="form-group">
+								<label for="province_list" class="col-sm-2 control-label">籍贯</label>
+								<div class="col-sm-10">
+									<select id="province_list" class="form-control">
+										<option value="">--省(随机)--</option>
+									</select>
+									<select id="city_list" class="form-control">
+										<option value="">--市(随机)--</option>
+									</select>
+									<select id="county_list" class="form-control">
+										<option value="">--县(随机)--</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="province_list" class="col-sm-2 control-label">生日</label>
+								<div class="col-sm-10">
+									<select id="year_list" class="form-control">
+										<option value="">--年(随机)--</option>
+									</select>
+									<select id="month_list" class="form-control">
+										<option value="">--月(随机)--</option>
+									</select>
+									<select id="date_list" class="form-control">
+										<option value="">--日(随机)--</option>
+									</select>
+									<span>提示：日期未做30、31以及闰年判断，请自行保证日期正确</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="make_idcard_count" class="col-sm-2 control-label">生成个数</label>
+								<div class="col-sm-4">
+									<input type="number" id="make_idcard_count" class="form-control" value="50" style="width:100px" placeholder="请输入要生成的个数"/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="province_list" class="col-sm-2 control-label"></label>
+								<div class="col-sm-10">
+									<a href="javascript:;" class="btn btn-primary" id="btn_batch_make_idcard">生成</a>
+								</div>
+							</div>
+							<div class="form-group mt-lg">
+								<label for="province_list" class="col-sm-2 control-label">结果</label>
+								<div class="col-sm-10">
+									<textarea id="idcard_list" class="form-control" readonly></textarea>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+	<script type="text/javascript" src="asset/all_city_codes.js"></script>
+</body>
+</html>

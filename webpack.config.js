@@ -6,6 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var fs = require('fs');
 
+var copyFolders = ['res', 'test']; // 需要被直接复制的文件夹
 var config = {
 	//页面入口文件配置
 	entry: getEntries(),
@@ -16,7 +17,7 @@ var config = {
 		// 输出文件夹
 		path: getAbsolutePath('./dist'),
 		// 输出文件名
-		filename: '[name].js'
+		filename: '[name].js?v=[chunkhash:8]'
 	},
 	module: {
 		//加载器配置
@@ -47,14 +48,20 @@ var config = {
 	// 插件项
 	plugins: [
 		// 公共模块提取插件
-		new webpack.optimize.CommonsChunkPlugin('res/js/common'),
+		new webpack.optimize.CommonsChunkPlugin({
+			name:'res/bundle/common',
+			// 至少要被多少个页面引用才算作是公共模块
+			minChunks: 4
+		}),
+		// 压缩js文件
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {warnings: false}
+		}),
+		// 在所有JS开头添加banner
+		new webpack.BannerPlugin("The file is creted by lxa --"+ new Date()),
 		// 静态资源拷贝插件
-		new CopyWebpackPlugin([{
-			from: getAbsolutePath('./src/res'),
-			to: getAbsolutePath('./dist/res'),
-			force: true // 覆盖同名文件
-		}]),
-		new ExtractTextPlugin('[name].css')
+		new CopyWebpackPlugin(getCopyWebpackPlugins()),
+		new ExtractTextPlugin('[name].css?v=[contenthash:8]')
 		// 全局挂载插件，使用jQuery的地方无需require，直接用$就可以了
 		/*new webpack.ProvidePlugin(
 		{
@@ -81,7 +88,7 @@ function getEntries()
 	// 遍历src下面的所有js，只要文件名是index.js的都认为是入口文件
 	scanFolderSync('src', function(filePath)
 	{
-		if(filePath.startsWith('src/res/')) return;
+		if(checkIsCopyFolder(filePath)) return;
 		if(filePath.endsWith('index.js'))
 		{
 			filePath = filePath.replace(/\.js$/g, '');
@@ -97,13 +104,13 @@ function getHtmlWebpackPlugins()
 	// 遍历src下面的所有html，只要文件名是index.html的都认为是入口页面
 	scanFolderSync('src', function(filePath)
 	{
-		if(filePath.startsWith('src/res/')) return;
+		if(checkIsCopyFolder(filePath)) return;
 		if(filePath.endsWith('index.html'))
 		{
 			// 查找有没有对应的入口chunk，有的话push进去
 			var chunk = filePath.replace(/^src\//g, '').replace(/\.html$/g, '');
 			var chunks = [];
-			chunks.push('res/js/common');
+			chunks.push('res/bundle/common');
 			if(config.entry[chunk]) chunks.push(chunk);
 			
 			plugins.push(new HtmlWebpackPlugin(
@@ -119,17 +126,66 @@ function getHtmlWebpackPlugins()
 	return plugins;
 }
 
-function scanFolderSync(path, callback, idx)
+function getCopyWebpackPlugins()
 {
-	idx = idx == undefined ? 1 : idx;
-	if(!fs.statSync(path).isDirectory()) callback(path, idx);
-	else
+	var plugins = [];
+	copyFolders.forEach(folder =>
 	{
-		fs.readdirSync(path).forEach(function(file)
+		plugins.push(
 		{
-			var tempPath = path + '/' + file;  
-			if(fs.statSync(tempPath).isDirectory()) scanFolderSync(tempPath, callback, idx+1);
-			else callback(tempPath, idx);
+			from: getAbsolutePath('./src/'+folder),
+			to: getAbsolutePath('./dist/'+folder),
+			force: true // 覆盖同名文件
+		});
+	});
+	scanFolderSync('src', function(filePath, fileName, isFolder)
+	{
+		// 只要文件夹名是asset的也直接复制
+		if(fileName == 'asset' && isFolder)
+		{
+			var folder = filePath.replace('src/', '');
+			plugins.push(
+			{
+				from: getAbsolutePath('./src/'+folder),
+				to: getAbsolutePath('./dist/'+folder),
+				force: true // 覆盖同名文件
+			});
+		}
+	});
+	return plugins;
+}
+
+/**
+ * 检查是否是需要直接复制的文件夹
+ * @param {*} filePath 
+ */
+function checkIsCopyFolder(filePath)
+{
+	for(var i=0; i<copyFolders.length; i++)
+	{
+		if(filePath.startsWith('src/'+copyFolders[i]+'/'))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * 同步遍历某个文件夹，注意需要定义 var path = require('path');
+ * @param {*} filePath 需要遍历的文件夹 
+ * @param {*} callback 回调函数，接收3个参数(filePath, fileName, isFolder, deep)
+ */
+function scanFolderSync(filePath, callback)
+{
+	var deep = arguments[2] || 1;
+	var isFolder = fs.statSync(filePath).isDirectory();
+	callback(filePath, path.basename(filePath), isFolder, deep);
+	if(isFolder) 
+	{
+		fs.readdirSync(filePath).forEach(function(file)
+		{
+			scanFolderSync(filePath + '/' + file, callback, deep + 1);
 		});
 	}
 }
