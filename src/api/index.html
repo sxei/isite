@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: 'API', merge: true}) %>
+</head>
+<body>
+	<%= require('tool/com/tpl/com_nav.html')({pageName: 'index'}) %>
+
+	<div class="container">
+		<h1>API目录</h1>
+		<div>
+			<a href="http://nodejs.cn/api/" target="_blank">Node.js中文API</a><br>
+			<a href="http://tool.oschina.net/apidocs/apidoc?api=jquery" target="_blank">jQuery在线文档</a><br>
+			<a href="http://tool.oschina.net/apidocs/" target="_blank">开源中国文档目录</a><br>
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+</body>
+</html>
