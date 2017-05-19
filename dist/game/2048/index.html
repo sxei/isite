@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>2048网页版</title>
+	<style>
+		#restart
+		{
+			width: 140px;
+			height: 40px;
+			font-size: 24px;
+			text-decoration: none;
+			color: rgb(83, 63, 63);
+			border: solid 1px #ccc;
+			display: inline-block;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 5px;
+			background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+			margin: 5px;
+			font-family: 微软雅黑;	
+		}
+		#restart:hover
+		{
+			background-image: linear-gradient(to bottom,rgb(224, 224, 224),rgb(230, 230, 230));
+			color: #08c;
+		}
+		#container
+		{
+			position: relative;
+			width: 503px;
+			height: 503px;
+			background-color: #bbada0;
+			border-radius: 6px;
+			padding:15px;
+			box-sizing: border-box;/*为元素设定的宽度和高度决定了元素的边框盒*/
+		}
+		#game_over
+		{
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:503px;
+			height:503px;
+			background-color: rgba(238, 228, 218, 0.5);
+			z-index: 100;
+			display:none;
+		}
+		#game_over p
+		{
+			font-size: 60px;
+			font-weight: bold;
+			height: 60px;
+			line-height: 60px;
+			margin-top: 222px;
+			color: #776e65;
+			font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+			text-align: center;
+			cursor: default;
+		}
+		.block
+		{
+			position:absolute;
+			width:107px;
+			height:107px;
+			line-height: 107px; 
+			font-size: 55px;
+			background-color:rgba(238, 228, 218, 0.35);
+			border-radius: 3px;
+			-webkit-transition: 100ms ease-in-out;/*CSS3过渡动画*/
+			text-align: center;
+			font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+			font-weight: bold;
+		}
+		.block_new
+		{
+			-webkit-animation: make_new_block 100ms;
+		}
+		.block_merge
+		{
+			-webkit-animation: merge_block 100ms;
+		}
+
+		.block_2{background-color:#eee4da;color:#776e65;}
+		.block_4{background-color:#ede0c8;color:#776e65;}
+		.block_8{background-color:#f2b179;color:#f9f6f2;}
+		.block_16{background-color:#f59563;color:#f9f6f2;}
+		.block_32{background-color:#f67c5f;color:#f9f6f2;}
+		.block_64{background-color:#f65e3b;color:#f9f6f2;}
+		.block_128
+		{
+			background-color:#edcf72;
+			color:#f9f6f2;
+			box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+			font-size: 45px;
+		}
+		.block_256
+		{
+			color: #f9f6f2;
+			background: #edcc61;
+			box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    		font-size: 45px;
+    	}
+		.block_512
+		{
+			color: #f9f6f2;
+		    background: #edc850;
+		    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+		    font-size: 45px;
+		}
+		.block_1024
+		{
+			color: #f9f6f2;
+		    background: #edc53f;
+		    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+		    font-size: 35px;
+   		}
+		.block_2048
+		{
+			color: #f9f6f2;
+    		background: #edc22e;
+    		box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    		font-size: 35px;
+    	}
+		@-webkit-keyframes make_new_block /* Safari 和 Chrome */
+		{
+			0% {margin-left:53px;margin-top:53px;width:0px; height:0px;line-height:0px;font-size:10px}
+			100% {margin-left:0px;margin-top:0px;width:107px; height:107px;line-height:107px;font-size:55px;}
+		}
+		@-webkit-keyframes merge_block /* Safari 和 Chrome */
+		{
+			0% {margin-left:-20px;margin-top:-20px;width:147px; height:147px;line-height:147px;font-size:65px;}
+			100% {margin-left:0px;margin-top:0px;width:107px; height:107px;line-height:107px;font-size:55px;}
+		}
+
+	</style>
+	
+<link href="//res.liuxianan.com/bundle/common.css?v=bda65844" rel="stylesheet"></head>
+<body>
+	<a href="javascript:start();" id="restart">重新开始</a>
+	<div id="container">
+		<div id="game_over"><p>Game over!</p></div>
+	</div>
+	
+	<script src="//res.liuxianan.com/lib/jquery/2.1.1/jquery.js"></script>
+	<script type="text/javascript">
+
+	
+	//产生二维数组的方法，value可以不传
+	function erweiArray(length, value)
+	{
+		var array = [];
+		for(var i=0; i<length; i++)
+		{
+			array[i] = [];
+			for(var j=0; j<length; j++)
+				array[i][j] = value;
+		}
+		return array;
+	}
+	/**
+	 * 随机数方法<br>
+	 * 如果不传param，那么返回0-1的随机小数<br>
+	 * 如果param为number类型，那么返回0-param的随机整数，0<=num<param<br>
+	 * 如果param为数组（数组内容格式不限），那么随机返回其中一个数据<br>
+	 * @param param
+	 * @returns 返回产生的随机数
+	 */
+	function random(param)
+	{
+		var r = Math.random();
+		if(param === undefined)
+			return r;
+		if(typeof param === 'number')
+			return Math.floor(r*param);
+		if(param instanceof Array && param.length>0)
+			return param[Math.floor(r*param.length)];
+	}
+	var block_width = 107,//方块的宽度
+		gap = 15,//方块间的间隙
+		column = 4,
+		blocks = erweiArray(column);
+	
+	function initPage()
+	{
+		var container = $('#container');
+		for(var i=0; i<column; i++)
+			for(var j=0; j<column; j++)
+			{
+				$('<div class="block"></div>')
+				.css('left', gap+j*(block_width+gap))
+				.css('top', gap+i*(block_width+gap))
+				.appendTo(container)
+			}
+	}
+	
+	function start(params)
+	{
+		for(var i=0; i<column; i++)
+			for(var j=0; j<column; j++)
+				deleteBlock(i, j);
+		if(params === undefined)
+		{
+			makeNewBlockRandom();
+			makeNewBlockRandom();
+		}
+		else
+		{
+			blocks = params;
+			for(var i=0; i<column; i++)
+				for(var j=0; j<column; j++)
+					makeNewBlock(i, j, blocks[i][j]);
+		}
+		$('#game_over').hide();
+	}
+
+	//产生新的方块，num的值与blocks对应的值相同时表示是合并，唯一的区别是动画不一样
+	function makeNewBlock(i, j, num)
+	{
+		if(!num)
+			return;
+		var animation = blocks[i][j]==num?'block_merge':'block_new';
+		$('<div class="block block_'+i+'_'+j+' '+animation+'"></div>')
+			.css('left', gap+j*(block_width+gap))
+			.css('top', gap+i*(block_width+gap))
+			.addClass('block_'+num)
+			.html(num)
+			.appendTo(container);
+		blocks[i][j] = num;
+	}
+	
+	function makeNewBlockRandom()
+	{
+		var temp = [];
+		for(var i=0; i<column; i++)
+			for(var j=0; j<column; j++)
+			{
+				if(!blocks[i][j])
+					temp.push([i, j]);
+			}
+		if(temp.length==0)
+			return false;
+		var pos = random(temp);
+		makeNewBlock(pos[0], pos[1], random([2]))
+		return true;
+	}
+	
+	function moveBlock(from_i, from_j, to_i, to_j)
+	{
+		var obj = $('.block_'+from_i+'_'+from_j);
+		obj
+			.css('left', gap+to_j*(block_width+gap)+'px')
+			.css('top', gap+to_i*(block_width+gap)+'px')
+			.removeClass('block_'+from_i+'_'+from_j)
+			.addClass('block_'+to_i+'_'+to_j);
+		
+		if(blocks[to_i][to_j] === blocks[from_i][from_j])
+		{
+			isMerge[to_i][to_j] = true;
+			blocks[to_i][to_j] = blocks[from_i][from_j]*2;
+			obj[0].addEventListener('webkitTransitionEnd', function(e)
+			{
+				var value = blocks[to_i][to_j];//必须备份，否则会被删掉
+				deleteBlock(to_i,to_j);
+				blocks[to_i][to_j] = value;
+				makeNewBlock(to_i, to_j, blocks[to_i][to_j]);
+			});
+		}
+		else
+			blocks[to_i][to_j] = blocks[from_i][from_j];
+		blocks[from_i][from_j] = undefined;
+	}
+	
+	function deleteBlock(i, j)
+	{
+		$('.block_'+i+'_'+j).remove();
+		blocks[i][j] = undefined;
+	}
+	
+	//合并方块，返回是否已经合并
+	function mergeBlock(dir, from_i, from_j, to_i, to_j)
+	{
+		var temp = (dir==='up'||dir==='down')?to_i:to_j;
+		if( (dir==='left'||dir==='up') && temp<0 )
+			return false;
+		if( (dir==='right'||dir==='down') && temp>=column )
+			return false;
+		if(blocks[from_i][from_j]==blocks[to_i][to_j] && !isMerge[to_i][to_j])
+		{
+			var value = blocks[from_i][from_j]*2;//存储数字
+			deleteBlock(from_i,from_j);
+			deleteBlock(to_i,to_j);
+			makeNewBlock(to_i, to_j, value);
+			isMerge[to_i][to_j] = true;
+			return true;
+		}
+	}
+	var isMerge = [];//标记16个方块哪些是新合并的
+	function upOrDown(dir)
+	{
+		return (dir==='up'||dir==='down');
+	}
+	function rightOrDown(dir)
+	{
+		return (dir==='right'||dir==='down');
+	}
+	function move(dir)
+	{
+		isMerge = erweiArray(column, false);//重新清空
+		var hasMoved = false;//标记是否已经移动或者合并方块
+ 		for(var i=0; i<column; i++)
+			for(var j=rightOrDown(dir)?(column-2):1; rightOrDown(dir)?(j>=0):(j<column); rightOrDown(dir)?(j--):(j++))
+				upOrDown(dir)?check(j, i):check(i, j);
+		function check(i, j)
+		{
+			if(!blocks[i][j])//只有某个方格上有数字才处理
+				return;
+			var _temp = temp = upOrDown(dir)?i:j;//朝移动的方向查找第一个没有数字的方格
+			for(var k=rightOrDown(dir)?(temp+1):(temp-1); rightOrDown(dir)?(k<column):(k>=0); rightOrDown(dir)?(k++):(k--))
+			{
+				var t_i = upOrDown(dir)?k:i, t_j = upOrDown(dir)?j:k;
+				if(blocks[t_i][t_j] && (blocks[t_i][t_j]!==blocks[i][j] || (blocks[t_i][t_j]===blocks[i][j]&&isMerge[t_i][t_j])))
+					break;
+				temp = k;
+			}
+			if(temp!=_temp)//如果这个方块可以移动
+			{
+				moveBlock(i, j, upOrDown(dir)?temp:i, upOrDown(dir)?j:temp);
+				hasMoved = true;
+			}
+		}
+		if(hasMoved)
+			makeNewBlockRandom();
+		checkGameOver();
+		
+		/* if(upOrDown(dir))
+		{
+			for(var j=0; j<column; j++)
+			{
+				if(dir === 'up')
+					for(var i=1; i<column; i++)
+						check(i, j);
+				else if(dir === 'down')
+					for(var i=column-2; i>=0; i--)
+						check(i, j);
+			}
+		}
+		else
+		{
+			for(var i=0; i<column; i++)
+			{
+				if(dir === 'left')
+					for(var j=1; j<column; j++)
+						check(i, j);
+				else if(dir === 'right')
+					for(var j=column-2; j>=0; j--)
+						check(i, j);
+			}
+		} */
+	
+	}
+	function checkGameOver()
+	{
+		var flag = true;
+		for(var i=0; i<column; i++)
+		{
+			for(var j=0; j<column; j++)
+			{
+				if( !blocks[i][j]||
+					((i-1)>=0 && blocks[i][j]===blocks[i-1][j])||
+					((i+1)<column && blocks[i][j]===blocks[i+1][j])||
+					((j-1)>=0 && blocks[i][j]===blocks[i][j-1])||
+					((j+1)>=0 && blocks[i][j]===blocks[i][j+1]))
+				{
+					flag = false;
+					break;
+				}
+			}
+					
+		}
+		if(flag)
+			$('#game_over').show();
+	}
+	
+	$(function()
+	{
+		initPage();
+		//start([[2,4,8,2],[4,2,16,32],[128,8,4,2],[4,2,2,4]]);
+		start();
+	});
+	
+	var	KEY_BACK 		 = 0x0008; 	// 返回/删除
+	var KEY_ENTER 		 = 0x000D; 	// 确定
+	var KEY_PAGE_UP		 = 0x0021;	// 上页
+	var KEY_PAGE_DOWN    = 0x0022;  // 下页
+	var KEY_LEFT		 = 0x0025;  // 左
+	var	KEY_UP			 = 0x0026;  // 上
+	var KEY_RIGHT 		 = 0x0027;	// 右
+	var	KEY_DOWN 		 = 0x0028;	// 下
+	$(window).keydown(function(e)
+	{
+		switch(e.keyCode)
+		{
+			case KEY_LEFT:move('left');break;
+			case KEY_RIGHT:move('right');break;
+			case KEY_UP:move('up');break;
+			case KEY_DOWN:move('down');break;	
+		}
+	});
+	</script>
+<script type="text/javascript" src="//res.liuxianan.com/bundle/common.js?v=7f8436bc"></script></body>
+</html>
