@@ -41,6 +41,37 @@ pre > code {
 
 
 
+
+/* 设置整个滚动条的一些属性，宽度针对垂直滚动条，高度针对水平滚动条 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/* 整个滚动条去除button剩下的部分 */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #d8dce5
+}
+/* 滚动条可拖拽的部分 */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #adadad;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #929292;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #666363;
+}
+::-webkit-scrollbar-corner {
+    background-color: #535353
+}
+::-webkit-scrollbar-resizer {
+    background-color: #ff6e00
+}
+
+
+
 /* 通用样式 */
 .mt-xs {
     margin-top: 4px
@@ -2028,11 +2059,13 @@ body.search-page {
 
 
 
-/* 覆盖默认的markdown样式 */
+/* =============== 覆盖默认的markdown样式开始 ============== */
+
+/* H1标签设置 */
 .markdown-body h1 {
-    background-color: #127EBA;
+    background-color: #3199E4;
     color: white;
-    padding: 0 10px;
+    padding: 2px 8px;
     border-radius: 5px;
     font-size: 30px;
     line-height: 1.5;
@@ -2043,25 +2076,23 @@ body.search-page {
     color: white;
     margin: 0 2px;
 }
+/* A标签添加左右外边距 */
 .markdown-body a {
     margin: 0 4px;
 }
+/* 图片添加border */
 .markdown-body img {
     border: solid 1px #ccc;
     border-radius: 3px;
 }
-/* 修正editormd编辑器预览时code的样式 */
-.editormd-preview-container code, .editormd-html-preview code {
-    color: black;
-    padding: 1px 3px;
-}
-
+/* pre标签设置 */
 .markdown-body .highlight pre, .markdown-body pre {
     background-color: #272822;
     line-height: 1.5;
-}
-pre {
+    max-height: 720px;
+    overflow-y: scroll;
     position: relative;
+    font-size: 100%;
 }
 pre > span.pre-code-btn {
     position: absolute;
@@ -2087,8 +2118,42 @@ pre > span.pre-code-btn:hover {
     background: #CDB504;
     color: white;
 }
-.markdown-body .highlight pre, .markdown-body pre {
-    font-size: 100%;
+/* 修改引用样式 */
+.markdown-body blockquote {
+    padding: 10px 15px;
+    color: #747474;
+    border-left: 2px solid #41ABF7;
+    background: #F7F7F7;
+}
+/* 覆盖H2的样式 */
+.markdown-body h2 {
+    border-bottom: 1px solid #41ABF7;
+    color: #3199E4;
+}
+/* 给ul和ol添加简单的背景色 */
+.markdown-body ul, .markdown-body ol {
+    border-left: solid 2px #41ABF7;
+    background: #FAFAFA;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+/* 使用CSS给h1添加索引，h2-h6无法通过CSS生成，只能交由JS来处理 */
+.markdown-body h1 {
+    counter-increment: markdown-body-h1;
+}
+.markdown-body h1:before {
+    content: counter(markdown-body-h1) ". ";
+}
+
+/* =============== 覆盖默认的markdown样式结束 ============== */
+
+
+
+
+/* 修正editormd编辑器预览时code的样式 */
+.editormd-preview-container code, .editormd-html-preview code {
+    color: black;
+    padding: 1px 3px;
 }
 
 
@@ -2099,20 +2164,7 @@ pre > span.pre-code-btn:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 手机适配 */
+/* 移动端适配 */
 @media screen and (max-width: 768px) {
 	body {
 	    font-size: 14px;

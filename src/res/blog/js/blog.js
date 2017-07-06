@@ -1,3 +1,5 @@
+
+
 /**
  * 全局的提示样式
  */
@@ -43,23 +45,27 @@ $(function()
 
 ;(function($)
 {
-	/**
-	 * 简单的markdown生成TOC工具，这个只是生成toc代码，具体页面展示自己去实现
-	 * @start 2016-07-10
-	 * @last 2016-07-18
-	 * @author lxa
-	 */
+
 	$.fn.extend(
 	{
+		/**
+		 * 简单的markdown生成TOC工具，这个只是生成toc代码，具体页面展示自己去实现
+		 * 会自动修正一些不正确的写法，比如H1后面紧跟H3，那么我们将在中间自动补上H2
+		 * @start 2016-07-10
+		 * @last 2016-07-18
+		 * @author lxa
+	 	 */
 		getMarkdownTOC: function()
 		{
+			// list存放[[标题层级，标题ID，标题名称]]
 			var list = [], elements = this.find('h1,h2,h3,h4,h5,h6');
 			if(elements.length == 0) return '';
 			for(var i=0; i<elements.size(); i++)
 			{
 				var obj = elements[i];
-				var level = parseInt(obj.nodeName.substr(1));
-				if(i > 0) for(var j=list[list.length-1][0]+1; j<level; j++) list.push([j, '', '']);
+				var level = parseInt(obj.nodeName.substr(1)); // 提取h1~h6中的数字
+				// 这一步是为了修正一些可能不正确的写法，比如H1后面紧跟H3，那么我们将在中间自动补上H2
+				for(var j = (list[list.length-1] || [0])[0] + 1; j<level; j++) list.push([j, '', '']);
 				list.push([level, obj.id, $(obj).text()]);
 			}
 			var target = $('<div></div>').appendTo($(document.createDocumentFragment()));
@@ -74,6 +80,32 @@ $(function()
 				lastOl.append(html);
 			}
 			return '<div class="markdown-toc">' + target.html() + '</div>';
+		},
+		/**
+		 * 给H1-H6添加数字导航，如1.3.6
+		 * 注意，必须在getMarkdownTOC()方法之后调用本方法，否则获取到的内容会有多余的类似“1.2.1”这样的东西
+		 */
+		addNumberBeforeHeaderline: function(ignoreH1)
+		{
+			var list = [], elements = this.find('h1,h2,h3,h4,h5,h6');			
+			for(var i=0; i<elements.size(); i++)
+			{
+				var level = parseInt(elements[i].nodeName.substr(1)); // 提取h1~h6中的数字
+				// 这一步是为了修正一些可能不正确的写法，比如H1后面紧跟H3，那么我们将在中间自动补上H2
+				for(var j = (list[list.length-1] || [0])[0] + 1; j<level; j++) list.push([j, -1]);
+				list.push([level, i]);
+			}
+			var h = []; // 记录每一个层级最高的索引
+			for(var i=0; i<list.length; i++)
+			{
+				var level = list[i][0];
+				var result = '';
+				h[level] = (h[level] || 0) + 1; // 从0开始自增
+				for(var j=level+1; j<=6; j++) h[j] = 0; // 例如，h2自增后，h2后面的h3-h6都要归零
+				for(var j=1; j<=level; j++) result += h[j] + '.';
+				if(ignoreH1 && level == 1) continue;
+				$(elements[list[i][1]]).prepend(result + ' ');
+			}
 		},
 		/**
 		 * 初始化当前内容滚动监听
@@ -197,8 +229,6 @@ $(function()
 })(jQuery);
 
 
-
-
 /**
  * 滚到顶部小插件，依赖jQuery和font-aswome
  * @start 2016-08-18
@@ -253,22 +283,22 @@ $(function()
 
 
 
-
+// 双击Ctrl搜索
 $(function()
 {
 	// 顶部搜索
 	$('#top_search').on('keydown', function(e)
 	{
-		if(e.keyCode == 13)
+		if(e.keyCode == 13) // 13 为回车键
 		{
 			var kw = this.value;
 			if(kw) location.href = 'search?kw='+kw;
 		}
 	});
 	var lastCtrlTime = 0;
-	$(window).on('keydown', function(e)
+	$(window).on('keyup', function(e)
 	{
-		if(e.keyCode == 17)
+		if(e.keyCode == 17) // 17为ctrl键
 		{
 			if(lastCtrlTime == 0) lastCtrlTime = Date.now();
 			else
@@ -313,3 +343,98 @@ $(function()
 		}
 	})
 });
+
+
+//登录
+function login()
+{
+	var uid = $('#login_uid').val();
+	var password = $('#login_password').val();
+	var savePwd = $('#login_save_pwd').prop('checked');
+	if(!uid) {notice('账号不能为空！'); return;}
+	if(!password) {notice('密码不能为空！'); return;}
+	$.post('login',{uid: uid, password: password, savePwd: savePwd}, function(data)
+	{
+		if(!data.success) $.tip(data.text);
+		else location.reload();
+	});
+}
+
+//退出
+function exit()
+{
+	$.post('exit', function(data)
+	{
+		if(!data.success) $.tip(data.text);
+		else location.reload();
+	});
+}
+
+$(function()
+{
+	$('#jbox_modal_login').jBox('Modal',
+	{
+		width: 360,
+		height: 180,
+		title: '登录',
+		//overlay: false,//是否显示半黑色背景，默认为true
+		content: $('#jbox_modal_login_content'),
+		draggable: 'title'
+	});
+	$('#jbox_modal_update_password').jBox('Modal',
+	{
+		width: 400,
+		height: 220,
+		title: '修改密码',
+		//overlay: false,//是否显示半黑色背景，默认为true
+		content: $('#jbox_modal_update_password_content'),
+		draggable: 'title'
+	});
+});
+function delBlog(id)
+{
+	if(confirm('确定要删除吗？'))
+	{
+		$.post('del_blog?id='+id, function(data)
+		{
+			if(!data || !data.success) alert('删除失败！');
+			else location.reload();
+		});
+	}
+}
+//后门，双击 您的位置 显示登录按钮
+$('.your_position').on('click', function()
+{
+	$('#jbox_modal_login').css('display', 'block');
+});
+
+function updatePassword()
+{
+	var oldPwd = $('#update_password_old').val();
+	var newPwd = $('#update_password_new').val();
+	var newPwd2 = $('#update_password_new2').val();
+	if(!oldPwd || !newPwd || !newPwd2)
+	{
+		notice('不能留空！');
+		return;
+	}
+	if(newPwd !== newPwd2)
+	{
+		notice('两次密码不一致！');
+		return;
+	}
+	if(newPwd.length <6)
+	{
+		notice('新密码长度至少是6位！');
+		return;
+	}
+	$.post('update_password',{oldPassword: oldPwd, newPassword: newPwd}, function(data)
+	{
+		if(!data.success) notice(data.text);
+		else
+		{
+			notice('修改密码成功！请重新登录！');
+			setTimeout(exit, 1500);
+		}
+	});
+}

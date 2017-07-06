@@ -1,0 +1,27 @@
+<%
+	var config = require('config');
+%>
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: '游戏', merge: true}) %>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>看图猜省份</h1>
+		<div style="margin-bottom: 10px;" >
+			请输入答案：<input type="text" id="answer"/>
+			<a href="javascript:;" id="post_answer">提交答案</a>
+			<a href="javascript:;" id="next">下一个</a>
+			<a href="javascript:;" id="see_result">查看答案</a>
+		</div>
+		<div id="panel" style="width:600px;height:500px;">
+
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+	<script type="text/javascript" src="<%=config.resSitePath%>/lib/echarts/3.4.0/echarts.min.js"></script>
+</body>
+</html>
