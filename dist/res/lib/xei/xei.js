@@ -331,8 +331,8 @@
 		/**
 		 * 计算2日期之间的天数，用的是比较毫秒数的方法
 		 * 传进来的日期要么是Date类型，要么是yyyy-MM-dd格式的字符串日期
-		 * @param date1 日期一
-		 * @param date2 日期二
+		 * @param date1 较新日期
+		 * @param date2 较旧日期
 		 */
 		countDays: function(date1, date2)
 		{
@@ -340,13 +340,13 @@
 			// 将日期转换成字符串，转换的目的是去除“时、分、秒”
 			if(date1 instanceof Date && date2 instanceof Date)
 			{
-				date1 = this.format(fmt, date1);
-				date2 = this.format(fmt, date2);
+				date1 = this.formatDate(fmt, date1);
+				date2 = this.formatDate(fmt, date2);
 			}
 			if(typeof date1 === 'string' && typeof date2 === 'string')
 			{
-				date1 = this.parse(date1, fmt);
-				date2 = this.parse(date2, fmt);
+				date1 = this.parseDate(date1, fmt);
+				date2 = this.parseDate(date2, fmt);
 				return (date1.getTime() - date2.getTime()) / (1000*60*60*24);
 			}
 			else

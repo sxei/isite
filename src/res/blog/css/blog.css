@@ -2060,7 +2060,9 @@ body.search-page {
 
 
 /* =============== 覆盖默认的markdown样式开始 ============== */
-
+.markdown-body {
+    line-height: 1.8;
+}
 /* H1标签设置 */
 .markdown-body h1 {
     background-color: #3199E4;
