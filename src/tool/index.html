@@ -4,12 +4,12 @@
 	<%= require('tpl/com_head.html')({title: '工具', merge: true}) %>
 </head>
 <body>
-	<%= require('tool/com/tpl/com_nav.html')({pageName: 'index'}) %>
+	<%= require('tpl/com_nav.html')({menus: require('./menus'), pageName: 'index'}) %>
 
 	<div class="container">
 		<h1>实用工具集合</h1>
 		<%
-			var _menus = require('./com/js/menus');
+			var _menus = require('./menus');
 			var menus = [];
 			var others = {name: '其它', children: []};
 			_menus.forEach((menu, idx) => {

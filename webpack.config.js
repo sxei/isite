@@ -1,5 +1,6 @@
 ﻿var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+// 自己随便写的一个定制化的复制插件
 var HtmlXeiWebpackPlugin = require('./html-xei-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -58,9 +59,11 @@ var config = {
 			compress: {warnings: false}
 		}),
 		// 在所有JS开头添加banner
-		new webpack.BannerPlugin("The file is creted by lxa --"+ new Date()),
+		// 由于不改内容每次构建内容都会变，所以还是注释算了
+		// new webpack.BannerPlugin("The file is creted by lxa --"+ new Date()),
 		// 静态资源拷贝插件
 		new CopyWebpackPlugin(getCopyWebpackPlugins()),
+		// 输出CSS
 		new ExtractTextPlugin('[name].css?v=[contenthash:8]')
 		// 全局挂载插件，使用jQuery的地方无需require，直接用$就可以了
 		/*new webpack.ProvidePlugin(
@@ -75,6 +78,9 @@ config.plugins = config.plugins.concat(getHtmlWebpackPlugins());
 config.plugins.push(new HtmlXeiWebpackPlugin());
 
 module.exports = config;
+
+
+
 
 function getAbsolutePath(tempPath)
 {

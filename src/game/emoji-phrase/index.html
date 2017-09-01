@@ -1,0 +1,22 @@
+<%
+	var config = require('config');
+%>
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: '看emoji猜成语', merge: true}) %>
+</head>
+<body>
+	<%= require('tpl/com_nav.html')({menus: require('../menus'), pageName: 'emoji-phrase'}) %>
+
+	<div class="container">
+		<h1>看emoji猜成语</h1>
+		<div>
+			<a href="javascript:;" id="gen" class="btn btn-primary">随机生成</a><br><br>
+			<div id="emoji_wrapper"></div>
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+</body>
+</html>
