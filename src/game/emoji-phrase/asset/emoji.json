@@ -1,3529 +1,798 @@
-{
-    "动物系列": [
-        {
-            "text": "🐶",
-            "img": "images/2_bqfh0.png",
-            "title": "小狗符号",
-            "kw": "狗"
-        },
-        {
-            "text": "🐺",
-            "img": "images/2_bqfh1.png",
-            "title": "狼狗符号",
-            "kw": "狼"
-        },
-        {
-            "text": "🐱",
-            "img": "images/2_bqfh2.png",
-            "title": "小猫头像",
-            "kw": "猫"
-        },
-        {
-            "text": "🐭",
-            "img": "images/2_bqfh3.png",
-            "title": "老鼠头像",
-            "kw": "鼠"
-        },
-        {
-            "text": "🐹",
-            "img": "images/2_bqfh4.png",
-            "title": "花鼠头像",
-            "kw": "鼠"
-        },
-        {
-            "text": "🐰",
-            "img": "images/2_bqfh5.png",
-            "title": "兔子头像",
-            "kw": "兔"
-        },
-        {
-            "text": "🐸",
-            "img": "images/2_bqfh6.png",
-            "title": "青蛙头像",
-            "kw": "蛙"
-        },
-        {
-            "text": "🐯",
-            "img": "images/2_bqfh7.png",
-            "title": "老虎头像",
-            "kw": "虎"
-        },
-        {
-            "text": "🐨",
-            "img": "images/2_bqfh8.png",
-            "title": "考拉头像",
-            "kw": "考"
-        },
-        {
-            "text": "🐻",
-            "img": "images/2_bqfh9.png",
-            "title": "小熊头像",
-            "kw": "熊"
-        },
-        {
-            "text": "🐷",
-            "img": "images/2_bqfh10.png",
-            "title": "猪的头像",
-            "kw": "猪"
-        },
-        {
-            "text": "🐽",
-            "img": "images/2_bqfh11.png",
-            "title": "猪鼻符号",
-            "kw": "鼻"
-        },
-        {
-            "text": "🐮",
-            "img": "images/2_bqfh12.png",
-            "title": "牛的头像",
-            "kw": "牛"
-        },
-        {
-            "text": "🐗",
-            "img": "images/2_bqfh13.png",
-            "title": "野猪头像",
-            "kw": "猪"
-        },
-        {
-            "text": "🐵",
-            "img": "images/2_bqfh14.png",
-            "title": "猴子头像",
-            "kw": "猴"
-        },
-        {
-            "text": "🐒",
-            "img": "images/2_bqfh15.png",
-            "title": "小猴子图像",
-            "kw": "猴"
-        },
-        {
-            "text": "🐴",
-            "img": "images/2_bqfh16.png",
-            "title": "马的头像",
-            "kw": "马"
-        },
-        {
-            "text": "🐑",
-            "img": "images/2_bqfh17.png",
-            "title": "绵羊符号",
-            "kw": "羊"
-        },
-        {
-            "text": "🐘",
-            "img": "images/2_bqfh18.png",
-            "title": "大象符号",
-            "kw": "象"
-        },
-        {
-            "text": "🐼",
-            "img": "images/2_bqfh19.png",
-            "title": "熊猫头像",
-            "kw": "熊,猫"
-        },
-        {
-            "text": "🐧",
-            "img": "images/2_bqfh20.png",
-            "title": "企鹅头像",
-            "kw": "企,鹅"
-        },
-        {
-            "text": "🐦",
-            "img": "images/2_bqfh21.png",
-            "title": "鸽子头像",
-            "kw": "鸽"
-        },
-        {
-            "text": "🐤",
-            "img": "images/2_bqfh22.png",
-            "title": "小鸟头像",
-            "kw": "鸟"
-        },
-        {
-            "text": "🐥",
-            "img": "images/2_bqfh23.png",
-            "title": "小鸡图像",
-            "kw": "鸡"
-        },
-        {
-            "text": "🐣",
-            "img": "images/2_bqfh24.png",
-            "title": "小鸡",
-            "kw": "鸡"
-        },
-        {
-            "text": "🐔",
-            "img": "images/2_bqfh25.png",
-            "title": "母鸡头像",
-            "kw": "鸡"
-        },
-        {
-            "text": "🐍",
-            "img": "images/2_bqfh26.png",
-            "title": "蛇的符号",
-            "kw": "蛇"
-        },
-        {
-            "text": "🐢",
-            "img": "images/2_bqfh27.png",
-            "title": "乌龟符号",
-            "kw": "乌,龟"
-        },
-        {
-            "text": "🐛",
-            "img": "images/2_bqfh28.png",
-            "title": "虫子符号",
-            "kw": "虫"
-        },
-        {
-            "text": "🐝",
-            "img": "images/2_bqfh29.png",
-            "title": "蜜蜂符号",
-            "kw": "蜜,蜂"
-        },
-        {
-            "text": "🐜",
-            "img": "images/2_bqfh30.png",
-            "title": "蚂蚁符号",
-            "kw": "蚂,蚁"
-        },
-        {
-            "text": "🐞",
-            "img": "images/2_bqfh31.png",
-            "title": "瓢虫符号",
-            "kw": "瓢,虫"
-        },
-        {
-            "text": "🐌",
-            "img": "images/2_bqfh32.png",
-            "title": "蜗牛符号",
-            "kw": "蜗,牛"
-        },
-        {
-            "text": "🐙",
-            "img": "images/2_bqfh33.png",
-            "title": "章鱼",
-            "kw": "章"
-        },
-        {
-            "text": "🐚",
-            "img": "images/2_bqfh34.png",
-            "title": "海螺壳",
-            "kw": "螺,壳"
-        },
-        {
-            "text": "🐠",
-            "img": "images/2_bqfh35.png",
-            "title": "热带鱼",
-            "kw": "鱼"
-        },
-        {
-            "text": "🐟",
-            "img": "images/2_bqfh36.png",
-            "title": "鱼",
-            "kw": "鱼"
-        },
-        {
-            "text": "🐬",
-            "img": "images/2_bqfh37.png",
-            "title": "海豚",
-            "kw": "豚"
-        },
-        {
-            "text": "🐳",
-            "img": "images/2_bqfh38.png",
-            "title": "喷水鲸鱼",
-            "kw": "喷,鲸"
-        },
-        {
-            "text": "🐋",
-            "img": "images/2_bqfh39.png",
-            "title": "长须鲸",
-            "kw": "鲸"
-        },
-        {
-            "text": "🐄",
-            "img": "images/2_bqfh40.png",
-            "title": "奶牛",
-            "kw": "奶,牛"
-        },
-        {
-            "text": "🐏",
-            "img": "images/2_bqfh41.png",
-            "title": "绵羊",
-            "kw": "羊"
-        },
-        {
-            "text": "🐀",
-            "img": "images/2_bqfh42.png",
-            "title": "老鼠",
-            "kw": "鼠"
-        },
-        {
-            "text": "🐃",
-            "img": "images/2_bqfh43.png",
-            "title": "牛",
-            "kw": "牛"
-        },
-        {
-            "text": "🐅",
-            "img": "images/2_bqfh44.png",
-            "title": "老虎",
-            "kw": "虎"
-        },
-        {
-            "text": "🐇",
-            "img": "images/2_bqfh45.png",
-            "title": "兔子",
-            "kw": "兔"
-        },
-        {
-            "text": "🐉",
-            "img": "images/2_bqfh46.png",
-            "title": "龙",
-            "kw": "龙"
-        },
-        {
-            "text": "🐎",
-            "img": "images/2_bqfh47.png",
-            "title": "马",
-            "kw": "马"
-        },
-        {
-            "text": "🐐",
-            "img": "images/2_bqfh48.png",
-            "title": "羊",
-            "kw": "羊"
-        },
-        {
-            "text": "🐓",
-            "img": "images/2_bqfh49.png",
-            "title": "鸡",
-            "kw": "鸡"
-        },
-        {
-            "text": "🐕",
-            "img": "images/2_bqfh50.png",
-            "title": "狗",
-            "kw": "狗"
-        },
-        {
-            "text": "🐖",
-            "img": "images/2_bqfh51.png",
-            "title": "猪",
-            "kw": "猪"
-        },
-        {
-            "text": "🐁",
-            "img": "images/2_bqfh52.png",
-            "title": "老鼠",
-            "kw": "鼠"
-        },
-        {
-            "text": "🐂",
-            "img": "images/2_bqfh53.png",
-            "title": "牛",
-            "kw": "牛"
-        },
-        {
-            "text": "🐲",
-            "img": "images/2_bqfh54.png",
-            "title": "龙头",
-            "kw": "龙,头"
-        },
-        {
-            "text": "🐡",
-            "img": "images/2_bqfh55.png",
-            "title": "鱼",
-            "kw": "鱼"
-        },
-        {
-            "text": "🐊",
-            "img": "images/2_bqfh56.png",
-            "title": "鳄鱼",
-            "kw": "鳄,鱼"
-        },
-        {
-            "text": "🐫",
-            "img": "images/2_bqfh57.png",
-            "title": "骆驼",
-            "kw": "骆,驼"
-        },
-        {
-            "text": "🐪",
-            "img": "images/2_bqfh58.png",
-            "title": "骆驼",
-            "kw": "骆,驼"
-        },
-        {
-            "text": "🐆",
-            "img": "images/2_bqfh59.png",
-            "title": "牧羊犬",
-            "kw": "牧,犬"
-        },
-        {
-            "text": "🐈",
-            "img": "images/2_bqfh60.png",
-            "title": "牧羊犬",
-            "kw": "牧,犬"
-        },
-        {
-            "text": "🐩",
-            "img": "images/2_bqfh61.png",
-            "title": "狮子狗",
-            "kw": "狗"
-        },
-        {
-            "text": "🐾",
-            "img": "images/2_bqfh62.png",
-            "title": "爪印",
-            "kw": "爪"
-        },
-        {
-            "text": "🙈",
-            "img": "images/1_bqfh84.png",
-            "title": "害羞的猴子",
-            "kw": "猴"
-        },
-        {
-            "text": "🙉",
-            "img": "images/1_bqfh85.png",
-            "title": "捂着耳朵的猴子",
-            "kw": "猴"
-        },
-        {
-            "text": "🙊",
-            "img": "images/1_bqfh86.png",
-            "title": "偷笑的猴子",
-            "kw": "猴"
-        },
-        {
-            "text": "💀",
-            "img": "images/1_bqfh87.png",
-            "title": "骷髅",
-            "kw": "骨,骷,髅"
-        },
-        {
-            "text": "👽",
-            "img": "images/1_bqfh88.png",
-            "title": "外星人",
-            "kw": "星"
-        },
-        {
-            "text": "😺",
-            "img": "images/1_bqfh73.png",
-            "title": "微笑的猫脸",
-            "kw": "猫,头,笑"
-        },
-        {
-            "text": "😸",
-            "img": "images/1_bqfh74.png",
-            "title": "咧着嘴笑得猫脸",
-            "kw": "猫,头,脸,笑"
-        },
-        {
-            "text": "😻",
-            "img": "images/1_bqfh75.png",
-            "title": "色迷迷的猫脸",
-            "kw": "色,猫"
-        },
-        {
-            "text": "😽",
-            "img": "images/1_bqfh76.png",
-            "title": "接吻猫",
-            "kw": "亲,吻,猫"
-        },
-        {
-            "text": "😼",
-            "img": "images/1_bqfh77.png",
-            "title": "苦笑的猫脸",
-            "kw": "猫"
-        },
-        {
-            "text": "🙀",
-            "img": "images/1_bqfh78.png",
-            "title": "吃惊的猫脸",
-            "kw": "惊,猫"
-        },
-        {
-            "text": "😿",
-            "img": "images/1_bqfh79.png",
-            "title": "哭的猫脸",
-            "kw": "汗,猫"
-        },
-        {
-            "text": "😹",
-            "img": "images/1_bqfh80.png",
-            "title": "流着泪的猫脸",
-            "kw": "泪,哭,猫"
-        },
-        {
-            "text": "😾",
-            "img": "images/1_bqfh81.png",
-            "title": "撅嘴的猫脸",
-            "kw": "猫"
-        }
-    ],
-    "水果食物": [
-        {
-            "text": "☕",
-            "img": "images/3_bqfh169.png"
-        },
-        {
-            "text": "🍵",
-            "img": "images/3_bqfh170.png"
-        },
-        {
-            "text": "🍶",
-            "img": "images/3_bqfh171.png"
-        },
-        {
-            "text": "🍼",
-            "img": "images/3_bqfh172.png"
-        },
-        {
-            "text": "🍺",
-            "img": "images/3_bqfh173.png"
-        },
-        {
-            "text": "🍻",
-            "img": "images/3_bqfh174.png"
-        },
-        {
-            "text": "🍸",
-            "img": "images/3_bqfh175.png"
-        },
-        {
-            "text": "🍹",
-            "img": "images/3_bqfh176.png"
-        },
-        {
-            "text": "🍷",
-            "img": "images/3_bqfh177.png"
-        },
-        {
-            "text": "🍴",
-            "img": "images/3_bqfh178.png"
-        },
-        {
-            "text": "🍕",
-            "img": "images/3_bqfh179.png"
-        },
-        {
-            "text": "🍔",
-            "img": "images/3_bqfh180.png"
-        },
-        {
-            "text": "🍟",
-            "img": "images/3_bqfh181.png"
-        },
-        {
-            "text": "🍗",
-            "img": "images/3_bqfh182.png"
-        },
-        {
-            "text": "🍖",
-            "img": "images/3_bqfh183.png"
-        },
-        {
-            "text": "🍝",
-            "img": "images/3_bqfh184.png"
-        },
-        {
-            "text": "🍛",
-            "img": "images/3_bqfh185.png"
-        },
-        {
-            "text": "🍤",
-            "img": "images/3_bqfh186.png"
-        },
-        {
-            "text": "🍱",
-            "img": "images/3_bqfh187.png"
-        },
-        {
-            "text": "🍣",
-            "img": "images/3_bqfh188.png"
-        },
-        {
-            "text": "🍥",
-            "img": "images/3_bqfh189.png"
-        },
-        {
-            "text": "🍙",
-            "img": "images/3_bqfh190.png"
-        },
-        {
-            "text": "🍘",
-            "img": "images/3_bqfh191.png"
-        },
-        {
-            "text": "🍚",
-            "img": "images/3_bqfh192.png"
-        },
-        {
-            "text": "🍜",
-            "img": "images/3_bqfh193.png"
-        },
-        {
-            "text": "🍲",
-            "img": "images/3_bqfh194.png"
-        },
-        {
-            "text": "🍢",
-            "img": "images/3_bqfh195.png"
-        },
-        {
-            "text": "🍡",
-            "img": "images/3_bqfh196.png"
-        },
-        {
-            "text": "🍳",
-            "img": "images/3_bqfh197.png"
-        },
-        {
-            "text": "🍞",
-            "img": "images/3_bqfh198.png"
-        },
-        {
-            "text": "🍩",
-            "img": "images/3_bqfh199.png"
-        },
-        {
-            "text": "🍮",
-            "img": "images/3_bqfh200.png"
-        },
-        {
-            "text": "🍦",
-            "img": "images/3_bqfh201.png"
-        },
-        {
-            "text": "🍨",
-            "img": "images/3_bqfh202.png"
-        },
-        {
-            "text": "🍧",
-            "img": "images/3_bqfh203.png"
-        },
-        {
-            "text": "🎂",
-            "img": "images/3_bqfh204.png"
-        },
-        {
-            "text": "🍰",
-            "img": "images/3_bqfh205.png"
-        },
-        {
-            "text": "🍪",
-            "img": "images/3_bqfh206.png"
-        },
-        {
-            "text": "🍫",
-            "img": "images/3_bqfh207.png"
-        },
-        {
-            "text": "🍬",
-            "img": "images/3_bqfh208.png"
-        },
-        {
-            "text": "🍭",
-            "img": "images/3_bqfh209.png"
-        },
-        {
-            "text": "🍯",
-            "img": "images/3_bqfh210.png"
-        },
-        {
-            "text": "🍎",
-            "img": "images/3_bqfh211.png"
-        },
-        {
-            "text": "🍏",
-            "img": "images/3_bqfh212.png"
-        },
-        {
-            "text": "🍊",
-            "img": "images/3_bqfh213.png"
-        },
-        {
-            "text": "🍋",
-            "img": "images/3_bqfh214.png"
-        },
-        {
-            "text": "🍒",
-            "img": "images/3_bqfh215.png"
-        },
-        {
-            "text": "🍇",
-            "img": "images/3_bqfh216.png"
-        },
-        {
-            "text": "🍉",
-            "img": "images/3_bqfh217.png"
-        },
-        {
-            "text": "🍓",
-            "img": "images/3_bqfh218.png"
-        },
-        {
-            "text": "🍑",
-            "img": "images/3_bqfh219.png"
-        },
-        {
-            "text": "🍈",
-            "img": "images/3_bqfh220.png"
-        },
-        {
-            "text": "🍌",
-            "img": "images/3_bqfh221.png"
-        },
-        {
-            "text": "🍐",
-            "img": "images/3_bqfh222.png"
-        },
-        {
-            "text": "🍍",
-            "img": "images/3_bqfh223.png"
-        },
-        {
-            "text": "🍠",
-            "img": "images/3_bqfh224.png"
-        },
-        {
-            "text": "🍆",
-            "img": "images/3_bqfh225.png"
-        },
-        {
-            "text": "🍅",
-            "img": "images/3_bqfh226.png"
-        },
-        {
-            "text": "🌽",
-            "img": "images/3_bqfh227.png"
-        }
-    ],
-    "表情系列": [
-        {
-            "text": "😄",
-            "img": "images/1_bqfh0.png"
-        },
-        {
-            "text": "😃",
-            "img": "images/1_bqfh1.png"
-        },
-        {
-            "text": "😀",
-            "img": "images/1_bqfh2.png"
-        },
-        {
-            "text": "😊",
-            "img": "images/1_bqfh3.png"
-        },
-        {
-            "text": "☺",
-            "img": "images/1_bqfh4.png"
-        },
-        {
-            "text": "😉",
-            "img": "images/1_bqfh5.png"
-        },
-        {
-            "text": "😍",
-            "img": "images/1_bqfh6.png"
-        },
-        {
-            "text": "😘",
-            "img": "images/1_bqfh7.png"
-        },
-        {
-            "text": "😚",
-            "img": "images/1_bqfh8.png"
-        },
-        {
-            "text": "😗",
-            "img": "images/1_bqfh9.png"
-        },
-        {
-            "text": "😙",
-            "img": "images/1_bqfh10.png"
-        },
-        {
-            "text": "😜",
-            "img": "images/1_bqfh11.png"
-        },
-        {
-            "text": "😝",
-            "img": "images/1_bqfh12.png"
-        },
-        {
-            "text": "😛",
-            "img": "images/1_bqfh13.png"
-        },
-        {
-            "text": "😳",
-            "img": "images/1_bqfh14.png"
-        },
-        {
-            "text": "😁",
-            "img": "images/1_bqfh15.png"
-        },
-        {
-            "text": "😔",
-            "img": "images/1_bqfh16.png"
-        },
-        {
-            "text": "😌",
-            "img": "images/1_bqfh17.png"
-        },
-        {
-            "text": "😒",
-            "img": "images/1_bqfh18.png"
-        },
-        {
-            "text": "😞",
-            "img": "images/1_bqfh19.png"
-        },
-        {
-            "text": "😣",
-            "img": "images/1_bqfh20.png"
-        },
-        {
-            "text": "😢",
-            "img": "images/1_bqfh21.png"
-        },
-        {
-            "text": "😂",
-            "img": "images/1_bqfh22.png"
-        },
-        {
-            "text": "😭",
-            "img": "images/1_bqfh23.png"
-        },
-        {
-            "text": "😪",
-            "img": "images/1_bqfh24.png"
-        },
-        {
-            "text": "😥",
-            "img": "images/1_bqfh25.png"
-        },
-        {
-            "text": "😰",
-            "img": "images/1_bqfh26.png"
-        },
-        {
-            "text": "😅",
-            "img": "images/1_bqfh27.png"
-        },
-        {
-            "text": "😓",
-            "img": "images/1_bqfh28.png"
-        },
-        {
-            "text": "😩",
-            "img": "images/1_bqfh29.png"
-        },
-        {
-            "text": "😫",
-            "img": "images/1_bqfh30.png"
-        },
-        {
-            "text": "😨",
-            "img": "images/1_bqfh31.png"
-        },
-        {
-            "text": "😱",
-            "img": "images/1_bqfh32.png"
-        },
-        {
-            "text": "😠",
-            "img": "images/1_bqfh33.png"
-        },
-        {
-            "text": "😡",
-            "img": "images/1_bqfh34.png"
-        },
-        {
-            "text": "😤",
-            "img": "images/1_bqfh35.png"
-        },
-        {
-            "text": "😖",
-            "img": "images/1_bqfh36.png"
-        },
-        {
-            "text": "😆",
-            "img": "images/1_bqfh37.png"
-        },
-        {
-            "text": "😋",
-            "img": "images/1_bqfh38.png"
-        },
-        {
-            "text": "😷",
-            "img": "images/1_bqfh39.png"
-        },
-        {
-            "text": "😎",
-            "img": "images/1_bqfh40.png"
-        },
-        {
-            "text": "😴",
-            "img": "images/1_bqfh41.png"
-        },
-        {
-            "text": "😵",
-            "img": "images/1_bqfh42.png"
-        },
-        {
-            "text": "😲",
-            "img": "images/1_bqfh43.png"
-        },
-        {
-            "text": "😟",
-            "img": "images/1_bqfh44.png"
-        },
-        {
-            "text": "😦",
-            "img": "images/1_bqfh45.png"
-        },
-        {
-            "text": "😧",
-            "img": "images/1_bqfh46.png"
-        },
-        {
-            "text": "😈",
-            "img": "images/1_bqfh47.png"
-        },
-        {
-            "text": "👿",
-            "img": "images/1_bqfh48.png"
-        },
-        {
-            "text": "😮",
-            "img": "images/1_bqfh49.png"
-        },
-        {
-            "text": "😬",
-            "img": "images/1_bqfh50.png"
-        },
-        {
-            "text": "😐",
-            "img": "images/1_bqfh51.png"
-        },
-        {
-            "text": "😕",
-            "img": "images/1_bqfh52.png"
-        },
-        {
-            "text": "😯",
-            "img": "images/1_bqfh53.png"
-        },
-        {
-            "text": "😶",
-            "img": "images/1_bqfh54.png"
-        },
-        {
-            "text": "😇",
-            "img": "images/1_bqfh55.png"
-        },
-        {
-            "text": "😏",
-            "img": "images/1_bqfh56.png"
-        },
-        {
-            "text": "😑",
-            "img": "images/1_bqfh57.png"
-        },
-        {
-            "text": "😺",
-            "img": "images/1_bqfh73.png"
-        },
-        {
-            "text": "😸",
-            "img": "images/1_bqfh74.png"
-        },
-        {
-            "text": "😻",
-            "img": "images/1_bqfh75.png"
-        },
-        {
-            "text": "😽",
-            "img": "images/1_bqfh76.png"
-        },
-        {
-            "text": "😼",
-            "img": "images/1_bqfh77.png"
-        },
-        {
-            "text": "🙀",
-            "img": "images/1_bqfh78.png"
-        },
-        {
-            "text": "😿",
-            "img": "images/1_bqfh79.png"
-        },
-        {
-            "text": "😹",
-            "img": "images/1_bqfh80.png"
-        },
-        {
-            "text": "😾",
-            "img": "images/1_bqfh81.png"
-        },
-        {
-            "text": "👹",
-            "img": "images/1_bqfh82.png"
-        },
-        {
-            "text": "👺",
-            "img": "images/1_bqfh83.png"
-        }
-    ],
-    "植物自然": [
-        {
-            "text": "💐",
-            "img": "images/2_bqfh63.png"
-        },
-        {
-            "text": "🌸",
-            "img": "images/2_bqfh64.png"
-        },
-        {
-            "text": "🌷",
-            "img": "images/2_bqfh65.png"
-        },
-        {
-            "text": "🍀",
-            "img": "images/2_bqfh66.png"
-        },
-        {
-            "text": "🌹",
-            "img": "images/2_bqfh67.png"
-        },
-        {
-            "text": "🌻",
-            "img": "images/2_bqfh68.png"
-        },
-        {
-            "text": "🌺",
-            "img": "images/2_bqfh69.png"
-        },
-        {
-            "text": "🍁",
-            "img": "images/2_bqfh70.png"
-        },
-        {
-            "text": "🍃",
-            "img": "images/2_bqfh71.png"
-        },
-        {
-            "text": "🍂",
-            "img": "images/2_bqfh72.png"
-        },
-        {
-            "text": "🌿",
-            "img": "images/2_bqfh73.png"
-        },
-        {
-            "text": "🌾",
-            "img": "images/2_bqfh74.png"
-        },
-        {
-            "text": "🍄",
-            "img": "images/2_bqfh75.png"
-        },
-        {
-            "text": "🌵",
-            "img": "images/2_bqfh76.png"
-        },
-        {
-            "text": "🌴",
-            "img": "images/2_bqfh77.png"
-        },
-        {
-            "text": "🌲",
-            "img": "images/2_bqfh78.png"
-        },
-        {
-            "text": "🌳",
-            "img": "images/2_bqfh79.png"
-        },
-        {
-            "text": "🌰",
-            "img": "images/2_bqfh80.png"
-        },
-        {
-            "text": "🌱",
-            "img": "images/2_bqfh81.png"
-        },
-        {
-            "text": "🌼",
-            "img": "images/2_bqfh82.png"
-        },
-        {
-            "text": "🌐",
-            "img": "images/2_bqfh83.png"
-        },
-        {
-            "text": "🌞",
-            "img": "images/2_bqfh84.png"
-        },
-        {
-            "text": "🌝",
-            "img": "images/2_bqfh85.png"
-        },
-        {
-            "text": "🌚",
-            "img": "images/2_bqfh86.png"
-        },
-        {
-            "text": "🌑",
-            "img": "images/2_bqfh87.png"
-        },
-        {
-            "text": "🌒",
-            "img": "images/2_bqfh88.png"
-        },
-        {
-            "text": "🌓",
-            "img": "images/2_bqfh89.png"
-        },
-        {
-            "text": "🌔",
-            "img": "images/2_bqfh90.png"
-        },
-        {
-            "text": "🌕",
-            "img": "images/2_bqfh91.png"
-        },
-        {
-            "text": "🌖",
-            "img": "images/2_bqfh92.png"
-        },
-        {
-            "text": "🌗",
-            "img": "images/2_bqfh93.png"
-        },
-        {
-            "text": "🌘",
-            "img": "images/2_bqfh94.png"
-        },
-        {
-            "text": "🌜",
-            "img": "images/2_bqfh95.png"
-        },
-        {
-            "text": "🌛",
-            "img": "images/2_bqfh96.png"
-        },
-        {
-            "text": "🌙",
-            "img": "images/2_bqfh97.png"
-        },
-        {
-            "text": "🌍",
-            "img": "images/2_bqfh98.png"
-        },
-        {
-            "text": "🌎",
-            "img": "images/2_bqfh99.png"
-        },
-        {
-            "text": "🌏",
-            "img": "images/2_bqfh100.png"
-        },
-        {
-            "text": "🌋",
-            "img": "images/2_bqfh101.png"
-        },
-        {
-            "text": "🌌",
-            "img": "images/2_bqfh102.png"
-        },
-        {
-            "text": "🌠",
-            "img": "images/2_bqfh103.png"
-        },
-        {
-            "text": "⭐",
-            "img": "images/2_bqfh104.png"
-        },
-        {
-            "text": "☀",
-            "img": "images/2_bqfh105.png"
-        },
-        {
-            "text": "⛅",
-            "img": "images/2_bqfh106.png"
-        },
-        {
-            "text": "☁",
-            "img": "images/2_bqfh107.png"
-        },
-        {
-            "text": "⚡",
-            "img": "images/2_bqfh108.png"
-        },
-        {
-            "text": "☔",
-            "img": "images/2_bqfh109.png"
-        },
-        {
-            "text": "❄",
-            "img": "images/2_bqfh110.png"
-        },
-        {
-            "text": "⛄",
-            "img": "images/2_bqfh111.png"
-        },
-        {
-            "text": "🌀",
-            "img": "images/2_bqfh112.png"
-        },
-        {
-            "text": "🌁",
-            "img": "images/2_bqfh113.png"
-        },
-        {
-            "text": "🌈",
-            "img": "images/2_bqfh114.png"
-        },
-        {
-            "text": "🌊",
-            "img": "images/2_bqfh115.png"
-        },
-        {
-            "text": "🔥",
-            "img": "images/1_bqfh90.png"
-        },
-        {
-            "text": "✨",
-            "img": "images/1_bqfh91.png"
-        },
-        {
-            "text": "🌟",
-            "img": "images/1_bqfh92.png"
-        },
-        {
-            "text": "💫",
-            "img": "images/1_bqfh93.png"
-        },
-        {
-            "text": "💥",
-            "img": "images/1_bqfh94.png"
-        },
-        {
-            "text": "💢",
-            "img": "images/1_bqfh95.png"
-        },
-        {
-            "text": "💦",
-            "img": "images/1_bqfh96.png"
-        },
-        {
-            "text": "💧",
-            "img": "images/1_bqfh97.png"
-        },
-        {
-            "text": "💤",
-            "img": "images/1_bqfh98.png"
-        },
-        {
-            "text": "💨",
-            "img": "images/1_bqfh99.png"
-        }
-    ],
-    "生肖星座": [
-        {
-            "text": "🐁",
-            "img": "images/2_bqfh52.png",
-            "title": "鼠"
-        },
-        {
-            "text": "🐂",
-            "img": "images/2_bqfh53.png",
-            "title": "牛"
-        },
-        {
-            "text": "🐅",
-            "img": "images/2_bqfh44.png",
-            "title": "虎"
-        },
-        {
-            "text": "🐇",
-            "img": "images/2_bqfh45.png",
-            "title": "兔"
-        },
-        {
-            "text": "🐉",
-            "img": "images/2_bqfh46.png",
-            "title": "龙"
-        },
-        {
-            "text": "🐍",
-            "img": "images/2_bqfh26.png",
-            "title": "蛇"
-        },
-        {
-            "text": "🐎",
-            "img": "images/2_bqfh47.png",
-            "title": "马"
-        },
-        {
-            "text": "🐐",
-            "img": "images/2_bqfh48.png",
-            "title": "羊"
-        },
-        {
-            "text": "🐒",
-            "img": "images/2_bqfh15.png",
-            "title": "猴"
-        },
-        {
-            "text": "🐓",
-            "img": "images/2_bqfh49.png",
-            "title": "鸡"
-        },
-        {
-            "text": "🐕",
-            "img": "images/2_bqfh50.png",
-            "title": "狗"
-        },
-        {
-            "text": "🐖",
-            "img": "images/2_bqfh51.png",
-            "title": "猪"
-        },
-        {
-            "text": "♈",
-            "img": "images/5_bqfh110.png",
-            "title": "白羊座"
-        },
-        {
-            "text": "♉",
-            "img": "images/5_bqfh111.png",
-            "title": "金牛座"
-        },
-        {
-            "text": "♊",
-            "img": "images/5_bqfh112.png",
-            "title": "双子座"
-        },
-        {
-            "text": "♋",
-            "img": "images/5_bqfh113.png",
-            "title": "巨蟹座"
-        },
-        {
-            "text": "♌",
-            "img": "images/5_bqfh114.png",
-            "title": "狮子座"
-        },
-        {
-            "text": "♍",
-            "img": "images/5_bqfh115.png",
-            "title": "处女座"
-        },
-        {
-            "text": "♎",
-            "img": "images/5_bqfh116.png",
-            "title": "天秤座"
-        },
-        {
-            "text": "♏",
-            "img": "images/5_bqfh117.png",
-            "title": "天蝎座"
-        },
-        {
-            "text": "♐",
-            "img": "images/5_bqfh118.png",
-            "title": "射手座"
-        },
-        {
-            "text": "♑",
-            "img": "images/5_bqfh119.png",
-            "title": "摩羯座"
-        },
-        {
-            "text": "♒",
-            "img": "images/5_bqfh120.png",
-            "title": "水瓶座"
-        },
-        {
-            "text": "♓",
-            "img": "images/5_bqfh121.png",
-            "title": "双鱼座"
-        }
-    ],
-    "运动休闲": [
-        {
-            "text": "📰",
-            "img": "images/3_bqfh131.png"
-        },
-        {
-            "text": "🎨",
-            "img": "images/3_bqfh132.png"
-        },
-        {
-            "text": "🎬",
-            "img": "images/3_bqfh133.png"
-        },
-        {
-            "text": "🎤",
-            "img": "images/3_bqfh134.png"
-        },
-        {
-            "text": "🎧",
-            "img": "images/3_bqfh135.png"
-        },
-        {
-            "text": "🎼",
-            "img": "images/3_bqfh136.png"
-        },
-        {
-            "text": "🎵",
-            "img": "images/3_bqfh137.png"
-        },
-        {
-            "text": "🎶",
-            "img": "images/3_bqfh138.png"
-        },
-        {
-            "text": "🎹",
-            "img": "images/3_bqfh139.png"
-        },
-        {
-            "text": "🎻",
-            "img": "images/3_bqfh140.png"
-        },
-        {
-            "text": "🎷",
-            "img": "images/3_bqfh141.png"
-        },
-        {
-            "text": "🎸",
-            "img": "images/3_bqfh142.png"
-        },
-        {
-            "text": "👾",
-            "img": "images/3_bqfh143.png"
-        },
-        {
-            "text": "🎮",
-            "img": "images/3_bqfh144.png"
-        },
-        {
-            "text": "🃏",
-            "img": "images/3_bqfh145.png"
-        },
-        {
-            "text": "🎴",
-            "img": "images/3_bqfh146.png"
-        },
-        {
-            "text": "🀄",
-            "img": "images/3_bqfh147.png"
-        },
-        {
-            "text": "🎲",
-            "img": "images/3_bqfh148.png"
-        },
-        {
-            "text": "🎯",
-            "img": "images/3_bqfh149.png"
-        },
-        {
-            "text": "🏈",
-            "img": "images/3_bqfh150.png"
-        },
-        {
-            "text": "🏀",
-            "img": "images/3_bqfh151.png"
-        },
-        {
-            "text": "⚽",
-            "img": "images/3_bqfh152.png"
-        },
-        {
-            "text": "⚾",
-            "img": "images/3_bqfh153.png"
-        },
-        {
-            "text": "🎾",
-            "img": "images/3_bqfh154.png"
-        },
-        {
-            "text": "🎱",
-            "img": "images/3_bqfh155.png"
-        },
-        {
-            "text": "🏉",
-            "img": "images/3_bqfh156.png"
-        },
-        {
-            "text": "🎳",
-            "img": "images/3_bqfh157.png"
-        },
-        {
-            "text": "⛳",
-            "img": "images/3_bqfh158.png"
-        },
-        {
-            "text": "🚵",
-            "img": "images/3_bqfh159.png"
-        },
-        {
-            "text": "🚴",
-            "img": "images/3_bqfh160.png"
-        },
-        {
-            "text": "🏁",
-            "img": "images/3_bqfh161.png"
-        },
-        {
-            "text": "🏇",
-            "img": "images/3_bqfh162.png"
-        },
-        {
-            "text": "🏆",
-            "img": "images/3_bqfh163.png"
-        },
-        {
-            "text": "🎿",
-            "img": "images/3_bqfh164.png"
-        },
-        {
-            "text": "🏂",
-            "img": "images/3_bqfh165.png"
-        },
-        {
-            "text": "🏊",
-            "img": "images/3_bqfh166.png"
-        },
-        {
-            "text": "🏄",
-            "img": "images/3_bqfh167.png"
-        },
-        {
-            "text": "🎣",
-            "img": "images/3_bqfh168.png"
-        }
-    ],
-    "人物相关": [
-        {
-            "text": "👂",
-            "img": "images/1_bqfh100.png"
-        },
-        {
-            "text": "👀",
-            "img": "images/1_bqfh101.png"
-        },
-        {
-            "text": "👃",
-            "img": "images/1_bqfh102.png"
-        },
-        {
-            "text": "👅",
-            "img": "images/1_bqfh103.png"
-        },
-        {
-            "text": "👄",
-            "img": "images/1_bqfh104.png"
-        },
-        {
-            "text": "👍",
-            "img": "images/1_bqfh105.png"
-        },
-        {
-            "text": "👎",
-            "img": "images/1_bqfh106.png"
-        },
-        {
-            "text": "👌",
-            "img": "images/1_bqfh107.png"
-        },
-        {
-            "text": "👊",
-            "img": "images/1_bqfh108.png"
-        },
-        {
-            "text": "✊",
-            "img": "images/1_bqfh109.png"
-        },
-        {
-            "text": "✌",
-            "img": "images/1_bqfh110.png"
-        },
-        {
-            "text": "👋",
-            "img": "images/1_bqfh111.png"
-        },
-        {
-            "text": "✋",
-            "img": "images/1_bqfh112.png"
-        },
-        {
-            "text": "👐",
-            "img": "images/1_bqfh113.png"
-        },
-        {
-            "text": "👆",
-            "img": "images/1_bqfh114.png"
-        },
-        {
-            "text": "👇",
-            "img": "images/1_bqfh115.png"
-        },
-        {
-            "text": "👉",
-            "img": "images/1_bqfh116.png"
-        },
-        {
-            "text": "👈",
-            "img": "images/1_bqfh117.png"
-        },
-        {
-            "text": "🙌",
-            "img": "images/1_bqfh118.png"
-        },
-        {
-            "text": "🙏",
-            "img": "images/1_bqfh119.png"
-        },
-        {
-            "text": "☝",
-            "img": "images/1_bqfh120.png"
-        },
-        {
-            "text": "👏",
-            "img": "images/1_bqfh121.png"
-        },
-        {
-            "text": "💪",
-            "img": "images/1_bqfh122.png"
-        },
-        {
-            "text": "🚶",
-            "img": "images/1_bqfh123.png"
-        },
-        {
-            "text": "🏃",
-            "img": "images/1_bqfh124.png"
-        },
-        {
-            "text": "💃",
-            "img": "images/1_bqfh125.png"
-        },
-        {
-            "text": "👫",
-            "img": "images/1_bqfh126.png"
-        },
-        {
-            "text": "👪",
-            "img": "images/1_bqfh127.png"
-        },
-        {
-            "text": "👬",
-            "img": "images/1_bqfh128.png"
-        },
-        {
-            "text": "👭",
-            "img": "images/1_bqfh129.png"
-        },
-        {
-            "text": "💏",
-            "img": "images/1_bqfh130.png"
-        },
-        {
-            "text": "💑",
-            "img": "images/1_bqfh131.png"
-        },
-        {
-            "text": "👯",
-            "img": "images/1_bqfh132.png"
-        },
-        {
-            "text": "🙆",
-            "img": "images/1_bqfh133.png"
-        },
-        {
-            "text": "🙅",
-            "img": "images/1_bqfh134.png"
-        },
-        {
-            "text": "💁",
-            "img": "images/1_bqfh135.png"
-        },
-        {
-            "text": "🙋",
-            "img": "images/1_bqfh136.png"
-        },
-        {
-            "text": "💇",
-            "img": "images/1_bqfh137.png"
-        },
-        {
-            "text": "💅",
-            "img": "images/1_bqfh138.png"
-        },
-        {
-            "text": "👰",
-            "img": "images/1_bqfh139.png"
-        },
-        {
-            "text": "🙎",
-            "img": "images/1_bqfh140.png"
-        },
-        {
-            "text": "🙍",
-            "img": "images/1_bqfh141.png"
-        },
-        {
-            "text": "🙇",
-            "img": "images/1_bqfh142.png"
-        },
-        {
-            "text": "🎩",
-            "img": "images/1_bqfh143.png"
-        },
-        {
-            "text": "👑",
-            "img": "images/1_bqfh144.png"
-        },
-        {
-            "text": "👒",
-            "img": "images/1_bqfh145.png"
-        },
-        {
-            "text": "👟",
-            "img": "images/1_bqfh146.png"
-        },
-        {
-            "text": "👞",
-            "img": "images/1_bqfh147.png"
-        },
-        {
-            "text": "👡",
-            "img": "images/1_bqfh148.png"
-        },
-        {
-            "text": "👠",
-            "img": "images/1_bqfh149.png"
-        },
-        {
-            "text": "👢",
-            "img": "images/1_bqfh150.png"
-        },
-        {
-            "text": "👕",
-            "img": "images/1_bqfh151.png"
-        },
-        {
-            "text": "👔",
-            "img": "images/1_bqfh152.png"
-        },
-        {
-            "text": "👚",
-            "img": "images/1_bqfh153.png"
-        },
-        {
-            "text": "👗",
-            "img": "images/1_bqfh154.png"
-        },
-        {
-            "text": "🎽",
-            "img": "images/1_bqfh155.png"
-        },
-        {
-            "text": "👖",
-            "img": "images/1_bqfh156.png"
-        },
-        {
-            "text": "👘",
-            "img": "images/1_bqfh157.png"
-        },
-        {
-            "text": "👙",
-            "img": "images/1_bqfh158.png"
-        },
-        {
-            "text": "💼",
-            "img": "images/1_bqfh159.png"
-        },
-        {
-            "text": "👜",
-            "img": "images/1_bqfh160.png"
-        },
-        {
-            "text": "👝",
-            "img": "images/1_bqfh161.png"
-        },
-        {
-            "text": "👛",
-            "img": "images/1_bqfh162.png"
-        },
-        {
-            "text": "👓",
-            "img": "images/1_bqfh163.png"
-        },
-        {
-            "text": "🎀",
-            "img": "images/1_bqfh164.png"
-        },
-        {
-            "text": "🌂",
-            "img": "images/1_bqfh165.png"
-        },
-        {
-            "text": "💄",
-            "img": "images/1_bqfh166.png"
-        },
-        {
-            "text": "💋",
-            "img": "images/1_bqfh180.png"
-        },
-        {
-            "text": "👣",
-            "img": "images/1_bqfh185.png"
-        },
-        {
-            "text": "💎",
-            "img": "images/1_bqfh181.png"
-        },
-        {
-            "text": "💍",
-            "img": "images/1_jiezhi.png"
-        }
-    ],
-    "花样庆祝": [
-        {
-            "text": "👑",
-            "img": "images/1_bqfh144.png",
-            "title": "<a href=http://www.fuhaodq.com/haokandefuhao/huangguan.html target=_blank class=infotextkey>皇冠</a>"
-        },
-        {
-            "text": "🔥",
-            "img": "images/1_bqfh90.png"
-        },
-        {
-            "text": "✨",
-            "img": "images/1_bqfh91.png"
-        },
-        {
-            "text": "🌟",
-            "img": "images/1_bqfh92.png"
-        },
-        {
-            "text": "💫",
-            "img": "images/1_bqfh93.png"
-        },
-        {
-            "text": "💥",
-            "img": "images/1_bqfh94.png"
-        },
-        {
-            "text": "🎀",
-            "img": "images/1_bqfh164.png"
-        },
-        {
-            "text": "🌂",
-            "img": "images/1_bqfh165.png"
-        },
-        {
-            "text": "💄",
-            "img": "images/1_bqfh166.png"
-        },
-        {
-            "text": "💛",
-            "img": "images/1_bqfh167.png"
-        },
-        {
-            "text": "💙",
-            "img": "images/1_bqfh168.png"
-        },
-        {
-            "text": "💜",
-            "img": "images/1_bqfh169.png"
-        },
-        {
-            "text": "💚",
-            "img": "images/1_bqfh170.png"
-        },
-        {
-            "text": "❤",
-            "img": "images/1_bqfh171.png"
-        },
-        {
-            "text": "💔",
-            "img": "images/1_bqfh172.png"
-        },
-        {
-            "text": "💗",
-            "img": "images/1_bqfh173.png"
-        },
-        {
-            "text": "💓",
-            "img": "images/1_bqfh174.png"
-        },
-        {
-            "text": "💕",
-            "img": "images/1_bqfh175.png"
-        },
-        {
-            "text": "💖",
-            "img": "images/1_bqfh176.png"
-        },
-        {
-            "text": "💞",
-            "img": "images/1_bqfh177.png"
-        },
-        {
-            "text": "💘",
-            "img": "images/1_bqfh178.png"
-        },
-        {
-            "text": "💌",
-            "img": "images/1_bqfh179.png"
-        },
-        {
-            "text": "💋",
-            "img": "images/1_bqfh180.png"
-        },
-        {
-            "text": "🎍",
-            "img": "images/3_bqfh0.png"
-        },
-        {
-            "text": "💝",
-            "img": "images/3_bqfh1.png"
-        },
-        {
-            "text": "🎎",
-            "img": "images/3_bqfh2.png"
-        },
-        {
-            "text": "🎒",
-            "img": "images/3_bqfh3.png"
-        },
-        {
-            "text": "🎓",
-            "img": "images/3_bqfh4.png"
-        },
-        {
-            "text": "🎏",
-            "img": "images/3_bqfh5.png"
-        },
-        {
-            "text": "🎆",
-            "img": "images/3_bqfh6.png"
-        },
-        {
-            "text": "🎇",
-            "img": "images/3_bqfh7.png"
-        },
-        {
-            "text": "🎐",
-            "img": "images/3_bqfh8.png"
-        },
-        {
-            "text": "🎑",
-            "img": "images/3_bqfh9.png"
-        },
-        {
-            "text": "🎃",
-            "img": "images/3_bqfh10.png"
-        },
-        {
-            "text": "👻",
-            "img": "images/3_bqfh11.png"
-        },
-        {
-            "text": "🎅",
-            "img": "images/3_bqfh12.png"
-        },
-        {
-            "text": "🎄",
-            "img": "images/3_bqfh13.png"
-        },
-        {
-            "text": "🎁",
-            "img": "images/3_bqfh14.png"
-        },
-        {
-            "text": "🎋",
-            "img": "images/3_bqfh15.png"
-        },
-        {
-            "text": "🎉",
-            "img": "images/3_bqfh16.png"
-        },
-        {
-            "text": "🎊",
-            "img": "images/3_bqfh17.png"
-        },
-        {
-            "text": "🎈",
-            "img": "images/3_bqfh18.png"
-        },
-        {
-            "text": "🎌",
-            "img": "images/3_bqfh19.png"
-        }
-    ],
-    "文字系列": [
-        {
-            "text": "🈯",
-            "img": "images/5_bqfh51.png"
-        },
-        {
-            "text": "🈳",
-            "img": "images/5_bqfh52.png"
-        },
-        {
-            "text": "🈵",
-            "img": "images/5_bqfh53.png"
-        },
-        {
-            "text": "🈴",
-            "img": "images/5_bqfh54.png"
-        },
-        {
-            "text": "🈲",
-            "img": "images/5_bqfh55.png"
-        },
-        {
-            "text": "🉐",
-            "img": "images/5_bqfh56.png"
-        },
-        {
-            "text": "🈹",
-            "img": "images/5_bqfh57.png"
-        },
-        {
-            "text": "🈺",
-            "img": "images/5_bqfh58.png"
-        },
-        {
-            "text": "🈶",
-            "img": "images/5_bqfh59.png"
-        },
-        {
-            "text": "🈚",
-            "img": "images/5_bqfh60.png"
-        },
-        {
-            "text": "🚾",
-            "img": "images/5_bqfh65.png"
-        },
-        {
-            "text": "🅿",
-            "img": "images/5_bqfh68.png"
-        },
-        {
-            "text": "🈷",
-            "img": "images/5_bqfh71.png"
-        },
-        {
-            "text": "🈸",
-            "img": "images/5_bqfh72.png"
-        },
-        {
-            "text": "🈂",
-            "img": "images/5_bqfh73.png"
-        },
-        {
-            "text": "Ⓜ",
-            "img": "images/5_bqfh74.png"
-        },
-        {
-            "text": "🉑",
-            "img": "images/5_bqfh79.png"
-        },
-        {
-            "text": "㊙",
-            "img": "images/5_bqfh80.png"
-        },
-        {
-            "text": "㊗",
-            "img": "images/5_bqfh81.png"
-        },
-        {
-            "text": "🆑",
-            "img": "images/5_bqfh82.png"
-        },
-        {
-            "text": "🆘",
-            "img": "images/5_bqfh83.png"
-        },
-        {
-            "text": "🆔",
-            "img": "images/5_bqfh84.png"
-        },
-        {
-            "text": "🔞",
-            "img": "images/5_bqfh86.png"
-        },
-        {
-            "text": "🚫",
-            "img": "images/5_bqfh85.png"
-        },
-        {
-            "text": "🆚",
-            "img": "images/5_bqfh100.png"
-        },
-        {
-            "text": "🅰",
-            "img": "images/5_bqfh103.png"
-        },
-        {
-            "text": "🅱",
-            "img": "images/5_bqfh104.png"
-        },
-        {
-            "text": "🆎",
-            "img": "images/5_bqfh105.png"
-        },
-        {
-            "text": "🅾",
-            "img": "images/5_bqfh106.png"
-        },
-        {
-            "text": "❇",
-            "img": "images/5_bqfh95.png"
-        }
-    ],
-    "物体物件": [
-        {
-            "text": "🔮",
-            "img": "images/3_bqfh20.png"
-        },
-        {
-            "text": "🎥",
-            "img": "images/3_bqfh21.png"
-        },
-        {
-            "text": "📷",
-            "img": "images/3_bqfh22.png"
-        },
-        {
-            "text": "📹",
-            "img": "images/3_bqfh23.png"
-        },
-        {
-            "text": "📼",
-            "img": "images/3_bqfh24.png"
-        },
-        {
-            "text": "💿",
-            "img": "images/3_bqfh25.png"
-        },
-        {
-            "text": "📀",
-            "img": "images/3_bqfh26.png"
-        },
-        {
-            "text": "💽",
-            "img": "images/3_bqfh27.png"
-        },
-        {
-            "text": "💾",
-            "img": "images/3_bqfh28.png"
-        },
-        {
-            "text": "💻",
-            "img": "images/3_bqfh29.png"
-        },
-        {
-            "text": "📱",
-            "img": "images/3_bqfh30.png"
-        },
-        {
-            "text": "☎",
-            "img": "images/3_bqfh31.png"
-        },
-        {
-            "text": "📞",
-            "img": "images/3_bqfh32.png"
-        },
-        {
-            "text": "📟",
-            "img": "images/3_bqfh33.png"
-        },
-        {
-            "text": "📠",
-            "img": "images/3_bqfh34.png"
-        },
-        {
-            "text": "📡",
-            "img": "images/3_bqfh35.png"
-        },
-        {
-            "text": "📺",
-            "img": "images/3_bqfh36.png"
-        },
-        {
-            "text": "📻",
-            "img": "images/3_bqfh37.png"
-        },
-        {
-            "text": "🔊",
-            "img": "images/3_bqfh38.png"
-        },
-        {
-            "text": "🔉",
-            "img": "images/3_bqfh39.png"
-        },
-        {
-            "text": "🔈",
-            "img": "images/3_bqfh40.png"
-        },
-        {
-            "text": "🔇",
-            "img": "images/3_bqfh41.png"
-        },
-        {
-            "text": "🔔",
-            "img": "images/3_bqfh42.png"
-        },
-        {
-            "text": "🔕",
-            "img": "images/3_bqfh43.png"
-        },
-        {
-            "text": "📢",
-            "img": "images/3_bqfh44.png"
-        },
-        {
-            "text": "📣",
-            "img": "images/3_bqfh45.png"
-        },
-        {
-            "text": "⏳",
-            "img": "images/3_bqfh46.png"
-        },
-        {
-            "text": "⌛",
-            "img": "images/3_bqfh47.png"
-        },
-        {
-            "text": "⏰",
-            "img": "images/3_bqfh48.png"
-        },
-        {
-            "text": "⌚",
-            "img": "images/3_bqfh49.png"
-        },
-        {
-            "text": "🔓",
-            "img": "images/3_bqfh50.png"
-        },
-        {
-            "text": "🔒",
-            "img": "images/3_bqfh51.png"
-        },
-        {
-            "text": "🔐",
-            "img": "images/3_bqfh52.png"
-        },
-        {
-            "text": "🔑",
-            "img": "images/3_bqfh53.png"
-        },
-        {
-            "text": "🔎",
-            "img": "images/3_bqfh54.png"
-        },
-        {
-            "text": "💡",
-            "img": "images/3_bqfh55.png"
-        },
-        {
-            "text": "🔦",
-            "img": "images/3_bqfh56.png"
-        },
-        {
-            "text": "🔆",
-            "img": "images/3_bqfh57.png"
-        },
-        {
-            "text": "🔅",
-            "img": "images/3_bqfh58.png"
-        },
-        {
-            "text": "🔌",
-            "img": "images/3_bqfh59.png"
-        },
-        {
-            "text": "🔋",
-            "img": "images/3_bqfh60.png"
-        },
-        {
-            "text": "🔍",
-            "img": "images/3_bqfh61.png"
-        },
-        {
-            "text": "🛁",
-            "img": "images/3_bqfh62.png"
-        },
-        {
-            "text": "🛀",
-            "img": "images/3_bqfh63.png"
-        },
-        {
-            "text": "🚿",
-            "img": "images/3_bqfh64.png"
-        },
-        {
-            "text": "🚽",
-            "img": "images/3_bqfh65.png"
-        },
-        {
-            "text": "🔧",
-            "img": "images/3_bqfh66.png"
-        },
-        {
-            "text": "🔩",
-            "img": "images/3_bqfh67.png"
-        },
-        {
-            "text": "🔨",
-            "img": "images/3_bqfh68.png"
-        },
-        {
-            "text": "🚪",
-            "img": "images/3_bqfh69.png"
-        },
-        {
-            "text": "🚬",
-            "img": "images/3_bqfh70.png"
-        },
-        {
-            "text": "💣",
-            "img": "images/3_bqfh71.png"
-        },
-        {
-            "text": "🔫",
-            "img": "images/3_bqfh72.png"
-        },
-        {
-            "text": "🔪",
-            "img": "images/3_bqfh73.png"
-        },
-        {
-            "text": "💊",
-            "img": "images/3_bqfh74.png"
-        },
-        {
-            "text": "💉",
-            "img": "images/3_bqfh75.png"
-        },
-        {
-            "text": "💰",
-            "img": "images/3_bqfh76.png"
-        },
-        {
-            "text": "💴",
-            "img": "images/3_bqfh77.png"
-        },
-        {
-            "text": "💵",
-            "img": "images/3_bqfh78.png"
-        },
-        {
-            "text": "💷",
-            "img": "images/3_bqfh79.png"
-        },
-        {
-            "text": "💶",
-            "img": "images/3_bqfh80.png"
-        },
-        {
-            "text": "💳",
-            "img": "images/3_bqfh81.png"
-        },
-        {
-            "text": "💸",
-            "img": "images/3_bqfh82.png"
-        },
-        {
-            "text": "📲",
-            "img": "images/3_bqfh83.png"
-        },
-        {
-            "text": "📧",
-            "img": "images/3_bqfh84.png"
-        },
-        {
-            "text": "📥",
-            "img": "images/3_bqfh85.png"
-        },
-        {
-            "text": "📤",
-            "img": "images/3_bqfh86.png"
-        },
-        {
-            "text": "✉",
-            "img": "images/3_bqfh87.png"
-        },
-        {
-            "text": "📩",
-            "img": "images/3_bqfh88.png"
-        },
-        {
-            "text": "📨",
-            "img": "images/3_bqfh89.png"
-        },
-        {
-            "text": "📯",
-            "img": "images/3_bqfh90.png"
-        },
-        {
-            "text": "📫",
-            "img": "images/3_bqfh91.png"
-        },
-        {
-            "text": "📪",
-            "img": "images/3_bqfh92.png"
-        },
-        {
-            "text": "📬",
-            "img": "images/3_bqfh93.png"
-        },
-        {
-            "text": "📭",
-            "img": "images/3_bqfh94.png"
-        },
-        {
-            "text": "📮",
-            "img": "images/3_bqfh95.png"
-        },
-        {
-            "text": "📦",
-            "img": "images/3_bqfh96.png"
-        },
-        {
-            "text": "📝",
-            "img": "images/3_bqfh97.png"
-        },
-        {
-            "text": "📄",
-            "img": "images/3_bqfh98.png"
-        },
-        {
-            "text": "📃",
-            "img": "images/3_bqfh99.png"
-        },
-        {
-            "text": "📑",
-            "img": "images/3_bqfh100.png"
-        },
-        {
-            "text": "📊",
-            "img": "images/3_bqfh101.png"
-        },
-        {
-            "text": "📈",
-            "img": "images/3_bqfh102.png"
-        },
-        {
-            "text": "📉",
-            "img": "images/3_bqfh103.png"
-        },
-        {
-            "text": "📜",
-            "img": "images/3_bqfh104.png"
-        },
-        {
-            "text": "📋",
-            "img": "images/3_bqfh105.png"
-        },
-        {
-            "text": "📅",
-            "img": "images/3_bqfh106.png"
-        },
-        {
-            "text": "📆",
-            "img": "images/3_bqfh107.png"
-        },
-        {
-            "text": "📇",
-            "img": "images/3_bqfh108.png"
-        },
-        {
-            "text": "📁",
-            "img": "images/3_bqfh109.png"
-        },
-        {
-            "text": "📂",
-            "img": "images/3_bqfh110.png"
-        },
-        {
-            "text": "✂",
-            "img": "images/3_bqfh111.png"
-        },
-        {
-            "text": "📌",
-            "img": "images/3_bqfh112.png"
-        },
-        {
-            "text": "📎",
-            "img": "images/3_bqfh113.png"
-        },
-        {
-            "text": "✒",
-            "img": "images/3_bqfh114.png"
-        },
-        {
-            "text": "✏",
-            "img": "images/3_bqfh115.png"
-        },
-        {
-            "text": "📏",
-            "img": "images/3_bqfh116.png"
-        },
-        {
-            "text": "📐",
-            "img": "images/3_bqfh117.png"
-        },
-        {
-            "text": "📕",
-            "img": "images/3_bqfh118.png"
-        },
-        {
-            "text": "📗",
-            "img": "images/3_bqfh119.png"
-        },
-        {
-            "text": "📘",
-            "img": "images/3_bqfh120.png"
-        },
-        {
-            "text": "📙",
-            "img": "images/3_bqfh121.png"
-        },
-        {
-            "text": "📓",
-            "img": "images/3_bqfh122.png"
-        },
-        {
-            "text": "📔",
-            "img": "images/3_bqfh123.png"
-        },
-        {
-            "text": "📒",
-            "img": "images/3_bqfh124.png"
-        },
-        {
-            "text": "📚",
-            "img": "images/3_bqfh125.png"
-        },
-        {
-            "text": "📖",
-            "img": "images/3_bqfh126.png"
-        },
-        {
-            "text": "🔖",
-            "img": "images/3_bqfh127.png"
-        },
-        {
-            "text": "📛",
-            "img": "images/3_bqfh128.png"
-        },
-        {
-            "text": "🔬",
-            "img": "images/3_bqfh129.png"
-        },
-        {
-            "text": "🔭",
-            "img": "images/3_bqfh130.png"
-        }
-    ],
-    "各种标识": [
-        {
-            "text": "🚻",
-            "img": "images/5_bqfh61.png"
-        },
-        {
-            "text": "🚹",
-            "img": "images/5_bqfh62.png"
-        },
-        {
-            "text": "🚺",
-            "img": "images/5_bqfh63.png"
-        },
-        {
-            "text": "🚼",
-            "img": "images/5_bqfh64.png"
-        },
-        {
-            "text": "🚰",
-            "img": "images/5_bqfh66.png"
-        },
-        {
-            "text": "🚮",
-            "img": "images/5_bqfh67.png"
-        },
-        {
-            "text": "♿",
-            "img": "images/5_bqfh69.png"
-        },
-        {
-            "text": "🚭",
-            "img": "images/5_bqfh70.png"
-        },
-        {
-            "text": "🛂",
-            "img": "images/5_bqfh75.png"
-        },
-        {
-            "text": "🛄",
-            "img": "images/5_bqfh76.png"
-        },
-        {
-            "text": "🛅",
-            "img": "images/5_bqfh77.png"
-        },
-        {
-            "text": "🛃",
-            "img": "images/5_bqfh78.png"
-        },
-        {
-            "text": "🚫",
-            "img": "images/5_bqfh85.png"
-        },
-        {
-            "text": "🔞",
-            "img": "images/5_bqfh86.png"
-        },
-        {
-            "text": "🚯",
-            "img": "images/5_bqfh88.png"
-        },
-        {
-            "text": "🚱",
-            "img": "images/5_bqfh89.png"
-        },
-        {
-            "text": "🚳",
-            "img": "images/5_bqfh90.png"
-        },
-        {
-            "text": "🚷",
-            "img": "images/5_bqfh91.png"
-        },
-        {
-            "text": "🚸",
-            "img": "images/5_bqfh92.png"
-        },
-        {
-            "text": "⛔",
-            "img": "images/5_bqfh93.png"
-        },
-        {
-            "text": "✳",
-            "img": "images/5_bqfh94.png"
-        },
-        {
-            "text": "❇",
-            "img": "images/5_bqfh95.png"
-        },
-        {
-            "text": "❎",
-            "img": "images/5_bqfh96.png"
-        },
-        {
-            "text": "✅",
-            "img": "images/5_bqfh97.png"
-        },
-        {
-            "text": "✴",
-            "img": "images/5_bqfh98.png"
-        },
-        {
-            "text": "💟",
-            "img": "images/5_bqfh99.png"
-        },
-        {
-            "text": "📳",
-            "img": "images/5_bqfh101.png"
-        },
-        {
-            "text": "📴",
-            "img": "images/5_bqfh102.png"
-        },
-        {
-            "text": "💠",
-            "img": "images/5_bqfh107.png"
-        },
-        {
-            "text": "➿",
-            "img": "images/5_bqfh108.png"
-        },
-        {
-            "text": "♻",
-            "img": "images/5_bqfh109.png"
-        },
-        {
-            "text": "⛎",
-            "img": "images/5_bqfh122.png"
-        },
-        {
-            "text": "0⃣",
-            "img": "images/5_bqfh0.png"
-        },
-        {
-            "text": "1⃣",
-            "img": "images/5_bqfh1.png"
-        },
-        {
-            "text": "2⃣",
-            "img": "images/5_bqfh2.png"
-        },
-        {
-            "text": "3⃣",
-            "img": "images/5_bqfh3.png"
-        },
-        {
-            "text": "4⃣",
-            "img": "images/5_bqfh4.png"
-        },
-        {
-            "text": "5⃣",
-            "img": "images/5_bqfh5.png"
-        },
-        {
-            "text": "6⃣",
-            "img": "images/5_bqfh6.png"
-        },
-        {
-            "text": "7⃣",
-            "img": "images/5_bqfh7.png"
-        },
-        {
-            "text": "8⃣",
-            "img": "images/5_bqfh8.png"
-        },
-        {
-            "text": "9⃣",
-            "img": "images/5_bqfh9.png"
-        },
-        {
-            "text": "🔟",
-            "img": "images/5_bqfh10.png"
-        },
-        {
-            "text": "⬆",
-            "img": "images/5_bqfh11.png"
-        },
-        {
-            "text": "⬇",
-            "img": "images/5_bqfh12.png"
-        },
-        {
-            "text": "⬅",
-            "img": "images/5_bqfh13.png"
-        },
-        {
-            "text": "➡",
-            "img": "images/5_bqfh14.png"
-        },
-        {
-            "text": "🔣",
-            "img": "images/5_bqfh15.png"
-        },
-        {
-            "text": "🔢",
-            "img": "images/5_bqfh16.png"
-        },
-        {
-            "text": "🔠",
-            "img": "images/5_bqfh17.png"
-        },
-        {
-            "text": "🔡",
-            "img": "images/5_bqfh18.png"
-        },
-        {
-            "text": "🔤",
-            "img": "images/5_bqfh19.png"
-        },
-        {
-            "text": "↗",
-            "img": "images/5_bqfh20.png"
-        },
-        {
-            "text": "↖",
-            "img": "images/5_bqfh21.png"
-        },
-        {
-            "text": "↘",
-            "img": "images/5_bqfh22.png"
-        },
-        {
-            "text": "↙",
-            "img": "images/5_bqfh23.png"
-        },
-        {
-            "text": "↔",
-            "img": "images/5_bqfh24.png"
-        },
-        {
-            "text": "↕",
-            "img": "images/5_bqfh25.png"
-        },
-        {
-            "text": "🔄",
-            "img": "images/5_bqfh26.png"
-        },
-        {
-            "text": "◀",
-            "img": "images/5_bqfh27.png"
-        },
-        {
-            "text": "▶",
-            "img": "images/5_bqfh28.png"
-        },
-        {
-            "text": "🔼",
-            "img": "images/5_bqfh29.png"
-        },
-        {
-            "text": "🔽",
-            "img": "images/5_bqfh30.png"
-        },
-        {
-            "text": "↩",
-            "img": "images/5_bqfh31.png"
-        },
-        {
-            "text": "↪",
-            "img": "images/5_bqfh32.png"
-        },
-        {
-            "text": "ℹ",
-            "img": "images/5_bqfh33.png"
-        },
-        {
-            "text": "⏪",
-            "img": "images/5_bqfh34.png"
-        },
-        {
-            "text": "⏫",
-            "img": "images/5_bqfh35.png"
-        },
-        {
-            "text": "⏬",
-            "img": "images/5_bqfh36.png"
-        },
-        {
-            "text": "⤵",
-            "img": "images/5_bqfh37.png"
-        },
-        {
-            "text": "⤴",
-            "img": "images/5_bqfh38.png"
-        },
-        {
-            "text": "🆗",
-            "img": "images/5_bqfh39.png"
-        },
-        {
-            "text": "🔀",
-            "img": "images/5_bqfh40.png"
-        },
-        {
-            "text": "🔁",
-            "img": "images/5_bqfh41.png"
-        },
-        {
-            "text": "🔂",
-            "img": "images/5_bqfh42.png"
-        },
-        {
-            "text": "🆕",
-            "img": "images/5_bqfh43.png"
-        },
-        {
-            "text": "🆙",
-            "img": "images/5_bqfh44.png"
-        },
-        {
-            "text": "🆒",
-            "img": "images/5_bqfh45.png"
-        },
-        {
-            "text": "🆓",
-            "img": "images/5_bqfh46.png"
-        },
-        {
-            "text": "🆖",
-            "img": "images/5_bqfh47.png"
-        },
-        {
-            "text": "📶",
-            "img": "images/5_bqfh48.png"
-        },
-        {
-            "text": "🎦",
-            "img": "images/5_bqfh49.png"
-        },
-        {
-            "text": "🈁",
-            "img": "images/5_bqfh50.png"
-        },
-        {
-            "text": "⛎",
-            "img": "images/5_bqfh122.png"
-        },
-        {
-            "text": "🔯",
-            "img": "images/5_bqfh123.png"
-        },
-        {
-            "text": "🏧",
-            "img": "images/5_bqfh124.png"
-        },
-        {
-            "text": "💹",
-            "img": "images/5_bqfh125.png"
-        },
-        {
-            "text": "💲",
-            "img": "images/5_bqfh126.png"
-        },
-        {
-            "text": "💱",
-            "img": "images/5_bqfh127.png"
-        },
-        {
-            "text": "™",
-            "img": "images/5_bqfh128.png"
-        },
-        {
-            "text": "❌",
-            "img": "images/5_bqfh129.png"
-        },
-        {
-            "text": "‼",
-            "img": "images/5_bqfh130.png"
-        },
-        {
-            "text": "⁉",
-            "img": "images/5_bqfh131.png"
-        },
-        {
-            "text": "❗",
-            "img": "images/5_bqfh132.png"
-        },
-        {
-            "text": "❓",
-            "img": "images/5_bqfh133.png"
-        },
-        {
-            "text": "❕",
-            "img": "images/5_bqfh134.png"
-        },
-        {
-            "text": "❔",
-            "img": "images/5_bqfh135.png"
-        },
-        {
-            "text": "⭕",
-            "img": "images/5_bqfh136.png"
-        },
-        {
-            "text": "🔝",
-            "img": "images/5_bqfh137.png"
-        },
-        {
-            "text": "🔚",
-            "img": "images/5_bqfh138.png"
-        },
-        {
-            "text": "🔙",
-            "img": "images/5_bqfh139.png"
-        },
-        {
-            "text": "🔛",
-            "img": "images/5_bqfh140.png"
-        },
-        {
-            "text": "🔜",
-            "img": "images/5_bqfh141.png"
-        },
-        {
-            "text": "🔃",
-            "img": "images/5_bqfh142.png"
-        },
-        {
-            "text": "🕛",
-            "img": "images/5_bqfh143.png"
-        },
-        {
-            "text": "🕧",
-            "img": "images/5_bqfh144.png"
-        },
-        {
-            "text": "🕐",
-            "img": "images/5_bqfh145.png"
-        },
-        {
-            "text": "🕜",
-            "img": "images/5_bqfh146.png"
-        },
-        {
-            "text": "🕑",
-            "img": "images/5_bqfh147.png"
-        },
-        {
-            "text": "🕝",
-            "img": "images/5_bqfh148.png"
-        },
-        {
-            "text": "🕒",
-            "img": "images/5_bqfh149.png"
-        },
-        {
-            "text": "🕞",
-            "img": "images/5_bqfh150.png"
-        },
-        {
-            "text": "🕓",
-            "img": "images/5_bqfh151.png"
-        },
-        {
-            "text": "🕟",
-            "img": "images/5_bqfh152.png"
-        },
-        {
-            "text": "🕔",
-            "img": "images/5_bqfh153.png"
-        },
-        {
-            "text": "🕠",
-            "img": "images/5_bqfh154.png"
-        },
-        {
-            "text": "🕕",
-            "img": "images/5_bqfh155.png"
-        },
-        {
-            "text": "🕖",
-            "img": "images/5_bqfh156.png"
-        },
-        {
-            "text": "🕗",
-            "img": "images/5_bqfh157.png"
-        },
-        {
-            "text": "🕘",
-            "img": "images/5_bqfh158.png"
-        },
-        {
-            "text": "🕙",
-            "img": "images/5_bqfh159.png"
-        },
-        {
-            "text": "🕚",
-            "img": "images/5_bqfh160.png"
-        },
-        {
-            "text": "🕡",
-            "img": "images/5_bqfh161.png"
-        },
-        {
-            "text": "🕢",
-            "img": "images/5_bqfh162.png"
-        },
-        {
-            "text": "🕤",
-            "img": "images/5_bqfh163.png"
-        },
-        {
-            "text": "🕥",
-            "img": "images/5_bqfh164.png"
-        },
-        {
-            "text": "🕦",
-            "img": "images/5_bqfh165.png"
-        },
-        {
-            "text": "➕",
-            "img": "images/5_bqfh166.png"
-        },
-        {
-            "text": "➖",
-            "img": "images/5_bqfh167.png"
-        },
-        {
-            "text": "➗",
-            "img": "images/5_bqfh168.png"
-        },
-        {
-            "text": "♠",
-            "img": "images/5_bqfh169.png"
-        },
-        {
-            "text": "♥",
-            "img": "images/5_bqfh170.png"
-        },
-        {
-            "text": "♣",
-            "img": "images/5_bqfh171.png"
-        },
-        {
-            "text": "♦",
-            "img": "images/5_bqfh172.png"
-        },
-        {
-            "text": "💮",
-            "img": "images/5_bqfh173.png"
-        },
-        {
-            "text": "💯",
-            "img": "images/5_bqfh174.png"
-        },
-        {
-            "text": "✔",
-            "img": "images/5_bqfh175.png"
-        },
-        {
-            "text": "☑",
-            "img": "images/5_bqfh176.png"
-        },
-        {
-            "text": "🔘",
-            "img": "images/5_bqfh177.png"
-        },
-        {
-            "text": "🔗",
-            "img": "images/5_bqfh178.png"
-        },
-        {
-            "text": "➰",
-            "img": "images/5_bqfh179.png"
-        },
-        {
-            "text": "〰",
-            "img": "images/5_bqfh180.png"
-        },
-        {
-            "text": "〽",
-            "img": "images/5_bqfh181.png"
-        },
-        {
-            "text": "🔱",
-            "img": "images/5_bqfh182.png"
-        },
-        {
-            "text": "◼",
-            "img": "images/5_bqfh183.png"
-        },
-        {
-            "text": "◻",
-            "img": "images/5_bqfh184.png"
-        },
-        {
-            "text": "◾",
-            "img": "images/5_bqfh185.png"
-        },
-        {
-            "text": "◽",
-            "img": "images/5_bqfh186.png"
-        },
-        {
-            "text": "▪",
-            "img": "images/5_bqfh187.png"
-        },
-        {
-            "text": "▫",
-            "img": "images/5_bqfh188.png"
-        },
-        {
-            "text": "🔺",
-            "img": "images/5_bqfh189.png"
-        },
-        {
-            "text": "🔲",
-            "img": "images/5_bqfh190.png"
-        },
-        {
-            "text": "🔳",
-            "img": "images/5_bqfh191.png"
-        },
-        {
-            "text": "⚫",
-            "img": "images/5_bqfh192.png"
-        },
-        {
-            "text": "⚪",
-            "img": "images/5_bqfh193.png"
-        },
-        {
-            "text": "🔴",
-            "img": "images/5_bqfh194.png"
-        },
-        {
-            "text": "🔵",
-            "img": "images/5_bqfh195.png"
-        },
-        {
-            "text": "🔻",
-            "img": "images/5_bqfh196.png"
-        },
-        {
-            "text": "🔶",
-            "img": "images/5_bqfh197.png"
-        },
-        {
-            "text": "🔷",
-            "img": "images/5_bqfh198.png"
-        },
-        {
-            "text": "🔸",
-            "img": "images/5_bqfh199.png"
-        },
-        {
-            "text": "🔹",
-            "img": "images/5_bqfh200.png"
-        },
-        {
-            "text": "✖",
-            "img": "images/5_bqfh201.png"
-        }
-    ],
-    "房车交通": [
-        {
-            "text": "🏠",
-            "img": "images/4_bqfh0.png"
-        },
-        {
-            "text": "🏡",
-            "img": "images/4_bqfh1.png"
-        },
-        {
-            "text": "🏫",
-            "img": "images/4_bqfh2.png"
-        },
-        {
-            "text": "🏢",
-            "img": "images/4_bqfh3.png"
-        },
-        {
-            "text": "🏣",
-            "img": "images/4_bqfh4.png"
-        },
-        {
-            "text": "🏥",
-            "img": "images/4_bqfh5.png"
-        },
-        {
-            "text": "🏦",
-            "img": "images/4_bqfh6.png"
-        },
-        {
-            "text": "🏪",
-            "img": "images/4_bqfh7.png"
-        },
-        {
-            "text": "🏩",
-            "img": "images/4_bqfh8.png"
-        },
-        {
-            "text": "🏨",
-            "img": "images/4_bqfh9.png"
-        },
-        {
-            "text": "💒",
-            "img": "images/4_bqfh10.png"
-        },
-        {
-            "text": "⛪",
-            "img": "images/4_bqfh11.png"
-        },
-        {
-            "text": "🏬",
-            "img": "images/4_bqfh12.png"
-        },
-        {
-            "text": "🏤",
-            "img": "images/4_bqfh13.png"
-        },
-        {
-            "text": "🌇",
-            "img": "images/4_bqfh14.png"
-        },
-        {
-            "text": "🌆",
-            "img": "images/4_bqfh15.png"
-        },
-        {
-            "text": "🏯",
-            "img": "images/4_bqfh16.png"
-        },
-        {
-            "text": "🏰",
-            "img": "images/4_bqfh17.png"
-        },
-        {
-            "text": "⛺",
-            "img": "images/4_bqfh18.png"
-        },
-        {
-            "text": "🏭",
-            "img": "images/4_bqfh19.png"
-        },
-        {
-            "text": "🗼",
-            "img": "images/4_bqfh20.png"
-        },
-        {
-            "text": "🗾",
-            "img": "images/4_bqfh21.png"
-        },
-        {
-            "text": "🗻",
-            "img": "images/4_bqfh22.png"
-        },
-        {
-            "text": "🌄",
-            "img": "images/4_bqfh23.png"
-        },
-        {
-            "text": "🚢",
-            "img": "images/4_bqfh24.png"
-        },
-        {
-            "text": "⛵",
-            "img": "images/4_bqfh25.png"
-        },
-        {
-            "text": "🚤",
-            "img": "images/4_bqfh26.png"
-        },
-        {
-            "text": "🚣",
-            "img": "images/4_bqfh27.png"
-        },
-        {
-            "text": "⚓",
-            "img": "images/4_bqfh28.png"
-        },
-        {
-            "text": "🚀",
-            "img": "images/4_bqfh29.png"
-        },
-        {
-            "text": "✈",
-            "img": "images/4_bqfh30.png"
-        },
-        {
-            "text": "💺",
-            "img": "images/4_bqfh31.png"
-        },
-        {
-            "text": "🚁",
-            "img": "images/4_bqfh32.png"
-        },
-        {
-            "text": "🚂",
-            "img": "images/4_bqfh33.png"
-        },
-        {
-            "text": "🚊",
-            "img": "images/4_bqfh34.png"
-        },
-        {
-            "text": "🚉",
-            "img": "images/4_bqfh35.png"
-        },
-        {
-            "text": "🚞",
-            "img": "images/4_bqfh36.png"
-        },
-        {
-            "text": "🚆",
-            "img": "images/4_bqfh37.png"
-        },
-        {
-            "text": "🚄",
-            "img": "images/4_bqfh38.png"
-        },
-        {
-            "text": "🚅",
-            "img": "images/4_bqfh39.png"
-        },
-        {
-            "text": "🚈",
-            "img": "images/4_bqfh40.png"
-        },
-        {
-            "text": "🚇",
-            "img": "images/4_bqfh41.png"
-        },
-        {
-            "text": "🚝",
-            "img": "images/4_bqfh42.png"
-        },
-        {
-            "text": "🚋",
-            "img": "images/4_bqfh43.png"
-        },
-        {
-            "text": "🚃",
-            "img": "images/4_bqfh44.png"
-        },
-        {
-            "text": "🚎",
-            "img": "images/4_bqfh45.png"
-        },
-        {
-            "text": "🚌",
-            "img": "images/4_bqfh46.png"
-        },
-        {
-            "text": "🚍",
-            "img": "images/4_bqfh47.png"
-        },
-        {
-            "text": "🚙",
-            "img": "images/4_bqfh48.png"
-        },
-        {
-            "text": "🚘",
-            "img": "images/4_bqfh49.png"
-        },
-        {
-            "text": "🚗",
-            "img": "images/4_bqfh50.png"
-        },
-        {
-            "text": "🚕",
-            "img": "images/4_bqfh51.png"
-        },
-        {
-            "text": "🚖",
-            "img": "images/4_bqfh52.png"
-        },
-        {
-            "text": "🚛",
-            "img": "images/4_bqfh53.png"
-        },
-        {
-            "text": "🚚",
-            "img": "images/4_bqfh54.png"
-        },
-        {
-            "text": "🚨",
-            "img": "images/4_bqfh55.png"
-        },
-        {
-            "text": "🚓",
-            "img": "images/4_bqfh56.png"
-        },
-        {
-            "text": "🚔",
-            "img": "images/4_bqfh57.png"
-        },
-        {
-            "text": "🚒",
-            "img": "images/4_bqfh58.png"
-        },
-        {
-            "text": "🚑",
-            "img": "images/4_bqfh59.png"
-        },
-        {
-            "text": "🚐",
-            "img": "images/4_bqfh60.png"
-        },
-        {
-            "text": "🚲",
-            "img": "images/4_bqfh61.png"
-        },
-        {
-            "text": "🚡",
-            "img": "images/4_bqfh62.png"
-        },
-        {
-            "text": "🚟",
-            "img": "images/4_bqfh63.png"
-        },
-        {
-            "text": "🚠",
-            "img": "images/4_bqfh64.png"
-        },
-        {
-            "text": "🚜",
-            "img": "images/4_bqfh65.png"
-        },
-        {
-            "text": "💈",
-            "img": "images/4_bqfh66.png"
-        },
-        {
-            "text": "🚏",
-            "img": "images/4_bqfh67.png"
-        },
-        {
-            "text": "🎫",
-            "img": "images/4_bqfh68.png"
-        },
-        {
-            "text": "🚦",
-            "img": "images/4_bqfh69.png"
-        },
-        {
-            "text": "🚥",
-            "img": "images/4_bqfh70.png"
-        },
-        {
-            "text": "⚠",
-            "img": "images/4_bqfh71.png"
-        },
-        {
-            "text": "🚧",
-            "img": "images/4_bqfh72.png"
-        },
-        {
-            "text": "🔰",
-            "img": "images/4_bqfh73.png"
-        },
-        {
-            "text": "⛽",
-            "img": "images/4_bqfh74.png"
-        },
-        {
-            "text": "🏮",
-            "img": "images/4_bqfh75.png"
-        },
-        {
-            "text": "🎰",
-            "img": "images/4_bqfh76.png"
-        },
-        {
-            "text": "♨",
-            "img": "images/4_bqfh77.png"
-        },
-        {
-            "text": "🗿",
-            "img": "images/4_bqfh78.png"
-        },
-        {
-            "text": "🎪",
-            "img": "images/4_bqfh79.png"
-        },
-        {
-            "text": "🎭",
-            "img": "images/4_bqfh80.png"
-        },
-        {
-            "text": "📍",
-            "img": "images/4_bqfh81.png"
-        },
-        {
-            "text": "🚩",
-            "img": "images/4_bqfh82.png"
-        }
-    ]
-}
+﻿[
+    ["1_000", "😄", "高兴", "笑,兴", "表情系列", "smiling face with open mouth and smiling eyes", "笑脸张开嘴,微笑的眼睛"],
+    ["1_001", "😃", "高兴", "笑,兴", "表情系列", "smiling face with open mouth", "笑脸张开嘴"],
+    ["1_002", "😀", "高兴", "笑,兴", "表情系列"],
+    ["1_003", "😊", "微笑、可爱", "羞", "表情系列", "smiling face with smiling eyes", "微笑面对微笑的眼睛"],
+    ["1_004", "☺", "可爱、害羞", "羞", "表情系列", "white smiling face", "白色的笑脸"],
+    ["1_005", "😉", "媚眼、眨眼", "眨", "表情系列", "winking face", "眨眼的脸"],
+    ["1_006", "😍", "色", "色,爱", "表情系列", "smiling face with heart-shaped eyes", "笑脸和心形的眼睛"],
+    ["1_007", "😘", "飞吻", "亲,吻", "表情系列", "face throwing a kiss", "脸扔一个吻"],
+    ["1_008", "😚", "亲嘴、吻", "亲,吻", "表情系列", "kissing face with closed eyes", "亲吻脸闭着眼睛"],
+    ["1_009", "😗", "亲嘴、吻", "亲,吻", "表情系列"],
+    ["1_010", "😙", "亲嘴、吻", "亲,吻", "表情系列"],
+    ["1_011", "😜", "鬼脸、淘气、调皮", "闭,淘", "表情系列", "face with stuck-out tongue and winking eye", "面对伸出舌头和眨眼的眼睛"],
+    ["1_012", "😝", "闭眼、吐舌头", "闭,舌", "表情系列", "face with stuck-out tongue and tightly-closed eyes", "面对伸出舌头,眼睛紧闭"],
+    ["1_013", "😛", "吐舌头", "", "表情系列"],
+    ["1_014", "😳", "害羞、脸红", "", "表情系列", "flushed face", "泛红的脸"],
+    ["1_015", "😁", "龇牙、微笑", "笑", "表情系列", "grinning face with smiling eyes", "笑着面对微笑的眼睛"],
+    ["1_016", "😔", "忧郁、失落、悲伤", "悲,忧", "表情系列", "pensive face", "忧郁的脸"],
+    ["1_017", "😌", "得意、悠闲", "", "表情系列", "relieved face", "松了一口气的脸"],
+    ["1_018", "😒", "不开心", "", "表情系列", "unamused face", "非娱乐性的脸"],
+    ["1_019", "😞", "难过", "悲,难", "表情系列", "disappointed face", "失望的脸"],
+    ["1_020", "😣", "囧", "囧", "表情系列", "persevering face", "坚持的脸"],
+    ["1_021", "😢", "汗", "汗", "表情系列", "crying face", "哭泣的脸"],
+    ["1_022", "😂", "哭笑", "哭,笑", "表情系列", "face with tears of joy", "喜悦的泪水"],
+    ["1_023", "😭", "哭、流泪", "哭,泪", "表情系列", "loudly crying face", "大声的哭脸"],
+    ["1_024", "😪", "叹气、困", "叹,困", "表情系列", "sleepy face", "沉睡的脸"],
+    ["1_025", "😥", "难过", "汗", "表情系列", "disappointed but relieved face", "失望但松了一口气的脸"],
+    ["1_026", "😰", "紧张、心虚", "汗,虚", "表情系列", "face with open mouth and cold sweat", "面对张口和冷汗"],
+    ["1_027", "😅", "张开嘴,冷汗的笑脸", "笑", "表情系列", "smiling face with open mouth and cold sweat", "张开嘴,冷汗的笑脸"],
+    ["1_028", "😓", "汗", "汗", "表情系列", "face with cold sweat", "脸上冷汗"],
+    ["1_029", "😩", "厌烦", "厌,烦", "表情系列", "weary face", "疲惫的脸"],
+    ["1_030", "😫", "疲惫", "厌,烦", "表情系列", "tired face", "疲惫的脸"],
+    ["1_031", "😨", "害怕", "怕", "表情系列", "fearful face", "可怕的脸"],
+    ["1_032", "😱", "吃惊", "惊", "表情系列", "face screaming in fear", "面对恐惧尖叫"],
+    ["1_033", "😠", "愤怒", "愤,怒,气", "表情系列", "angry face", "愤怒的脸"],
+    ["1_034", "😡", "生气", "愤,怒,气", "表情系列", "pouting face", "撅嘴的脸"],
+    ["1_035", "😤", "胜利的样子", "", "表情系列", "face with look of triumph", "脸上的胜利"],
+    ["1_036", "😖", "困惑", "狂", "表情系列", "confounded face", "蒙羞的脸"],
+    ["1_037", "😆", "张嘴闭眼的笑脸", "", "表情系列", "smiling face with open mouth and tightly-closed eyes", "笑脸张开嘴,紧闭的眼睛"],
+    ["1_038", "😋", "馋", "馋", "表情系列", "face savouring delicious food", "面对品尝美味的食物"],
+    ["1_039", "😷", "生病", "病", "表情系列", "face with medical mask", "面对医疗面具"],
+    ["1_040", "😎", "得意", "帅,酷", "表情系列"],
+    ["1_041", "😴", "困、睡觉", "困,睡,觉", "表情系列"],
+    ["1_042", "😵", "打哈欠", "", "表情系列", "dizzy face", "头晕目眩的脸"],
+    ["1_043", "😲", "打哈欠", "", "表情系列", "astonished face", "惊讶的脸"],
+    ["1_044", "😟", "不高兴", "", "表情系列"],
+    ["1_045", "😦", "失落", "", "表情系列"],
+    ["1_046", "😧", "失落", "", "表情系列"],
+    ["1_047", "😈", "得意的小鬼", "", "表情系列"],
+    ["1_048", "👿", "小鬼", "", "表情系列", "imp", "小鬼"],
+    ["1_049", "😮", "吃惊", "", "表情系列"],
+    ["1_050", "😬", "开心", "笑", "表情系列"],
+    ["1_051", "😐", "", "", "表情系列"],
+    ["1_052", "😕", "", "", "表情系列"],
+    ["1_053", "😯", "", "", "表情系列"],
+    ["1_054", "😶", "", "", "表情系列"],
+    ["1_055", "😇", "", "", "表情系列"],
+    ["1_056", "😏", "奸笑、淫笑、得意", "淫,笑", "表情系列", "smirking face", "傻笑的脸"],
+    ["1_057", "😑", "", "", "表情系列"],
+    ["1_073", "😺", "微笑", "笑", "表情系列", "smiling cat face with open mouth", "微笑的猫脸张开嘴巴"],
+    ["1_074", "😸", "微笑", "笑", "表情系列", "grinning cat face with smiling eyes", "笑猫脸含笑的眼睛"],
+    ["1_075", "😻", "色", "色", "表情系列", "smiling cat face with heart-shaped eyes", "微笑的猫脸,心形的眼睛"],
+    ["1_076", "😽", "亲", "亲,吻", "表情系列", "kissing cat face with closed eyes", "接吻猫脸闭着眼睛"],
+    ["1_077", "😼", "得意", "", "表情系列", "cat face with wry smile", "猫脸苦笑"],
+    ["1_078", "🙀", "吃惊", "惊", "表情系列", "weary cat face", "疲倦的猫脸"],
+    ["1_079", "😿", "汗", "汗", "表情系列", "crying cat face", "哭的猫脸"],
+    ["1_080", "😹", "哭", "哭", "表情系列", "cat face with tears of joy", "猫脸上喜悦的泪水"],
+    ["1_081", "😾", "生气", "气,怒", "表情系列", "pouting cat face", "撅嘴的猫脸"],
+    ["1_082", "👹", "日本食人魔", "魔", "表情系列", "japanese ogre", "日本食人魔"],
+    ["1_083", "👺", "日本小妖精", "妖", "表情系列", "japanese goblin", "日本的小妖精"],
+    ["1_084", "🙈", "害羞的猴子", "羞", "表情系列", "see-no-evil monkey", "非礼勿视的猴子"],
+    ["1_085", "🙉", "捂着耳朵的猴子", "捂,堵", "表情系列", "hear-no-evil monkey", "猴子不掉泪"],
+    ["1_086", "🙊", "偷笑的猴子", "猴", "表情系列", "speak-no-evil monkey", "speak-no-evil猴子"],
+    ["1_087", "💀", "骷髅", "骨,骷,髅", "表情系列", "skull", "头骨"],
+    ["1_088", "👽", "外星人", "星", "表情系列", "extraterrestrial alien", "外星人"],
+    ["1_100", "👂", "耳朵", "耳", "人物相关", "ear", "耳朵"],
+    ["1_101", "👀", "眼睛", "眼,睛", "人物相关", "eyes", "的眼睛"],
+    ["1_102", "👃", "鼻子", "鼻", "人物相关", "nose", "鼻子"],
+    ["1_103", "👅", "舌头", "舌", "人物相关", "tongue", "舌头"],
+    ["1_104", "👄", "嘴巴", "嘴,口,吻,亲", "人物相关", "mouth", "口"],
+    ["1_105", "👍", "赞", "赞,夸", "人物相关", "thumbs up sign", "大拇指的迹象"],
+    ["1_106", "👎", "鄙视", "鄙,踩", "人物相关", "thumbs down sign", "拇指向下的迹象"],
+    ["1_107", "👌", "OK", "好,行", "人物相关", "ok hand sign", "好的手签"],
+    ["1_108", "👊", "拳头", "拳", "人物相关", "fisted hand sign", "握成拳头的手签"],
+    ["1_109", "✊", "高举的拳头", "拳,手", "人物相关", "raised fist", "高举的拳头"],
+    ["1_110", "✌", "胜利的手势", "耶,胜", "人物相关", "victory hand", "胜利的手"],
+    ["1_111", "👋", "挥舞的手掌", "拍", "人物相关", "waving hand sign", "挥舞的手签"],
+    ["1_112", "✋", "举手", "举,手", "人物相关", "raised hand", "举起手"],
+    ["1_113", "👐", "双手", "双,手", "人物相关", "open hands sign", "打开手签"],
+    ["1_114", "👆", "向上", "上", "人物相关", "white up pointing backhand index", "白色的指向反手指数"],
+    ["1_115", "👇", "向下", "下", "人物相关", "white down pointing backhand index", "白色指向反手指数"],
+    ["1_116", "👉", "向右", "右", "人物相关", "white right pointing backhand index", "白色的正确指向反手指数"],
+    ["1_117", "👈", "向左", "左", "人物相关", "white left pointing backhand index", "白左指向反手指数"],
+    ["1_118", "🙌", "举起双手以示庆祝", "", "人物相关", "person raising both hands in celebration", "人提高双手以示庆祝"],
+    ["1_119", "🙏", "双手合十", "合,揖", "人物相关", "person with folded hands", "人双手合十"],
+    ["1_120", "☝", "No", "否,不,错", "人物相关", "white up pointing index", "白了指向索引"],
+    ["1_121", "👏", "鼓掌", "鼓,掌", "人物相关", "clapping hands sign", "鼓掌的手签"],
+    ["1_122", "💪", "肌肉", "肌,力", "人物相关", "flexed biceps", "弯曲的二头肌"],
+    ["1_123", "🚶", "走路", "行,走", "人物相关", "pedestrian", "行人"],
+    ["1_124", "🏃", "跑步", "跑", "人物相关", "runner", "跑步者"],
+    ["1_125", "💃", "跳舞", "舞", "人物相关", "dancer", "舞者"],
+    ["1_126", "👫", "情侣", "情", "人物相关", "man and woman holding hands", "男人和女人握手"],
+    ["1_127", "👪", "家庭", "家", "人物相关", "family", "家庭"],
+    ["1_128", "👬", "牵手", "牵", "人物相关"],
+    ["1_129", "👭", "2个女生牵手", "牵", "人物相关"],
+    ["1_130", "💏", "情侣", "爱", "人物相关", "kiss", "吻"],
+    ["1_131", "💑", "情侣", "爱", "人物相关", "couple with heart", "夫妇与心"],
+    ["1_132", "👯", "2个兔耳朵的女人", "", "人物相关", "woman with bunny ears", "女人用兔子的耳朵"],
+    ["1_133", "🙆", "OK手势", "", "人物相关", "face with ok gesture", "面对好的手势"],
+    ["1_134", "🙅", "错误", "错,否,不", "人物相关", "face with no good gesture", "面对没有好的姿态"],
+    ["1_135", "💁", "服务台的人", "", "人物相关", "information desk person", "服务台的人"],
+    ["1_136", "🙋", "快乐的举起一只手", "", "人物相关", "happy person raising one hand", "快乐的人养一只手"],
+    ["1_137", "💇", "发型", "", "人物相关", "haircut", "发型"],
+    ["1_138", "💅", "美甲", "指,甲", "人物相关", "nail polish", "指甲油"],
+    ["1_139", "👰", "新娘", "妻", "人物相关", "bride with veil", "新娘的面纱"],
+    ["1_140", "🙎", "噘嘴的女人", "", "人物相关", "person with pouting face", "撅嘴的人的脸"],
+    ["1_141", "🙍", "皱眉头的女人", "", "人物相关", "person frowning", "人皱着眉头"],
+    ["1_142", "🙇", "鞠躬", "鞠,躬", "人物相关", "person bowing deeply", "人深深地鞠躬"],
+    ["1_143", "🎩", "高顶礼帽", "帽", "人物相关", "top hat", "高顶礼帽"],
+    ["1_144", "👑", "皇冠", "冠", "人物相关", "crown", "皇冠"],
+    ["1_145", "👒", "女式帽子", "帽", "人物相关", "womans hat", "女人的帽子"],
+    ["1_146", "👟", "运动鞋", "鞋", "人物相关", "athletic shoe", "运动鞋"],
+    ["1_147", "👞", "男人的鞋", "鞋", "人物相关", "mans shoe", "男人的鞋"],
+    ["1_148", "👡", "女士凉鞋", "鞋", "人物相关", "womans sandal", "女士凉鞋"],
+    ["1_149", "👠", "高跟鞋", "高,根,鞋", "人物相关", "high-heeled shoe", "穿高跟鞋的鞋"],
+    ["1_150", "👢", "女人的靴子", "靴", "人物相关", "womans boots", "女人的靴子"],
+    ["1_151", "👕", "T恤", "恤", "人物相关", "t-shirt", "t恤"],
+    ["1_152", "👔", "领带", "领", "人物相关", "necktie", "领带"],
+    ["1_153", "👚", "女式衣服", "衣,服", "人物相关", "womans clothes", "女士的衣服"],
+    ["1_154", "👗", "裙子", "裙", "人物相关", "dress", "衣服"],
+    ["1_155", "🎽", "带肩带的运动衫", "衫", "人物相关", "running shirt with sash", "运行衬衫肩带"],
+    ["1_156", "👖", "牛仔裤", "裤", "人物相关", "jeans", "牛仔裤"],
+    ["1_157", "👘", "和服", "和,服", "人物相关", "kimono", "和服"],
+    ["1_158", "👙", "比基尼", "性", "人物相关", "bikini", "比基尼"],
+    ["1_159", "💼", "公文包", "包", "人物相关", "briefcase", "公文包"],
+    ["1_160", "👜", "手提包", "包", "人物相关", "handbag", "手提包"],
+    ["1_161", "👝", "包", "包", "人物相关", "pouch", "袋"],
+    ["1_162", "👛", "钱包", "包", "人物相关", "purse", "钱包"],
+    ["1_163", "👓", "眼镜", "镜", "人物相关", "eyeglasses", "眼镜"],
+    ["1_164", "🎀", "蝴蝶结", "结", "人物相关", "ribbon", "丝带"],
+    ["1_165", "🌂", "雨伞", "伞", "人物相关", "closed umbrella", "收伞"],
+    ["1_166", "💄", "口红", "红", "人物相关", "lipstick", "口红"],
+    ["1_180", "💋", "红唇", "唇,亲,吻,嘴", "人物相关", "kiss mark", "吻马克"],
+    ["1_185", "👣", "脚印", "脚,印", "人物相关", "footprints", "的足迹"],
+    ["1_181", "💎", "钻石", "钻", "人物相关", "gem stone", "天然宝石"],
+    ["1_186", "💍", "戒指", "戒,指", "人物相关", "ring", "环"],
+    ["2_000", "🐶", "小狗符号", "狗", "动物系列", "dog face", "狗的脸"],
+    ["2_001", "🐺", "狼狗符号", "狼", "动物系列", "wolf face", "狼的脸"],
+    ["2_002", "🐱", "小猫头像", "猫", "动物系列", "cat face", "猫的脸"],
+    ["2_003", "🐭", "老鼠头像", "鼠", "动物系列", "mouse face", "鼠标的脸"],
+    ["2_004", "🐹", "花鼠头像", "鼠", "动物系列", "hamster face", "仓鼠的脸"],
+    ["2_005", "🐰", "兔子头像", "兔", "动物系列", "rabbit face", "兔子的脸"],
+    ["2_006", "🐸", "青蛙头像", "蛙", "动物系列", "frog face", "青蛙脸"],
+    ["2_007", "🐯", "老虎头像", "虎", "动物系列", "tiger face", "老虎的脸"],
+    ["2_008", "🐨", "考拉头像", "考", "动物系列", "koala", "考拉"],
+    ["2_009", "🐻", "小熊头像", "熊", "动物系列", "bear face", "熊的脸"],
+    ["2_010", "🐷", "猪的头像", "猪", "动物系列", "pig face", "猪脸"],
+    ["2_011", "🐽", "猪鼻符号", "鼻", "动物系列", "pig nose", "猪的鼻子"],
+    ["2_012", "🐮", "牛的头像", "牛", "动物系列", "cow face", "牛的脸"],
+    ["2_013", "🐗", "野猪头像", "猪", "动物系列", "boar", "野猪"],
+    ["2_014", "🐵", "猴子头像", "猴", "动物系列", "monkey face", "猴子的脸"],
+    ["2_015", "🐒", "小猴子图像", "猴", "动物系列", "monkey", "猴子"],
+    ["2_016", "🐴", "马的头像", "马", "动物系列", "horse face", "马脸"],
+    ["2_017", "🐑", "绵羊符号", "羊", "动物系列", "sheep", "羊"],
+    ["2_018", "🐘", "大象符号", "象", "动物系列", "elephant", "大象"],
+    ["2_019", "🐼", "熊猫头像", "熊,猫", "动物系列", "panda face", "熊猫的脸"],
+    ["2_020", "🐧", "企鹅头像", "企,鹅", "动物系列", "penguin", "企鹅"],
+    ["2_021", "🐦", "鸽子头像", "鸽", "动物系列", "bird", "鸟"],
+    ["2_022", "🐤", "小鸟头像", "鸟", "动物系列", "baby chick", "宝宝的小鸡"],
+    ["2_023", "🐥", "小鸡图像", "鸡", "动物系列", "front-facing baby chick", "前置的小鸡"],
+    ["2_024", "🐣", "小鸡", "鸡", "动物系列", "hatching chick", "孵化的小鸡"],
+    ["2_025", "🐔", "母鸡头像", "鸡", "动物系列", "chicken", "鸡"],
+    ["2_026", "🐍", "蛇的符号", "蛇", "动物系列", "snake", "蛇"],
+    ["2_027", "🐢", "乌龟符号", "乌,龟", "动物系列", "turtle", "乌龟"],
+    ["2_028", "🐛", "虫子符号", "虫", "动物系列", "bug", "错误"],
+    ["2_029", "🐝", "蜜蜂符号", "蜜,蜂", "动物系列", "honeybee", "蜜蜂"],
+    ["2_030", "🐜", "蚂蚁符号", "蚂,蚁", "动物系列", "ant", "蚂蚁"],
+    ["2_031", "🐞", "瓢虫符号", "瓢,虫", "动物系列", "lady beetle", "瓢虫"],
+    ["2_032", "🐌", "蜗牛符号", "蜗,牛", "动物系列", "snail", "蜗牛"],
+    ["2_033", "🐙", "章鱼", "章", "动物系列", "octopus", "章鱼"],
+    ["2_034", "🐚", "海螺壳", "螺,壳", "动物系列", "spiral shell", "螺旋壳"],
+    ["2_035", "🐠", "热带鱼", "鱼", "动物系列", "tropical fish", "热带鱼"],
+    ["2_036", "🐟", "鱼", "鱼", "动物系列", "fish", "鱼"],
+    ["2_037", "🐬", "海豚", "豚", "动物系列", "dolphin", "海豚"],
+    ["2_038", "🐳", "喷水鲸鱼", "喷,鲸", "动物系列", "spouting whale", "喷射鲸鱼"],
+    ["2_039", "🐋", "长须鲸", "鲸", "动物系列"],
+    ["2_040", "🐄", "奶牛", "奶,牛", "动物系列"],
+    ["2_041", "🐏", "绵羊", "羊", "动物系列"],
+    ["2_042", "🐀", "老鼠", "鼠", "动物系列"],
+    ["2_043", "🐃", "牛", "牛", "动物系列"],
+    ["2_044", "🐅", "老虎", "虎", "动物系列"],
+    ["2_045", "🐇", "兔子", "兔", "动物系列"],
+    ["2_046", "🐉", "龙", "龙", "动物系列"],
+    ["2_047", "🐎", "马", "马", "动物系列", "horse", "马"],
+    ["2_048", "🐐", "羊", "羊", "动物系列"],
+    ["2_049", "🐓", "鸡", "鸡", "动物系列"],
+    ["2_050", "🐕", "狗", "狗", "动物系列"],
+    ["2_051", "🐖", "猪", "猪", "动物系列"],
+    ["2_052", "🐁", "鼠", "鼠", "动物系列"],
+    ["2_053", "🐂", "牛", "牛", "动物系列"],
+    ["2_054", "🐲", "龙头", "龙,头", "动物系列", "dragon face", "龙的脸"],
+    ["2_055", "🐡", "鱼", "鱼", "动物系列", "blowfish", "河豚"],
+    ["2_056", "🐊", "鳄鱼", "鳄,鱼", "动物系列"],
+    ["2_057", "🐫", "骆驼", "骆,驼", "动物系列", "bactrian camel", "双峰驼"],
+    ["2_058", "🐪", "骆驼", "骆,驼", "动物系列"],
+    ["2_059", "🐆", "牧羊犬", "牧,犬,狗", "动物系列"],
+    ["2_060", "🐈", "牧羊犬", "牧,犬,狗", "动物系列"],
+    ["2_061", "🐩", "狮子狗", "狗", "动物系列", "poodle", "贵宾犬"],
+    ["2_062", "🐾", "爪印", "爪", "动物系列", "paw prints", "爪印"],
+    ["1_090", "🔥", "火", "火", "植物自然", "fire", "火"],
+    ["1_091", "✨", "闪光", "闪,光", "植物自然", "sparkles", "闪光"],
+    ["1_092", "🌟", "发光的星星", "星", "植物自然", "glowing star", "发光的星星"],
+    ["1_093", "💫", "头晕", "晕", "植物自然", "dizzy symbol", "头晕目眩的象征"],
+    ["1_094", "💥", "爆炸", "爆,炸", "植物自然", "collision symbol", "碰撞的象征"],
+    ["1_095", "💢", "愤怒的象征", "", "植物自然", "anger symbol", "愤怒的象征"],
+    ["1_096", "💦", "水", "水", "植物自然", "splashing sweat symbol", "溅汗水的象征"],
+    ["1_097", "💧", "水滴", "水,滴", "植物自然", "droplet", "滴"],
+    ["1_098", "💤", "睡觉", "睡,困", "植物自然", "sleeping symbol", "睡觉的象征"],
+    ["1_099", "💨", "大风", "风", "植物自然", "dash symbol", "破折号"],
+    ["2_063", "💐", "花束", "花,束", "植物自然", "bouquet", "花束"],
+    ["2_064", "🌸", "樱花", "樱,花", "植物自然", "cherry blossom", "樱花"],
+    ["2_065", "🌷", "郁金香", "郁,香", "植物自然", "tulip", "郁金香"],
+    ["2_066", "🍀", "四叶苜蓿", "叶,苜,蓿", "植物自然", "four leaf clover", "四叶苜蓿"],
+    ["2_067", "🌹", "玫瑰", "玫,瑰,花", "植物自然", "rose", "玫瑰"],
+    ["2_068", "🌻", "向日葵", "向,葵", "植物自然", "sunflower", "向日葵"],
+    ["2_069", "🌺", "芙蓉", "芙,蓉,花", "植物自然", "hibiscus", "芙蓉"],
+    ["2_070", "🍁", "枫叶", "枫,叶,秋", "植物自然", "maple leaf", "枫叶"],
+    ["2_071", "🍃", "随风飞舞的叶子", "飞,叶", "植物自然", "leaf fluttering in wind", "叶子飞舞的风"],
+    ["2_072", "🍂", "落叶", "落,叶,秋", "植物自然", "fallen leaf", "落叶"],
+    ["2_073", "🌿", "草", "草", "植物自然", "herb", "草"],
+    ["2_074", "🌾", "稻穗", "稻,穗", "植物自然", "ear of rice", "耳朵的大米"],
+    ["2_075", "🍄", "蘑菇", "蘑,菇", "植物自然", "mushroom", "蘑菇"],
+    ["2_076", "🌵", "仙人掌", "仙", "植物自然", "cactus", "仙人掌"],
+    ["2_077", "🌴", "棕榈树", "棕,榈,树", "植物自然", "palm tree", "棕榈树"],
+    ["2_078", "🌲", "圣诞树", "圣,树", "植物自然"],
+    ["2_079", "🌳", "", "", "植物自然"],
+    ["2_080", "🌰", "栗子", "栗", "植物自然", "chestnut", "栗"],
+    ["2_081", "🌱", "幼苗", "幼,苗", "植物自然", "seedling", "幼苗"],
+    ["2_082", "🌼", "花朵", "花", "植物自然", "blossom", "开花"],
+    ["2_083", "🌐", "", "", "植物自然"],
+    ["2_084", "🌞", "太阳", "日,阳,光", "植物自然"],
+    ["2_085", "🌝", "太阳", "日,阳,光", "植物自然"],
+    ["2_086", "🌚", "月亮", "月", "植物自然"],
+    ["2_087", "🌑", "新月", "", "植物自然", "new moon symbol", "新月象征"],
+    ["2_088", "🌒", "", "", "植物自然"],
+    ["2_089", "🌓", "上弦月", "月,半", "植物自然", "first quarter moon symbol", "上弦月的象征"],
+    ["2_090", "🌔", "", "", "植物自然", "waxing gibbous moon symbol", "打蜡凸月的象征"],
+    ["2_091", "🌕", "满月", "满,月", "植物自然", "full moon symbol", "满月象征"],
+    ["2_092", "🌖", "", "", "植物自然"],
+    ["2_093", "🌗", "", "", "植物自然"],
+    ["2_094", "🌘", "", "", "植物自然"],
+    ["2_095", "🌜", "下弦月的脸", "", "植物自然"],
+    ["2_096", "🌛", "上弦月的脸", "", "植物自然", "first quarter moon with face", "上弦月的脸"],
+    ["2_097", "🌙", "弯月", "弯,月", "植物自然", "crescent moon", "新月"],
+    ["2_098", "🌍", "非洲", "非", "植物自然"],
+    ["2_099", "🌎", "南北美洲", "", "植物自然"],
+    ["2_100", "🌏", "亚洲", "亚", "植物自然", "earth globe asia-australia", "地球各地asia-australia"],
+    ["2_101", "🌋", "火山", "火", "植物自然", "volcano", "火山"],
+    ["2_102", "🌌", "银河系", "银", "植物自然", "milky way", "银河系"],
+    ["2_103", "🌠", "流星", "流,星", "植物自然", "shooting star", "流星"],
+    ["2_104", "⭐", "星星", "星", "植物自然", "white medium star", "白色中明星"],
+    ["2_105", "☀", "晴", "晴,阳,光,日", "植物自然", "black sun with rays", "black sun with rays"],
+    ["2_106", "⛅", "多云", "云", "植物自然", "sun behind cloud", "太阳在云"],
+    ["2_107", "☁", "阴", "阴,云", "植物自然", "cloud", "cloud"],
+    ["2_108", "⚡", "雷电", "雷,电", "植物自然", "high voltage sign", "高电压信号"],
+    ["2_109", "☔", "下雨", "雨", "植物自然", "umbrella with rain drops", "伞雨滴"],
+    ["2_110", "❄", "下雪", "雪", "植物自然", "snowflake", "雪花"],
+    ["2_111", "⛄", "雪人", "雪", "植物自然", "snowman without snow", "雪人没有雪"],
+    ["2_112", "🌀", "强热带风暴", "台,暴", "植物自然", "cyclone", "强热带风暴"],
+    ["2_113", "🌁", "多雾", "雾", "植物自然", "foggy", "多雾的"],
+    ["2_114", "🌈", "彩虹", "彩,虹", "植物自然", "rainbow", "彩虹"],
+    ["2_115", "🌊", "海浪", "海,浪", "植物自然", "water wave", "水波"],
+    ["3_020", "🔮", "水晶球", "晶,球", "物体物件", "crystal ball", "水晶球"],
+    ["3_021", "🎥", "摄像机", "摄,像,录", "物体物件", "movie camera", "电影摄影机"],
+    ["3_022", "📷", "相机", "照,相", "物体物件", "camera", "相机"],
+    ["3_023", "📹", "摄像机", "摄,像,录", "物体物件", "video camera", "摄像机"],
+    ["3_024", "📼", "录影带", "录,影", "物体物件", "videocassette", "录影带"],
+    ["3_025", "💿", "光盘", "盘", "物体物件", "optical disc", "光盘"],
+    ["3_026", "📀", "DVD", "", "物体物件", "dvd", "dvd"],
+    ["3_027", "💽", "迷你光碟", "", "物体物件", "minidisc", "小型磁盘"],
+    ["3_028", "💾", "软盘", "", "物体物件", "floppy disk", "软盘"],
+    ["3_029", "💻", "电脑", "", "物体物件", "personal computer", "个人电脑"],
+    ["3_030", "📱", "手机", "机", "物体物件", "mobile phone", "移动电话"],
+    ["3_031", "☎", "电话", "打", "物体物件", "black telephone", "黑色的电话"],
+    ["3_032", "📞", "听筒", "打,听,筒", "物体物件", "telephone receiver", "听筒"],
+    ["3_033", "📟", "寻呼机", "", "物体物件", "pager", "寻呼机"],
+    ["3_034", "📠", "传真", "", "物体物件", "fax machine", "传真机"],
+    ["3_035", "📡", "卫星天线", "", "物体物件", "satellite antenna", "卫星天线"],
+    ["3_036", "📺", "电视", "", "物体物件", "television", "电视"],
+    ["3_037", "📻", "广播", "", "物体物件", "radio", "广播"],
+    ["3_038", "🔊", "音量", "声,音,响,喇,叭", "物体物件", "speaker with three sound waves", "演讲者有三个声波"],
+    ["3_039", "🔉", "小音量", "", "物体物件"],
+    ["3_040", "🔈", "小音量", "", "物体物件"],
+    ["3_041", "🔇", "静音", "静", "物体物件"],
+    ["3_042", "🔔", "铃铛", "铃,铛", "物体物件", "bell", "贝尔"],
+    ["3_043", "🔕", "静音", "静", "物体物件"],
+    ["3_044", "📢", "扬声器", "", "物体物件", "public address loudspeaker", "公共广播扬声器"],
+    ["3_045", "📣", "扬声器", "", "物体物件", "cheering megaphone", "欢呼的扩音器"],
+    ["3_046", "⏳", "流动中的沙漏", "沙,漏", "物体物件", "hourglass with flowing sand", "沙漏的沙子流动"],
+    ["3_047", "⌛", "沙漏", "沙,漏", "物体物件", "hourglass", "沙漏"],
+    ["3_048", "⏰", "闹钟", "闹,钟,迟", "物体物件", "alarm clock", "闹钟"],
+    ["3_049", "⌚", "手表", "表,时", "物体物件", "watch", "看"],
+    ["3_050", "🔓", "打开的锁", "开,锁", "物体物件", "open lock", "打开的锁"],
+    ["3_051", "🔒", "锁", "锁", "物体物件", "lock", "锁"],
+    ["3_052", "🔐", "锁和钥匙", "", "物体物件", "closed lock with key", "关闭锁和钥匙"],
+    ["3_053", "🔑", "钥匙", "钥,匙", "物体物件", "key", "关键"],
+    ["3_054", "🔎", "放大镜", "查,找,放", "物体物件", "right-pointing magnifying glass", "三点放大镜"],
+    ["3_055", "💡", "电灯泡", "灯,亮,光", "物体物件", "electric light bulb", "电灯泡"],
+    ["3_056", "🔦", "手电筒", "灯,亮,光", "物体物件", "electric torch", "手电筒"],
+    ["3_057", "🔆", "明亮", "亮", "物体物件"],
+    ["3_058", "🔅", "一般亮", "", "物体物件"],
+    ["3_059", "🔌", "插头", "插", "物体物件", "electric plug", "电插座"],
+    ["3_060", "🔋", "电池", "电", "物体物件", "battery", "电池"],
+    ["3_061", "🔍", "放大镜", "查,找", "物体物件", "left-pointing magnifying glass", "只左向放大镜"],
+    ["3_062", "🛁", "浴缸", "浴,缸", "物体物件"],
+    ["3_063", "🛀", "洗澡", "洗,澡,浴", "物体物件", "bath", "浴"],
+    ["3_064", "🚿", "喷头", "喷,洗,澡,浴", "物体物件"],
+    ["3_065", "🚽", "马桶", "厕", "物体物件", "toilet", "厕所。。。"],
+    ["3_066", "🔧", "扳手", "扳", "物体物件", "wrench", "扳手"],
+    ["3_067", "🔩", "螺丝", "螺", "物体物件", "nut and bolt", "螺母和螺栓"],
+    ["3_068", "🔨", "锤子", "锤", "物体物件", "hammer", "锤"],
+    ["3_069", "🚪", "门", "门", "物体物件", "door", "门"],
+    ["3_070", "🚬", "抽烟", "抽,烟", "物体物件", "smoking symbol", "吸烟的标志"],
+    ["3_071", "💣", "炸弹", "炸", "物体物件", "bomb", "炸弹"],
+    ["3_072", "🔫", "手枪", "枪", "物体物件", "pistol", "手枪"],
+    ["3_073", "🔪", "小刀", "刀", "物体物件", "hocho", "hocho"],
+    ["3_074", "💊", "药丸", "药,丸,病", "物体物件", "pill", "药丸"],
+    ["3_075", "💉", "打针", "针", "物体物件", "syringe", "注射器"],
+    ["3_076", "💰", "钱", "钱", "物体物件", "money bag", "钱的袋子"],
+    ["3_077", "💴", "日元", "钱,币", "物体物件", "banknote with yen sign", "与日圆钞票标志"],
+    ["3_078", "💵", "美元", "钱,币", "物体物件", "banknote with dollar sign", "钞票,美元符号"],
+    ["3_079", "💷", "", "钱,币", "物体物件"],
+    ["3_080", "💶", "", "钱,币", "物体物件"],
+    ["3_081", "💳", "信用卡", "卡", "物体物件", "credit card", "信用卡"],
+    ["3_082", "💸", "长着翅膀的钱", "", "物体物件", "money with wings", "长着翅膀的钱"],
+    ["3_083", "📲", "左侧有箭头的手机", "", "物体物件", "mobile phone with rightwards arrow at left", "手机在左向右箭头"],
+    ["3_084", "📧", "电子邮件", "邮", "物体物件", "e-mail symbol", "电子邮件符号"],
+    ["3_085", "📥", "收件箱", "收", "物体物件", "inbox tray", "收件箱托盘"],
+    ["3_086", "📤", "发件箱", "发", "物体物件", "outbox tray", "发件箱托盘"],
+    ["3_087", "✉", "信封", "信,封", "物体物件", "envelope", "信封"],
+    ["3_088", "📩", "", "", "物体物件", "envelope with downwards arrow above", "信封上面向下箭头"],
+    ["3_089", "📨", "传入的信封", "", "物体物件", "incoming envelope", "传入的信封"],
+    ["3_090", "📯", "", "", "物体物件"],
+    ["3_091", "📫", "", "", "物体物件", "closed mailbox with raised flag", "关闭邮箱高举国旗"],
+    ["3_092", "📪", "", "", "物体物件", "closed mailbox with lowered flag", "与降低国旗关闭邮箱"],
+    ["3_093", "📬", "", "", "物体物件"],
+    ["3_094", "📭", "", "", "物体物件"],
+    ["3_095", "📮", "邮箱", "", "物体物件", "postbox", "邮箱"],
+    ["3_096", "📦", "包", "包", "物体物件", "package", "包"],
+    ["3_097", "📝", "备忘录", "", "物体物件", "memo", "备忘录"],
+    ["3_098", "📄", "纸", "文,纸", "物体物件", "page facing up", "页面对"],
+    ["3_099", "📃", "纸", "纸", "物体物件", "page with curl", "页面与旋度"],
+    ["3_100", "📑", "书签", "", "物体物件", "bookmark tabs", "书签的标签"],
+    ["3_101", "📊", "柱状图", "", "物体物件", "bar chart", "条形图"],
+    ["3_102", "📈", "向上的折线图", "", "物体物件", "chart with upwards trend", "图表与向上的趋势"],
+    ["3_103", "📉", "向下的折线图", "", "物体物件", "chart with downwards trend", "图有下降趋势"],
+    ["3_104", "📜", "滚动", "滚", "物体物件", "scroll", "滚动"],
+    ["3_105", "📋", "剪贴板", "", "物体物件", "clipboard", "剪贴板"],
+    ["3_106", "📅", "日历", "历", "物体物件", "calendar", "日历"],
+    ["3_107", "📆", "挂历", "", "物体物件", "tear-off calendar", "撕日历"],
+    ["3_108", "📇", "卡片索引", "", "物体物件", "card index", "卡片索引"],
+    ["3_109", "📁", "文件夹", "夹", "物体物件", "file folder", "文件夹"],
+    ["3_110", "📂", "打开的文件夹", "", "物体物件", "open file folder", "打开文件的文件夹"],
+    ["3_111", "✂", "剪刀", "剪,刀", "物体物件", "black scissors", "黑色的剪刀"],
+    ["3_112", "📌", "图钉", "钉", "物体物件", "pushpin", "图钉"],
+    ["3_113", "📎", "回形针", "", "物体物件", "paperclip", "回形针"],
+    ["3_114", "✒", "钢笔", "笔", "物体物件", "black nib", "黑嘴"],
+    ["3_115", "✏", "铅笔", "铅,笔", "物体物件", "pencil", "铅笔"],
+    ["3_116", "📏", "直尺", "直,尺", "物体物件", "straight ruler", "直尺"],
+    ["3_117", "📐", "三角尺", "尺", "物体物件", "triangular ruler", "三角形的统治者"],
+    ["3_118", "📕", "合上的书", "书,本", "物体物件", "closed book", "封闭的书"],
+    ["3_119", "📗", "绿色的书", "", "物体物件", "green book", "绿皮书"],
+    ["3_120", "📘", "蓝色的书", "", "物体物件", "blue book", "蓝色的书"],
+    ["3_121", "📙", "橙色的书", "", "物体物件", "orange book", "橙皮书"],
+    ["3_122", "📓", "笔记本", "记,本", "物体物件", "notebook", "笔记本"],
+    ["3_123", "📔", "带装饰的笔记本", "", "物体物件", "notebook with decorative cover", "笔记本装饰盖"],
+    ["3_124", "📒", "分类账", "", "物体物件", "ledger", "分类帐"],
+    ["3_125", "📚", "书", "书", "物体物件", "books", "书"],
+    ["3_126", "📖", "打开的书", "", "物体物件", "open book", "打开书"],
+    ["3_127", "🔖", "书签", "", "物体物件", "bookmark", "书签"],
+    ["3_128", "📛", "徽章", "", "物体物件", "name badge", "名字徽章"],
+    ["3_129", "🔬", "显微镜", "", "物体物件"],
+    ["3_130", "🔭", "望远镜", "远", "物体物件"],
+    ["3_131", "📰", "报纸", "报", "运动休闲", "newspaper", "报纸"],
+    ["3_132", "🎨", "调色板", "画", "运动休闲", "artist palette", "艺术家的调色板"],
+    ["3_133", "🎬", "电影拍板", "", "运动休闲", "clapper board", "合板"],
+    ["3_134", "🎤", "麦克风", "唱", "运动休闲", "microphone", "麦克风"],
+    ["3_135", "🎧", "耳机", "听,歌", "运动休闲", "headphone", "耳机"],
+    ["3_136", "🎼", "乐谱", "乐,谱", "运动休闲", "musical score", "乐谱"],
+    ["3_137", "🎵", "音符", "音,符", "运动休闲", "musical note", "音符"],
+    ["3_138", "🎶", "音乐", "音,乐", "运动休闲", "multiple musical notes", "多个音符"],
+    ["3_139", "🎹", "音乐键盘", "键", "运动休闲", "musical keyboard", "音乐键盘"],
+    ["3_140", "🎻", "小提琴", "琴", "运动休闲", "violin", "小提琴"],
+    ["3_141", "🎷", "萨克斯", "萨", "运动休闲", "saxophone", "萨克斯风"],
+    ["3_142", "🎸", "吉他", "吉", "运动休闲", "guitar", "吉他"],
+    ["3_143", "👾", "外星怪物", "", "运动休闲", "alien monster", "外星怪物"],
+    ["3_144", "🎮", "游戏手柄", "游,戏", "运动休闲", "video game", "视频游戏"],
+    ["3_145", "🃏", "扑克牌小丑", "牌", "运动休闲", "playing card black joker", "扑克牌黑色的小丑"],
+    ["3_146", "🎴", "扑克牌", "牌", "运动休闲", "flower playing cards", "花打牌"],
+    ["3_147", "🀄", "红中", "中", "运动休闲", "mahjong tile red dragon", "麻将砖红色的龙"],
+    ["3_148", "🎲", "骰子", "骰", "运动休闲", "game die", "游戏模"],
+    ["3_149", "🎯", "射中靶心", "靶", "运动休闲", "direct hit", "直接命中"],
+    ["3_150", "🏈", "橄榄球", "", "运动休闲", "american football", "美式足球"],
+    ["3_151", "🏀", "篮球", "篮,球", "运动休闲", "basketball and hoop", "篮球和篮球"],
+    ["3_152", "⚽", "足球", "足,球", "运动休闲", "soccer ball", "足球"],
+    ["3_153", "⚾", "棒球", "棒,球", "运动休闲", "baseball", "棒球"],
+    ["3_154", "🎾", "网球", "网,球", "运动休闲", "tennis racquet and ball", "网球球拍和球"],
+    ["3_155", "🎱", "桌球", "球", "运动休闲", "billiards", "台球"],
+    ["3_156", "🏉", "", "", "运动休闲"],
+    ["3_157", "🎳", "保龄球", "", "运动休闲", "bowling", "打保龄球"],
+    ["3_158", "⛳", "高尔夫", "", "运动休闲", "flag in hole", "国旗在洞"],
+    ["3_159", "🚵", "骑车", "骑", "运动休闲"],
+    ["3_160", "🚴", "骑车", "骑", "运动休闲"],
+    ["3_161", "🏁", "方格旗", "旗", "运动休闲", "chequered flag", "方格旗"],
+    ["3_162", "🏇", "骑马", "骑,马", "运动休闲"],
+    ["3_163", "🏆", "奖杯", "奖", "运动休闲", "trophy", "奖杯"],
+    ["3_164", "🎿", "滑雪板", "", "运动休闲", "ski and ski boot", "滑雪和滑雪靴"],
+    ["3_165", "🏂", "滑雪", "滑,雪", "运动休闲", "snowboarder", "滑雪"],
+    ["3_166", "🏊", "游泳", "游,泳", "运动休闲", "swimmer", "游泳运动员"],
+    ["3_167", "🏄", "冲浪", "冲,浪", "运动休闲", "surfer", "冲浪者"],
+    ["3_168", "🎣", "钓鱼", "钓,鱼", "运动休闲", "fishing pole and fish", "鱼竿和鱼"],
+    ["3_169", "☕", "咖啡", "咖,啡", "水果食物", "hot beverage", "热的饮料"],
+    ["3_170", "🍵", "绿茶", "茶", "水果食物", "teacup without handle", "茶杯没有处理"],
+    ["3_171", "🍶", "酒瓶", "瓶", "水果食物", "sake bottle and cup", "为了瓶子和杯子"],
+    ["3_172", "🍼", "奶瓶", "奶,瓶", "水果食物"],
+    ["3_173", "🍺", "啤酒", "啤,酒", "水果食物", "beer mug", "啤酒杯"],
+    ["3_174", "🍻", "干杯的啤酒杯", "干,杯", "水果食物", "clinking beer mugs", "无比的啤酒杯"],
+    ["3_175", "🍸", "酒杯", "酒,杯", "水果食物", "cocktail glass", "鸡尾酒杯"],
+    ["3_176", "🍹", "橙汁", "橙,汁", "水果食物", "tropical drink", "热带饮料"],
+    ["3_177", "🍷", "酒杯", "酒,杯", "水果食物", "wine glass", "酒杯"],
+    ["3_178", "🍴", "刀叉", "刀,叉", "水果食物", "fork and knife", "刀叉"],
+    ["3_179", "🍕", "披萨", "", "水果食物", "slice of pizza", "片披萨"],
+    ["3_180", "🍔", "汉堡", "", "水果食物", "hamburger", "汉堡"],
+    ["3_181", "🍟", "薯条", "薯", "水果食物", "french fries", "炸薯条"],
+    ["3_182", "🍗", "鸡腿", "腿,肉", "水果食物", "poultry leg", "禽类的腿"],
+    ["3_183", "🍖", "肉骨头", "肉", "水果食物", "meat on bone", "肉骨头"],
+    ["3_184", "🍝", "意大利面", "面", "水果食物", "spaghetti", "意大利面"],
+    ["3_185", "🍛", "咖喱饭", "饭", "水果食物", "curry and rice", "咖哩饭"],
+    ["3_186", "🍤", "炸虾", "虾", "水果食物", "fried shrimp", "炸虾"],
+    ["3_187", "🍱", "便当 盒饭", "饭", "水果食物", "bento box", "便当盒"],
+    ["3_188", "🍣", "寿司", "", "水果食物", "sushi", "寿司"],
+    ["3_189", "🍥", "旋涡式蛋糕", "", "水果食物", "fish cake with swirl design", "鱼与涡流设计蛋糕"],
+    ["3_190", "🍙", "饭团", "", "水果食物", "rice ball", "饭团"],
+    ["3_191", "🍘", "米饼", "", "水果食物", "rice cracker", "大米饼干"],
+    ["3_192", "🍚", "米饭", "米,饭", "水果食物", "cooked rice", "煮好的米饭"],
+    ["3_193", "🍜", "面条", "面,条", "水果食物", "steaming bowl", "蒸碗"],
+    ["3_194", "🍲", "煮熟的食物", "", "水果食物", "pot of food", "锅里的食物"],
+    ["3_195", "🍢", "关东煮", "", "水果食物", "oden", "奥登"],
+    ["3_196", "🍡", "团子", "", "水果食物", "dango", "dango"],
+    ["3_197", "🍳", "煎蛋", "", "水果食物", "cooking", "烹饪"],
+    ["3_198", "🍞", "面包", "", "水果食物", "bread", "面包"],
+    ["3_199", "🍩", "甜甜圈", "", "水果食物", "doughnut", "甜甜圈"],
+    ["3_200", "🍮", "蛋奶沙司", "", "水果食物", "custard", "蛋奶沙司"],
+    ["3_201", "🍦", "软冰淇淋", "", "水果食物", "soft ice cream", "软冰淇淋"],
+    ["3_202", "🍨", "冰淇淋", "", "水果食物", "ice cream", "冰淇淋"],
+    ["3_203", "🍧", "刨冰", "", "水果食物", "shaved ice", "刨冰"],
+    ["3_204", "🎂", "生日蛋糕", "糕", "水果食物", "birthday cake", "生日蛋糕"],
+    ["3_205", "🍰", "草莓蛋糕", "", "水果食物", "shortcake", "娃娃"],
+    ["3_206", "🍪", "饼干", "饼", "水果食物", "cookie", "饼干"],
+    ["3_207", "🍫", "巧克力", "", "水果食物", "chocolate bar", "巧克力棒"],
+    ["3_208", "🍬", "糖果", "", "水果食物", "candy", "糖果"],
+    ["3_209", "🍭", "棒棒糖", "", "水果食物", "lollipop", "棒棒糖"],
+    ["3_210", "🍯", "蜜罐", "", "水果食物", "honey pot", "蜜罐"],
+    ["3_211", "🍎", "红苹果", "", "水果食物", "red apple", "红苹果"],
+    ["3_212", "🍏", "青苹果", "", "水果食物", "green apple", "青苹果"],
+    ["3_213", "🍊", "橘子", "", "水果食物", "tangerine", "橘子"],
+    ["3_214", "🍋", "柠檬", "", "水果食物"],
+    ["3_215", "🍒", "樱桃", "", "水果食物", "cherries", "樱桃"],
+    ["3_216", "🍇", "葡萄", "", "水果食物", "grapes", "葡萄"],
+    ["3_217", "🍉", "西瓜", "", "水果食物", "watermelon", "西瓜"],
+    ["3_218", "🍓", "草莓", "", "水果食物", "strawberry", "草莓"],
+    ["3_219", "🍑", "桃子", "", "水果食物", "peach", "桃子"],
+    ["3_220", "🍈", "哈密瓜", "", "水果食物", "melon", "瓜"],
+    ["3_221", "🍌", "香蕉", "", "水果食物", "banana", "香蕉"],
+    ["3_222", "🍐", "梨", "", "水果食物"],
+    ["3_223", "🍍", "菠萝", "", "水果食物", "pineapple", "菠萝"],
+    ["3_224", "🍠", "烤地瓜", "", "水果食物", "roasted sweet potato", "烤地瓜"],
+    ["3_225", "🍆", "茄子", "", "水果食物", "aubergine", "茄子"],
+    ["3_226", "🍅", "西红柿", "", "水果食物", "tomato", "番茄"],
+    ["3_227", "🌽", "玉米", "", "水果食物", "ear of maize", "耳朵的玉米"],
+    ["1_167", "💛", "黄色的心", "黄,心", "花样庆祝", "yellow heart", "黄色的心"],
+    ["1_168", "💙", "蓝色的心", "蓝,心", "花样庆祝", "blue heart", "蓝色的心"],
+    ["1_169", "💜", "紫色的心", "紫,心", "花样庆祝", "purple heart", "紫心勋章"],
+    ["1_170", "💚", "绿色的心", "绿,心", "花样庆祝", "green heart", "绿色的心"],
+    ["1_171", "❤", "红色的心", "红,心", "花样庆祝", "heavy black heart", "深黑色的心"],
+    ["1_172", "💔", "心碎", "碎", "花样庆祝", "broken heart", "破碎的心"],
+    ["1_173", "💗", "成长的心", "", "花样庆祝", "growing heart", "成长的心"],
+    ["1_174", "💓", "跳动的心", "", "花样庆祝", "beating heart", "跳动的心脏"],
+    ["1_175", "💕", "两颗心", "", "花样庆祝", "two hearts", "两颗心"],
+    ["1_176", "💖", "心动", "", "花样庆祝", "sparkling heart", "闪闪发光的心"],
+    ["1_177", "💞", "旋转的心", "", "花样庆祝", "revolving hearts", "旋转的心"],
+    ["1_178", "💘", "心与箭头", "", "花样庆祝", "heart with arrow", "心与箭头"],
+    ["1_179", "💌", "情书", "", "花样庆祝", "love letter", "情书"],
+    ["3_000", "🎍", "松装饰", "", "花样庆祝", "pine decoration", "松装饰"],
+    ["3_001", "💝", "丝带心", "", "花样庆祝", "heart with ribbon", "心丝带"],
+    ["3_002", "🎎", "日本娃娃", "", "花样庆祝", "japanese dolls", "日本娃娃"],
+    ["3_003", "🎒", "书包", "", "花样庆祝", "school satchel", "书包"],
+    ["3_004", "🎓", "毕业帽", "", "花样庆祝", "graduation cap", "毕业帽"],
+    ["3_005", "🎏", "鲤鱼旗", "", "花样庆祝", "carp streamer", "鲤鱼等浮电缆"],
+    ["3_006", "🎆", "烟花", "", "花样庆祝", "fireworks", "烟花"],
+    ["3_007", "🎇", "烟花", "", "花样庆祝", "firework sparkler", "烟花炯炯有神的眼睛"],
+    ["3_008", "🎐", "风铃", "", "花样庆祝", "wind chime", "风铃"],
+    ["3_009", "🎑", "夜晚", "", "花样庆祝", "moon viewing ceremony", "月亮观看仪式"],
+    ["3_010", "🎃", "南瓜灯", "", "花样庆祝", "jack-o-lantern", "南瓜灯"],
+    ["3_011", "👻", "鬼", "鬼", "花样庆祝", "ghost", "鬼"],
+    ["3_012", "🎅", "圣诞老人", "", "花样庆祝", "father christmas", "圣诞老人"],
+    ["3_013", "🎄", "圣诞树", "", "花样庆祝", "christmas tree", "圣诞树"],
+    ["3_014", "🎁", "礼物", "", "花样庆祝", "wrapped present", "包装礼物"],
+    ["3_015", "🎋", "七夕树", "", "花样庆祝", "tanabata tree", "七夕节树"],
+    ["3_016", "🎉", "晚会烟花", "", "花样庆祝", "party popper", "晚会烟花"],
+    ["3_017", "🎊", "五彩纸屑球", "", "花样庆祝", "confetti ball", "五彩纸屑球"],
+    ["3_018", "🎈", "气球", "", "花样庆祝", "balloon", "气球"],
+    ["3_019", "🎌", "交叉的旗", "", "花样庆祝", "crossed flags", "交叉的旗帜"],
+    ["4_000", "🏠", "房子", "房", "房车交通", "house building", "房屋建筑"],
+    ["4_001", "🏡", "带花园的房子", "", "房车交通", "house with garden", "的房子,有花园"],
+    ["4_002", "🏫", "学校", "", "房车交通", "school", "学校"],
+    ["4_003", "🏢", "办公大楼", "", "房车交通", "office building", "办公大楼"],
+    ["4_004", "🏣", "日本邮局", "", "房车交通", "japanese post office", "日本邮局"],
+    ["4_005", "🏥", "医院", "", "房车交通", "hospital", "医院"],
+    ["4_006", "🏦", "银行", "", "房车交通", "bank", "银行"],
+    ["4_007", "🏪", "便利店", "", "房车交通", "convenience store", "便利店"],
+    ["4_008", "🏩", "喜欢的酒店", "", "房车交通", "love hotel", "喜欢的酒店"],
+    ["4_009", "🏨", "酒店", "", "房车交通", "hotel", "酒店"],
+    ["4_010", "💒", "婚礼教堂", "", "房车交通", "wedding", "婚礼"],
+    ["4_011", "⛪", "教堂", "", "房车交通", "church", "教堂"],
+    ["4_012", "🏬", "百货商店", "", "房车交通", "department store", "百货商店"],
+    ["4_013", "🏤", "", "", "房车交通"],
+    ["4_014", "🌇", "落日建筑", "", "房车交通", "sunset over buildings", "落日的建筑"],
+    ["4_015", "🌆", "城市黄昏", "", "房车交通", "cityscape at dusk", "城市黄昏"],
+    ["4_016", "🏯", "日本城堡", "", "房车交通", "japanese castle", "日本城堡"],
+    ["4_017", "🏰", "欧洲城堡", "", "房车交通", "european castle", "欧洲城堡"],
+    ["4_018", "⛺", "帐篷", "", "房车交通", "tent", "帐篷"],
+    ["4_019", "🏭", "工厂", "", "房车交通", "factory", "工厂"],
+    ["4_020", "🗼", "东京塔", "", "房车交通", "tokyo tower", "东京塔"],
+    ["4_021", "🗾", "日本的外形", "", "房车交通", "silhouette of japan", "日本的轮廓"],
+    ["4_022", "🗻", "富士山", "", "房车交通", "mount fuji", "富士山"],
+    ["4_023", "🌄", "日出", "", "房车交通", "sunrise over mountains", "山上的日出"],
+    ["4_024", "🚢", "船", "船", "房车交通", "ship", "船"],
+    ["4_025", "⛵", "帆船", "", "房车交通", "sailboat", "帆船"],
+    ["4_026", "🚤", "快艇", "", "房车交通", "speedboat", "快艇"],
+    ["4_027", "🚣", "划船", "", "房车交通"],
+    ["4_028", "⚓", "锚", "", "房车交通", "anchor", "锚"],
+    ["4_029", "🚀", "火箭", "", "房车交通", "rocket", "火箭"],
+    ["4_030", "✈", "飞机", "飞", "房车交通", "airplane", "飞机"],
+    ["4_031", "💺", "座位", "", "房车交通", "seat", "座位"],
+    ["4_032", "🚁", "直升机", "", "房车交通"],
+    ["4_033", "🚂", "老式火车", "", "房车交通"],
+    ["4_034", "🚊", "火车", "", "房车交通"],
+    ["4_035", "🚉", "火车月台", "", "房车交通", "station", "站"],
+    ["4_036", "🚞", "火车", "", "房车交通"],
+    ["4_037", "🚆", "火车", "", "房车交通"],
+    ["4_038", "🚄", "高铁", "", "房车交通", "high-speed train", "高速列车"],
+    ["4_039", "🚅", "高铁车头", "", "房车交通", "high-speed train with bullet nose", "高速列车与子弹的鼻子"],
+    ["4_040", "🚈", "", "", "房车交通"],
+    ["4_041", "🚇", "地铁", "", "房车交通", "metro", "地铁"],
+    ["4_042", "🚝", "", "", "房车交通"],
+    ["4_043", "🚋", "", "", "房车交通"],
+    ["4_044", "🚃", "轨道车", "", "房车交通", "railway car", "轨道车"],
+    ["4_045", "🚎", "有轨电车", "", "房车交通"],
+    ["4_046", "🚌", "公共汽车", "", "房车交通", "bus", "公共汽车"],
+    ["4_047", "🚍", "", "", "房车交通"],
+    ["4_048", "🚙", "休闲车", "", "房车交通", "recreational vehicle", "休闲车"],
+    ["4_049", "🚘", "汽车", "", "房车交通"],
+    ["4_050", "🚗", "汽车", "车", "房车交通", "automobile", "汽车"],
+    ["4_051", "🚕", "出租车", "", "房车交通", "taxi", "出租车"],
+    ["4_052", "🚖", "出租车", "", "房车交通"],
+    ["4_053", "🚛", "货车", "", "房车交通"],
+    ["4_054", "🚚", "卡车", "", "房车交通", "delivery truck", "送货卡车"],
+    ["4_055", "🚨", "警车灯", "", "房车交通", "police cars revolving light", "警车旋转灯"],
+    ["4_056", "🚓", "警车", "", "房车交通", "police car", "警车"],
+    ["4_057", "🚔", "", "", "房车交通"],
+    ["4_058", "🚒", "消防车", "", "房车交通", "fire engine", "消防车"],
+    ["4_059", "🚑", "救护车", "救,车", "房车交通", "ambulance", "救护车"],
+    ["4_060", "🚐", "", "", "房车交通"],
+    ["4_061", "🚲", "自行车", "", "房车交通", "bicycle", "自行车"],
+    ["4_062", "🚡", "缆车", "", "房车交通"],
+    ["4_063", "🚟", "", "", "房车交通"],
+    ["4_064", "🚠", "", "", "房车交通"],
+    ["4_065", "🚜", "", "", "房车交通"],
+    ["4_066", "💈", "理发店", "", "房车交通", "barber pole", "理发店"],
+    ["4_067", "🚏", "公共汽车站", "", "房车交通", "bus stop", "公共汽车站"],
+    ["4_068", "🎫", "票", "", "房车交通", "ticket", "票"],
+    ["4_069", "🚦", "竖着的红绿灯", "", "房车交通"],
+    ["4_070", "🚥", "横着的红绿灯", "", "房车交通", "horizontal traffic light", "水平红绿灯"],
+    ["4_071", "⚠", "警告", "", "房车交通", "warning sign", "警告标志"],
+    ["4_072", "🚧", "正在施工", "", "房车交通", "construction sign", "施工标志"],
+    ["4_073", "🔰", "日语初学者", "", "房车交通", "japanese symbol for beginner", "日语初学者的象征"],
+    ["4_074", "⛽", "燃料泵", "", "房车交通", "fuel pump", "燃料泵"],
+    ["4_075", "🏮", "灯笼", "", "房车交通", "izakaya lantern", "酒灯"],
+    ["4_076", "🎰", "自动售货机", "", "房车交通", "slot machine", "老虎机"],
+    ["4_077", "♨", "温泉", "", "房车交通", "hot springs", "温泉"],
+    ["4_078", "🗿", "moyai", "", "房车交通", "moyai", "moyai"],
+    ["4_079", "🎪", "帐篷", "", "房车交通", "circus tent", "马戏团的帐篷"],
+    ["4_080", "🎭", "面具", "", "房车交通", "performing arts", "表演艺术"],
+    ["4_081", "📍", "位置", "", "房车交通", "round pushpin", "一轮图钉"],
+    ["4_082", "🚩", "三角旗", "", "房车交通", "triangular flag on post", "三角国旗后"],
+    ["5_000", "0⃣", "0", "零", "各种标识"],
+    ["5_001", "1⃣", "1", "一", "各种标识"],
+    ["5_002", "2⃣", "2", "二", "各种标识"],
+    ["5_003", "3⃣", "3", "三", "各种标识"],
+    ["5_004", "4⃣", "4", "四", "各种标识"],
+    ["5_005", "5⃣", "5", "五", "各种标识"],
+    ["5_006", "6⃣", "6", "六", "各种标识"],
+    ["5_007", "7⃣", "7", "七", "各种标识"],
+    ["5_008", "8⃣", "8", "八", "各种标识"],
+    ["5_009", "9⃣", "9", "九", "各种标识"],
+    ["5_010", "🔟", "10", "十", "各种标识", "keycap ten", "键帽十"],
+    ["5_011", "⬆", "向上箭头", "", "各种标识", "upwards black arrow", "黑色箭头向上"],
+    ["5_012", "⬇", "向下箭头", "", "各种标识", "downwards black arrow", "向下黑色箭头"],
+    ["5_013", "⬅", "向左箭头", "", "各种标识", "leftwards black arrow", "在左边黑色箭头"],
+    ["5_014", "➡", "向右箭头", "", "各种标识", "black rightwards arrow", "黑色箭头向右"],
+    ["5_015", "🔣", "符号", "", "各种标识", "input symbol for symbols", "输入符号的象征"],
+    ["5_016", "🔢", "数字", "", "各种标识", "input symbol for numbers", "对数字的输入符号"],
+    ["5_017", "🔠", "大写字母", "", "各种标识", "input symbol for latin capital letters", "输入拉丁字母大写字母符号"],
+    ["5_018", "🔡", "小写字母", "", "各种标识", "input symbol for latin small letters", "输入拉丁字母小写字母符号"],
+    ["5_019", "🔤", "拉丁字母", "", "各种标识", "input symbol for latin letters", "输入符号拉丁字母"],
+    ["5_020", "↗", "东北方向", "", "各种标识", "north east arrow", "北东箭"],
+    ["5_021", "↖", "西北方向", "", "各种标识", "north west arrow", "西北方向"],
+    ["5_022", "↘", "东南方向", "", "各种标识", "south east arrow", "南东箭"],
+    ["5_023", "↙", "西南方向", "", "各种标识", "south west arrow", "西南箭头"],
+    ["5_024", "↔", "左右箭头", "", "各种标识", "left right arrow", "左右箭头"],
+    ["5_025", "↕", "上下箭头", "", "各种标识", "up down arrow", "向上向下箭头"],
+    ["5_026", "🔄", "循环", "", "各种标识"],
+    ["5_027", "◀", "向左三角形", "", "各种标识", "black left-pointing triangle", "黑色只左向三角形"],
+    ["5_028", "▶", "向右三角形", "", "各种标识", "black right-pointing triangle", "黑色三角形三点"],
+    ["5_029", "🔼", "向上三角形", "", "各种标识", "up-pointing small red triangle", "指小红三角"],
+    ["5_030", "🔽", "向下三角形", "", "各种标识", "down-pointing small red triangle", "down-pointing小红三角"],
+    ["5_031", "↩", "", "", "各种标识", "leftwards arrow with hook", "左箭头和钩"],
+    ["5_032", "↪", "", "", "各种标识", "rightwards arrow with hook", "向右箭头与钩"],
+    ["5_033", "ℹ", "信息", "", "各种标识", "information source", "信息来源"],
+    ["5_034", "⏪", "", "", "各种标识", "black left-pointing double triangle", "黑色只左向双三角形"],
+    ["5_035", "⏫", "", "", "各种标识", "black up-pointing double triangle", "黑色指双三角形"],
+    ["5_036", "⏬", "", "", "各种标识", "black down-pointing double triangle", "黑色down-pointing双三角形"],
+    ["5_037", "⤵", "", "", "各种标识", "arrow pointing rightwards then curving downwards", "箭头向右向下弯曲"],
+    ["5_038", "⤴", "", "", "各种标识", "arrow pointing rightwards then curving upwards", "箭头向右,向上弯曲"],
+    ["5_039", "🆗", "OK", "", "各种标识", "squared ok", "方好"],
+    ["5_040", "🔀", "", "", "各种标识"],
+    ["5_041", "🔁", "循环", "", "各种标识"],
+    ["5_042", "🔂", "循环1次", "", "各种标识"],
+    ["5_043", "🆕", "NEW", "", "各种标识", "squared new", "平方的新"],
+    ["5_044", "🆙", "UP", "", "各种标识", "squared up with exclamation mark", "方用感叹号"],
+    ["5_045", "🆒", "COOL", "", "各种标识", "squared cool", "方很酷"],
+    ["5_046", "🆓", "FREE", "", "各种标识", "squared free", "方免费"],
+    ["5_047", "🆖", "NG", "", "各种标识", "squared ng", "²ng"],
+    ["5_048", "📶", "信号", "", "各种标识", "antenna with bars", "天线与酒吧"],
+    ["5_049", "🎦", "电影", "", "各种标识", "cinema", "电影"],
+    ["5_050", "🈁", "", "", "各种标识", "squared katakana koko", "²片假名可可"],
+    ["5_051", "🈯", "指", "指", "文字系列", "squared cjk unified ideograph-6307", "²cjk统一象形文字- 6307"],
+    ["5_052", "🈳", "空", "空", "文字系列", "squared cjk unified ideograph-7a7a", "²cjk统一ideograph-7a7a"],
+    ["5_053", "🈵", "满", "满", "文字系列", "squared cjk unified ideograph-6e80", "²cjk统一ideograph-6e80"],
+    ["5_054", "🈴", "合", "合", "文字系列", "squared cjk unified ideograph-5408", "²cjk统一象形文字- 5408"],
+    ["5_055", "🈲", "禁", "禁", "文字系列", "squared cjk unified ideograph-7981", "²cjk统一象形文字- 7981"],
+    ["5_056", "🉐", "得", "得", "文字系列", "circled ideograph advantage", "环绕象形文字的优势"],
+    ["5_057", "🈹", "割", "割", "文字系列", "squared cjk unified ideograph-5272", "²cjk统一象形文字- 5272"],
+    ["5_058", "🈺", "当", "当", "文字系列", "squared cjk unified ideograph-55b6", "²cjk统一ideograph-55b6"],
+    ["5_059", "🈶", "有", "有", "文字系列", "squared cjk unified ideograph-6709", "²cjk统一象形文字- 6709"],
+    ["5_060", "🈚", "无", "无", "文字系列", "squared cjk unified ideograph-7121", "²cjk统一象形文字- 7121"],
+    ["5_065", "🚾", "厕所", "厕", "文字系列", "water closet", "抽水马桶"],
+    ["5_068", "🅿", "停车", "", "文字系列", "negative squared latin capital letter p", "-平方拉丁大写字母p"],
+    ["5_071", "🈷", "月", "月", "文字系列", "squared cjk unified ideograph-6708", "²cjk统一象形文字- 6708"],
+    ["5_072", "🈸", "申", "申", "文字系列", "squared cjk unified ideograph-7533", "²cjk统一象形文字- 7533"],
+    ["5_073", "🈂", "片假名sa", "", "文字系列", "squared katakana sa", "²片假名sa"],
+    ["5_074", "Ⓜ", "M", "M", "文字系列", "circled latin capital letter m", "围绕拉丁大写字母m"],
+    ["5_079", "🉑", "可", "可", "文字系列", "circled ideograph accept", "在象形文字接受"],
+    ["5_080", "㊙", "秘", "秘", "文字系列", "circled ideograph secret", "在象形文字的秘密"],
+    ["5_081", "㊗", "祝", "祝", "文字系列", "circled ideograph congratulation", "象形文字环绕祝贺"],
+    ["5_082", "🆑", "CL", "", "文字系列", "squared cl", "²cl"],
+    ["5_083", "🆘", "紧急求救", "", "文字系列", "squared sos", "²sos"],
+    ["5_084", "🆔", "ID", "", "文字系列", "squared id", "方id"],
+    ["5_100", "🆚", "VS", "", "文字系列", "squared vs", "方和"],
+    ["5_103", "🅰", "A", "", "文字系列", "negative squared latin capital letter a", "-平方大写拉丁字母a"],
+    ["5_104", "🅱", "B", "", "文字系列", "negative squared latin capital letter b", "-方拉丁大写字母b"],
+    ["5_105", "🆎", "AB", "", "文字系列", "negative squared ab", "ab -平方"],
+    ["5_106", "🅾", "O", "", "文字系列", "negative squared latin capital letter o", "消极的平方拉丁大写字母o"],
+    ["5_061", "🚻", "厕所", "", "各种标识", "restroom", "厕所"],
+    ["5_062", "🚹", "男厕", "", "各种标识", "mens symbol", "男人的象征"],
+    ["5_063", "🚺", "女厕", "", "各种标识", "womens symbol", "女性的象征"],
+    ["5_064", "🚼", "婴儿标志", "", "各种标识", "baby symbol", "婴儿象征"],
+    ["5_066", "🚰", "水龙头", "", "各种标识"],
+    ["5_067", "🚮", "垃圾回收", "", "各种标识"],
+    ["5_069", "♿", "轮椅", "", "各种标识", "wheelchair symbol", "轮椅的象征"],
+    ["5_070", "🚭", "禁止吸烟", "禁", "各种标识", "no smoking symbol", "禁止吸烟标志"],
+    ["5_075", "🛂", "", "", "各种标识"],
+    ["5_076", "🛄", "", "", "各种标识"],
+    ["5_077", "🛅", "", "", "各种标识"],
+    ["5_078", "🛃", "", "", "各种标识"],
+    ["5_085", "🚫", "禁", "禁", "各种标识", "no entry sign", "不准入内签署"],
+    ["5_086", "🔞", "未满18周岁禁止", "", "各种标识", "no one under eighteen symbol", "没有人在十八岁的象征"],
+    ["5_088", "🚯", "禁止乱扔垃圾", "", "各种标识"],
+    ["5_089", "🚱", "禁止水龙头", "", "各种标识"],
+    ["5_090", "🚳", "禁止骑车", "", "各种标识"],
+    ["5_091", "🚷", "行人禁止", "", "各种标识"],
+    ["5_092", "🚸", "", "", "各种标识"],
+    ["5_093", "⛔", "禁止入内", "", "各种标识", "no entry", "不准入内"],
+    ["5_094", "✳", "星号", "", "各种标识", "eight spoked asterisk", "八个辐条星号"],
+    ["5_095", "❇", "星号", "", "各种标识", "sparkle", "闪耀"],
+    ["5_096", "❎", "错误", "", "各种标识", "negative squared cross mark", "消极的平方十字标记"],
+    ["5_097", "✅", "正确", "", "各种标识", "white heavy check mark", "白重复选标记"],
+    ["5_098", "✴", "八指黑星", "", "各种标识", "eight pointed black star", "八指黑星"],
+    ["5_099", "💟", "爱心", "", "各种标识", "heart decoration", "心装饰"],
+    ["5_101", "📳", "震动模式", "", "各种标识", "vibration mode", "振动模式"],
+    ["5_102", "📴", "手机关机", "", "各种标识", "mobile phone off", "手机了"],
+    ["5_107", "💠", "有一个点的钻石形状", "", "各种标识", "diamond shape with a dot inside", "里面有一个点的钻石形状"],
+    ["5_108", "➿", "", "", "各种标识"],
+    ["5_109", "♻", "回收标志", "", "各种标识", "black universal recycling symbol", "黑人普遍回收标志"],
+    ["5_110", "♈", "白羊座", "", "各种标识", "aries", "白羊座"],
+    ["5_111", "♉", "金牛座", "", "各种标识", "taurus", "金牛座"],
+    ["5_112", "♊", "双子座", "", "各种标识", "gemini", "双子座"],
+    ["5_113", "♋", "巨蟹座", "", "各种标识", "cancer", "癌症"],
+    ["5_114", "♌", "狮子座", "", "各种标识", "leo", "利奥"],
+    ["5_115", "♍", "处女座", "", "各种标识", "virgo", "处女座"],
+    ["5_116", "♎", "天秤座", "", "各种标识", "libra", "天秤座"],
+    ["5_117", "♏", "天蝎座", "", "各种标识", "scorpius", "天蝎座"],
+    ["5_118", "♐", "射手座", "", "各种标识", "sagittarius", "射手座"],
+    ["5_119", "♑", "摩羯座", "", "各种标识", "capricorn", "摩羯座"],
+    ["5_120", "♒", "水瓶座", "", "各种标识", "aquarius", "水瓶座"],
+    ["5_121", "♓", "双鱼座", "", "各种标识", "pisces", "双鱼座"],
+    ["5_122", "⛎", "蛇夫座", "", "各种标识", "ophiuchus", "蛇夫座"],
+    ["5_123", "🔯", "六角星", "", "各种标识", "six pointed star with middle dot", "六个五角星与中间点"],
+    ["5_124", "🏧", "ATM", "", "各种标识", "automated teller machine", "自动柜员机"],
+    ["5_125", "💹", "股票走势", "", "各种标识", "chart with upwards trend and yen sign", "与向上趋势图和日圆的迹象"],
+    ["5_126", "💲", "美元", "", "各种标识", "heavy dollar sign", "沉重的美元符号"],
+    ["5_127", "💱", "货币兑换", "", "各种标识", "currency exchange", "货币兑换"],
+    ["5_128", "™", "TM", "", "各种标识", "trade mark sign", "商标标志"],
+    ["5_129", "❌", "错误", "错", "各种标识", "cross mark", "十字标记"],
+    ["5_130", "‼", "警告", "警", "各种标识", "double exclamation mark", "双感叹号"],
+    ["5_131", "⁉", "感叹问号", "", "各种标识", "exclamation question mark", "感叹问号"],
+    ["5_132", "❗", "感叹号", "叹", "各种标识", "heavy exclamation mark symbol", "沉重的感叹号标志"],
+    ["5_133", "❓", "问号", "问", "各种标识", "black question mark ornament", "黑色问号点缀"],
+    ["5_134", "❕", "白色感叹号", "", "各种标识", "white exclamation mark ornament", "白色的感叹号点缀"],
+    ["5_135", "❔", "白色问号", "", "各种标识", "white question mark ornament", "白色的问号点缀"],
+    ["5_136", "⭕", "圆圈", "", "各种标识", "heavy large circle", "沉重的大圈"],
+    ["5_137", "🔝", "回到顶部", "", "各种标识", "top with upwards arrow above", "用上面的向上箭头"],
+    ["5_138", "🔚", "END", "", "各种标识", "end with leftwards arrow above", "最后左箭头"],
+    ["5_139", "🔙", "BACK", "", "各种标识", "back with leftwards arrow above", "左箭头上面"],
+    ["5_140", "🔛", "ON", "", "各种标识", "on with exclamation mark with left right arrow above", "上面用感叹号左右箭头"],
+    ["5_141", "🔜", "SOON", "", "各种标识", "soon with rightwards arrow above", "很快就向右箭头上面"],
+    ["5_142", "🔃", "循环", "", "各种标识", "clockwise downwards and upwards open circle arrows", "顺时针方向向下和向上开放循环箭头"],
+    ["5_143", "🕛", "12点钟", "", "各种标识", "clock face twelve oclock", "钟面12点钟"],
+    ["5_144", "🕧", "12点半", "", "各种标识"],
+    ["5_145", "🕐", "1点钟", "", "各种标识", "clock face one oclock", "钟面1点钟"],
+    ["5_146", "🕜", "1点半", "", "各种标识"],
+    ["5_147", "🕑", "2点钟", "", "各种标识", "clock face two oclock", "钟面2点钟"],
+    ["5_148", "🕝", "2点半", "", "各种标识"],
+    ["5_149", "🕒", "3点钟", "", "各种标识", "clock face three oclock", "钟面3点钟"],
+    ["5_150", "🕞", "3点半", "", "各种标识"],
+    ["5_151", "🕓", "4点钟", "", "各种标识", "clock face four oclock", "钟面4点钟"],
+    ["5_152", "🕟", "4点半", "", "各种标识"],
+    ["5_153", "🕔", "5点钟", "", "各种标识", "clock face five oclock", "钟面5点钟"],
+    ["5_154", "🕠", "5点半", "", "各种标识"],
+    ["5_155", "🕕", "6点钟", "", "各种标识", "clock face six oclock", "钟面6点钟"],
+    ["5_156", "🕖", "7点钟", "", "各种标识", "clock face seven oclock", "钟面7点钟"],
+    ["5_157", "🕗", "8点钟", "", "各种标识", "clock face eight oclock", "钟面8点钟"],
+    ["5_158", "🕘", "9点钟", "", "各种标识", "clock face nine oclock", "钟面9点钟"],
+    ["5_159", "🕙", "10点钟", "", "各种标识", "clock face ten oclock", "钟面10点钟"],
+    ["5_160", "🕚", "11点钟", "", "各种标识", "clock face eleven oclock", "钟面11点钟"],
+    ["5_161", "🕡", "6点半", "", "各种标识"],
+    ["5_162", "🕢", "7点半", "", "各种标识"],
+    ["5_163", "🕤", "8点半", "", "各种标识"],
+    ["5_164", "🕥", "9点半", "", "各种标识"],
+    ["5_165", "🕦", "10点半", "", "各种标识"],
+    ["5_166", "➕", "加号", "加", "各种标识", "heavy plus sign", "沉重的加号"],
+    ["5_167", "➖", "减号", "减", "各种标识", "heavy minus sign", "沉重的负"],
+    ["5_168", "➗", "除号", "除", "各种标识", "heavy division sign", "沉重的除号"],
+    ["5_169", "♠", "黑桃", "", "各种标识", "black spade suit", "黑色的铁锹套装"],
+    ["5_170", "♥", "红桃", "", "各种标识", "black heart suit", "黑色的心套装"],
+    ["5_171", "♣", "梅花", "", "各种标识", "black club suit", "黑色俱乐部服"],
+    ["5_172", "♦", "方块", "", "各种标识", "black diamond suit", "黑钻石套装"],
+    ["5_173", "💮", "白色的花", "", "各种标识", "white flower", "白色的花"],
+    ["5_174", "💯", "100", "百", "各种标识", "hundred points symbol", "几百点符号"],
+    ["5_175", "✔", "打钩", "", "各种标识", "heavy check mark", "沉重的复选标记"],
+    ["5_176", "☑", "勾选框", "", "各种标识", "ballot box with check", "投票箱和检查"],
+    ["5_177", "🔘", "单选框", "", "各种标识", "radio button", "单选按钮"],
+    ["5_178", "🔗", "链接", "", "各种标识", "link symbol", "链接符号"],
+    ["5_179", "➰", "弯曲符号", "", "各种标识", "curly loop", "卷曲的循环"],
+    ["5_180", "〰", "波浪线", "", "各种标识", "wavy dash", ""],
+    ["5_181", "〽", "", "", "各种标识", "part alternation mark", "部分交替马克"],
+    ["5_182", "🔱", "USB", "", "各种标识", "trident emblem", "三叉戟会徽"],
+    ["5_183", "◼", "黑色方块", "", "各种标识", "black medium square", "黑色介质广场"],
+    ["5_184", "◻", "白色方块", "", "各种标识", "white medium square", "白色中广场"],
+    ["5_185", "◾", "中黑色方块", "", "各种标识", "black medium small square", "黑色的中等小广场"],
+    ["5_186", "◽", "中白色方块", "", "各种标识", "white medium small square", "白色介质小广场"],
+    ["5_187", "▪", "小黑色方块", "", "各种标识", "black small square", "黑色的小广场"],
+    ["5_188", "▫", "小白色方块", "", "各种标识", "white small square", "白色的小广场"],
+    ["5_189", "🔺", "小三角形", "", "各种标识", "up-pointing red triangle", "指红色三角形"],
+    ["5_190", "🔲", "黑色方块", "", "各种标识", "black square button", "黑色方形按钮"],
+    ["5_191", "🔳", "白色方块", "", "各种标识", "white square button", "白色正方形按钮"],
+    ["5_192", "⚫", "黑色圆圈", "", "各种标识", "medium black circle", "中黑圈"],
+    ["5_193", "⚪", "白色圆圈", "", "各种标识", "medium white circle", "中白色的圆"],
+    ["5_194", "🔴", "红色圆圈", "", "各种标识", "large red circle", "大红色圆圈"],
+    ["5_195", "🔵", "蓝色圆圈", "", "各种标识", "large blue circle", "大型蓝色圆"],
+    ["5_196", "🔻", "红色三角形", "", "各种标识", "down-pointing red triangle", "down-pointing红色三角形"],
+    ["5_197", "🔶", "大橘钻", "", "各种标识", "large orange diamond", "大型橙色钻石"],
+    ["5_198", "🔷", "大蓝钻", "", "各种标识", "large blue diamond", "大的蓝钻石"],
+    ["5_199", "🔸", "小橘钻", "", "各种标识", "small orange diamond", "小橘色的钻石"],
+    ["5_200", "🔹", "小蓝钻", "", "各种标识", "small blue diamond", "小蓝钻"],
+    ["5_201", "✖", "黑色错误", "", "各种标识", "heavy multiplication x", "沉重的乘法x"]
+]

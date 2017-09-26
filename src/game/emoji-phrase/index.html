@@ -5,6 +5,7 @@
 <html>
 <head lang="zh-CN">
 	<%= require('tpl/com_head.html')({title: '看emoji猜成语', merge: true}) %>
+	<link href="./asset/emoji_sprite.css" rel="stylesheet">
 </head>
 <body>
 	<%= require('tpl/com_nav.html')({menus: require('../menus'), pageName: 'emoji-phrase'}) %>
@@ -12,11 +13,22 @@
 	<div class="container">
 		<h1>看emoji猜成语</h1>
 		<div>
-			<a href="javascript:;" id="gen" class="btn btn-primary">随机生成</a><br><br>
-			<div id="emoji_wrapper"></div>
+			<div>
+				<a href="javascript:;" id="gen" class="btn btn-primary">随机生成</a>
+				<a href="javascript:;" id="see" class="btn btn-success">查看答案</a>
+				<a href="javascript:;" id="guess" class="btn btn-warning">输入答案</a>
+			</div>
+			<div id="emoji_wrapper" style="margin-top:12px;"></div>
+			<div id="answer"></div>
 		</div>
 	</div>
 	
 	<%= require('tpl/com_footer.html')() %>
+	<script type="text/javascript" src="asset/pinyin_dict_withtone.js"></script>
+	<script type="text/javascript" src="asset/pinyinUtil.js"></script>
+
+	<script type="text/javascript">
+	
+	</script>
 </body>
 </html>

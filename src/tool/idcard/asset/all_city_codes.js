@@ -25,6 +25,57 @@ var cityUtil =
         return result;
     },
     /**
+     * 将all_city_codes转换成可以级联展示的省 -> 市，直辖市下面直接跟市区或者县
+     */
+    getProvinceCityMap: function(cityCodes)
+    {
+        var result = {};
+        var special = ['11', '12', '31', '50']; // 直辖市属于特例
+        for(var i in cityCodes)
+        {
+            if(i.substring(2) == '0000') // 如果是省或者直辖市
+            {
+                result[i.substring(0, 2)+'00'] = {value: cityCodes[i], children: {}};
+            }
+            else if(i.substring(4) == '00' && special.indexOf(i.substring(0, 2)) < 0) // 如果是市
+            {
+                result[i.substring(0, 2)+'00']['children'][i.substring(0, 4)] = cityCodes[i];
+            }
+            else if(i.substring(4) != '00' && special.indexOf(i.substring(0, 2)) >= 0)
+            {
+                result[i.substring(0, 2)+'00']['children'][i.substring(0, 2)+i.substring(4)] = cityCodes[i];
+            }
+        }
+        return result;
+    },
+    /**
+     * 获取所有的市，形如：{3604: '江西省九江市'}，直辖市可能包含县
+     */
+    getAllCitys: function(cityCodes)
+    {
+        var citys = {};
+        var special = ['11', '12', '31', '50']; // 直辖市属于特例
+        for(var i in cityCodes)
+        {
+            var t1 = i.substring(0, 2),
+                t2 = i.substring(2, 4),
+                t3 = i.substring(4, 6);
+            if(t2 == '00' && t3 == '00')
+            {
+                citys[t1+'00'] = cityCodes[i];
+            }
+            else if(special.indexOf(t1) < 0 && t3 == '00')
+            {
+                citys[t1 + t2] = cityCodes[t1+'0000'] + cityCodes[t1+t2+'00'];
+            }
+            else if(special.indexOf(t1) >= 0 && t3 !== '00')
+            {
+                citys[t1 + t3] = cityCodes[t1+'0000'] + cityCodes[i];
+            }
+        }
+        return citys;
+    },
+    /**
      * 获取所有的县，形如：{360426: '江西省九江市德安县'}
      */
     getAllCuntys: function(cityCodes)

@@ -26,6 +26,7 @@ var config = {
 			// 特别注意！不同版本的ExtractTextPlugin语法完全不一样，也是醉了！
 			{test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},
 			{test: /\.js$/, loader: 'jsx-loader?harmony'},
+			// {test: /\.js$/, loader: 'babel-loader'},
 			// {test: /\.scss$/, loader: 'style!css!sass?sourceMap'},
 			// 小于8kb的图片直接采用base64方式引入
 			{test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},

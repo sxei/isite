@@ -14,7 +14,7 @@ var menu =
 			{name: '十面埋伏', value: 'maifu'},
 		]
 	},
-	{name: '找省份', value: 'idcard'},
+	{name: '找省份', value: 'find-province'},
 	{name: '看emoji猜成语', value: 'emoji-phrase'}
 ];
 module.exports = menu;
