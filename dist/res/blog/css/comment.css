@@ -12,14 +12,55 @@
     -moz-transition: color .15s linear;
     transition: color .15s linear;
 }
+#xei-cmt-wrapper .xei-cmt-toolbar {
+    margin: 10px 3px;
+    color: #797979;
+    text-align: right;
+}
+.xei-cmt-top-name {
+    margin-right: 4px;
+}
+.xei-cmt-settings {
+    cursor: pointer;
+    position: relative;
+}
+.xei-cmt-settings:hover {
+    color: #F77;
+}
+.xei-cmt-settings > ul{
+    /*display: none;*/
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #aaa;
+    background: #f8f8f8;
+    box-shadow: inset 0 1px 1px #fff,0 1px 1px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+.xei-cmt-settings > ul > li {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    list-style: none;
+    padding: 5px;
+    border-bottom: solid 1px #ddd;
+}
+.xei-cmt-settings > ul > li:hover {
+    background: #DEDEDE;
+    border-bottom: solid 1px #B3B3B3;
+}
+.xei-cmt-settings:hover > ul{
+    display: block;
+}
 /* 头像 */
 #xei-cmt-wrapper .xei-cmt-avatar {
-    box-shadow: 0 1px 1px rgba(255,255,255,0.75);
     position: relative;
-    border-radius: 3px;
-    background-color: #fff;
     float: left;
 }
+/* 注意这个是特指回复框中的头像 */
 .xei-cmt-replybox .xei-cmt-avatar {
     margin-right: 20px;
 }
@@ -33,6 +74,14 @@
     background: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.22);
     border-radius: 3px;
+}
+#xei-cmt-wrapper .xei-cmt-avatar > a {
+    display: block;
+}
+#xei-cmt-wrapper .xei-cmt-nickname {
+    margin-top: 6px;
+    text-align: center;
+    color: #969696;
 }
 #xei-cmt-wrapper .xei-cmt-post-wrapper {
     border-bottom: none;
@@ -74,16 +123,20 @@
     height: 33px;
     line-height: 33px;
 }
+/* 发表评论提示 */
 #xei-cmt-wrapper .xei-cmt-post-tip {
-    color: #d32;
     float: right;
     margin-right: 10px;
+    color: #999;
 }
-#xei-cmt-wrapper .xei-cmt-post-tip:hover {
+#xei-cmt-wrapper .xei-cmt-post-tip a{
+    color: #d32;
+    margin-left: 4px;
+}
+#xei-cmt-wrapper .xei-cmt-post-tip a:hover {
     text-decoration: underline;
 }
 #xei-cmt-wrapper .xei-cmt-post-button {
-    display: inline-block;
     float: right;
     height: 32px;
     width: 100px;
@@ -112,7 +165,7 @@
 }
 /* 所有图标 */
 #xei-cmt-wrapper .xei-cmt-icon {
-    background: rgba(0, 0, 0, 0) url("//res.xiaoming.com/blog/images/duoshuo_sprites.png") no-repeat;
+    background: rgba(0, 0, 0, 0) url("../images/duoshuo_sprites.png") no-repeat;
     vertical-align: middle;
     display: inline-block;
     -webkit-transition: opacity .15s linear;
@@ -125,7 +178,7 @@
     height: 19px;
     background-position: 0 -12px;
     opacity: .6;
-    margin: 6px 0px 0px 6px;
+    margin: 4px 0px 0px 6px;
 }
 #xei-cmt-wrapper .xei-cmt-icon-emoji:hover {
     background-position: 0 -30px;
@@ -145,6 +198,16 @@
     width: 13px;
     height: 13px;
     background-position: 0 -176px;
+}
+#xei-cmt-wrapper .xei-cmt-delete-btn {
+    visibility: hidden;
+}
+#xei-cmt-wrapper .xei-cmt-comment:hover .xei-cmt-delete-btn {
+    visibility: visible;
+}
+#xei-cmt-wrapper .xei-cmt-icon-settings {
+    width: 12px;
+    height: 12px;
 }
 .xei-cmt-top {
     margin: 10px 0 4px 0;
@@ -243,6 +306,36 @@
 #xei-cmt-wrapper .xei-cmt-comment-footer > a:hover .xei-cmt-icon {
     opacity: 1;
 }
-.xei-cmt-children-item {
+.xei-cmt-children-wrapper {
     margin-left: 38px;
+    padding: 0;
+}
+.xei-cmt-comment-body > .xei-cmt-replybox {
+    margin-top: 10px;
+}
+
+.xei-cmt-login-wrapper {
+    display: inline-block;
+}
+.xei-cmt-login-tip {
+    display: inline-block;
+    vertical-align: middle;
+    color: #818181;
+    margin: 1px 4px 0px 16px;
+}
+.xei-cmt-icon-qq {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../images/qq_login.png');
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.xei-cmt-icon-weibo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../images/weibo.png');
+    vertical-align: middle;
+    margin-right: 4px;
 }
