@@ -1,1 +1,1 @@
-webpack --watch
+webpack -p --watch

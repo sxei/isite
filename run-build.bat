@@ -1,1 +1,1 @@
-webpack
+webpack -p

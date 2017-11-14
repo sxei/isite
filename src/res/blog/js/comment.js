@@ -129,6 +129,7 @@
 			var rootId = $(this).parents('.xei-cmt-comment:last')[0].dataset.cmtId;
 			$parent.after(getReplyBoxHtml(parentId, rootId));
 			currentReplyId = parentId;
+			$parent.next('.xei-cmt-replybox').find('textarea')[0].focus();
 		});
 
 		// 点赞
@@ -187,7 +188,7 @@
 		});
 
 		// 文本框的回车监听
-		$('#xei-cmt-wrapper textarea').on('keyup', function(e)
+		$('#xei-cmt-wrapper').on('keyup', 'textarea', function(e)
 		{
 			if(e.ctrlKey && e.keyCode == 13)
 			{
@@ -269,17 +270,14 @@
 			}
 			// 总条数
 			updateCommentCount(resp.commentCount);
-			var list = resp.pb.dataList;
-			
 			// 处理二级以上评论
-			list = parseComments(list);
-
+			var list = parseComments(resp.pb.dataList);
 			if(list.length == 0)
 			{
 				target.html('<p class="comment-tip">暂无评论！</p>');
 				return;
 			}
-			var html = renderComment(resp.pb.dataList);
+			var html = renderComment(list);
 			html += renderPage(resp.pb.current, resp.pb.pageCount);
 			target.html(html);
 		});
@@ -459,7 +457,7 @@
 		return `
 			<div class="xei-cmt-replybox">
 				<div class="xei-cmt-avatar">
-					<a href="${userInfo.userWebsite || 'javascript:;'}" title="${userInfo.nickname}" target="_blank">
+					<a href="${userInfo.website || 'javascript:;'}" title="${userInfo.nickname}" target="_blank">
 						<img src="${fixAvatar(userInfo.avatar)}"/>
 					</a>
 					<div class="xei-cmt-nickname">${userInfo.nickname}</div>
@@ -620,7 +618,7 @@
 		var currentIdx = -1;
 		var emText = ['微笑','撇嘴','色','发呆','得意','流泪','害羞','闭嘴','睡','大哭','尴尬','发怒','调皮','呲牙','惊讶','难过','酷','冷汗','抓狂','吐','偷笑','可爱','白眼','傲慢','饥饿','困','惊恐','流汗','憨笑','大兵','奋斗','咒骂','疑问','嘘','晕','折磨','衰','骷髅','敲打','再见','擦汗','抠鼻','鼓掌','糗大了','坏笑','左哼哼','右哼哼','哈欠','鄙视','委屈','快哭了','阴险','亲亲','吓','可怜','菜刀','西瓜','啤酒','篮球','乒乓','咖啡','饭','猪头','玫瑰','凋谢','示爱','爱心','心碎','蛋糕','闪电','炸弹','刀','足球','瓢虫','便便','月亮','太阳','礼物','拥抱','强','弱','握手','胜利','抱拳','勾引','拳头','差劲','爱你','NO','OK','爱情','飞吻','跳跳','发抖','怄火','转圈','磕头','回头','跳绳','挥手','激动','街舞','献吻','左太极','右太极'];
 
-		$('.xei-qq-face-wrapper').on('mousemove', 'a', function(e)
+		$('#xei-cmt-wrapper').on('mousemove', '.xei-qq-face-wrapper a', function(e)
 		{
 			var idx = parseInt(this.dataset.idx);
 			if(idx == currentIdx) return;
@@ -633,17 +631,17 @@
 			if(currentIdx < 0) obj.show();
 			currentIdx = idx;
 		});
-		$('.xei-qq-face-wrapper').on('mouseleave', function(e)
+		$('#xei-cmt-wrapper').on('mouseleave', '.xei-qq-face-wrapper', function(e)
 		{
 			var obj = $('.xei-qq-face-wrapper > .face-preview').hide();
 			currentIdx = -1;
 		});
 		$('#xei-cmt-wrapper').on('click', '.xei-cmt-icon-emoji', function(e)
 		{
-			toggleFaceShow(true);
+			toggleFaceShow(true, this);
 		});
 
-		$('.xei-qq-face-wrapper').on('click', 'a', function(e)
+		$('#xei-cmt-wrapper').on('click', '.xei-qq-face-wrapper a', function(e)
 		{
 			var idx = parseInt(this.dataset.idx);
 			var textarea = $(this).parents('.xei-cmt-replybox').find('textarea')[0];
@@ -652,9 +650,11 @@
 		});
 
 		// 切换表情的显示和隐藏
-		function toggleFaceShow(show)
+		function toggleFaceShow(show, target)
 		{
-			$('.xei-qq-face-wrapper')[show?'show':'hide']('normal');
+			if(target == undefined) target = $('.xei-qq-face-wrapper');
+			else target = $(target).parents('.xei-cmt-replybox').children('.xei-qq-face-wrapper');
+			target[show?'show':'hide']('normal');
 			window[show ? 'addEventListener' : 'removeEventListener']('click', clickOtherHide, true);
 		}
 		
