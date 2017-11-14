@@ -503,15 +503,14 @@
 		 * @param parseToNumber 是否强转数字
 		 * @returns
 		 */
-		getCookie: function(cookieName, defaultValue, parseToNumber, isUnescape)
+		getCookie: function(cookieName, defaultValue, parseToNumber)
 		{
 			var temp = new RegExp('(^|;| )'+cookieName+'=([^;]*)(;|$)', 'g').exec(document.cookie);
 			if(temp == null) return defaultValue;
 			var value = temp[2];
-			// Java后台删除cookie时并不会真正删除，而是变成双引号，update 20150420
-			if(value == '' || value == '""') return defaultValue;
+			if(value == '') return defaultValue;
 			if(parseToNumber == true) return parseFloat(value);
-			return value;
+			return decodeURIComponent(value);
 		},
 		/**
 		 * 设置cookie，对于中文和特殊字符必须先进行编码
@@ -525,7 +524,7 @@
 		{
 			day = day || 30;
 			path = path || '/';
-			var str = name + '=' + value + '; ';
+			var str = name + '=' + encodeURIComponent(value) + '; ';
 			if(day) str += 'expires=' + new Date(Date.now() + day * 24 * 3600 * 1000).toGMTString() + '; ';
 			if(path) str += 'path=' + path + '; ';
 			if(domain) str += 'domain=' + domain;

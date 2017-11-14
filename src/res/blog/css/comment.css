@@ -27,12 +27,17 @@
 .xei-cmt-settings:hover {
     color: #F77;
 }
+.xei-cmt-settings > span {
+    display: inline-block;
+    padding-bottom: 8px;
+}
 .xei-cmt-settings > ul{
-    /*display: none;*/
+    display: none;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 20px;
-    width: 100px;
+    width: 76px;
     margin: 0;
     padding: 0;
     border: 1px solid #aaa;
@@ -45,7 +50,7 @@
     margin: 0;
     text-align: left;
     list-style: none;
-    padding: 5px;
+    padding: 5px 10px;
     border-bottom: solid 1px #ddd;
 }
 .xei-cmt-settings > ul > li:hover {
@@ -59,6 +64,9 @@
 #xei-cmt-wrapper .xei-cmt-avatar {
     position: relative;
     float: left;
+}
+#xei-cmt-wrapper .xei-cmt-replybox {
+    position: relative;
 }
 /* 注意这个是特指回复框中的头像 */
 .xei-cmt-replybox .xei-cmt-avatar {
@@ -116,6 +124,7 @@
 }
 /* 发表评论一栏 */
 #xei-cmt-wrapper .xei-cmt-post-toolbar {
+    position: relative;
     border: solid 1px #ccc;
     border-top: none;
     border-bottom-left-radius: 3px;
@@ -194,6 +203,12 @@
     height: 13px;
     background-position: 0 -117px;
 }
+#xei-cmt-wrapper a.liked > .xei-cmt-icon-like {
+    background-position: 0 -130px;
+}
+#xei-cmt-wrapper .xei-cmt-comment-footer > a.liked {
+    color: #d32;
+}
 #xei-cmt-wrapper .xei-cmt-icon-delete {
     width: 13px;
     height: 13px;
@@ -245,6 +260,10 @@
 /* 评论区 */
 .xei-cmt-comments {
     padding-bottom: 20px;
+}
+.xei-cmt-comments > .comment-tip {
+    text-align: center;
+    color: #6E6E6E;
 }
 /* 评论区 */
 .xei-cmt-comments > ul {
@@ -338,4 +357,173 @@
     background: url('../images/weibo.png');
     vertical-align: middle;
     margin-right: 4px;
+}
+
+
+/* QQ表情样式 */
+.xei-qq-face-wrapper {
+    position: absolute;
+    left: 78px;
+    top: 107px;
+    width: 400px;
+    height: 182px;
+    display: none;
+}
+/* QQ表情预览 */
+.xei-qq-face-wrapper .face-preview {
+    position: absolute;
+    border: 1px solid #999;
+    background: #fff;
+    overflow: hidden;
+    z-index: 2;
+    left: 3px;
+    display: none;
+}
+.xei-qq-face-wrapper .face-preview.right {
+    left: 345px;
+}
+.xei-qq-face-wrapper .face-preview img {
+    display: block;
+    margin: 8px 12px;
+}
+.xei-qq-face-wrapper .face-preview span {
+    display: block;
+    padding: 3px;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #ECECEC;
+}
+.xei-qq-face-wrapper > ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    background: url('../images/face/qq_face_bg.png') 0 0 no-repeat;
+    background-color: #FFF;
+    z-index: 1;
+    border: solid 1px #ccc;
+}
+.xei-qq-face-wrapper > ul > li {
+    float: left;
+}
+.xei-qq-face-wrapper > ul > li > a {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: solid 1px transparent;
+}
+.xei-qq-face-wrapper > ul > li > a:hover {
+    border-color: #2E8DED;
+}
+
+
+
+
+
+/* 登录弹窗样式 */
+.xei-cmt-login-type-select {
+    margin-top: 62px;
+}
+.xei-cmt-login-type-select > div {
+    margin: 20px 0;
+    text-align: center;
+}
+.xei-cmt-login-type-select > div > a {
+    display: inline-block;
+    width: 173px;
+    height: 32px;
+    line-height: 32px;
+    color: #FFF;
+    text-align: center;
+    padding-left: 24px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.xei-cmt-login-type-select > div > a:hover {
+    text-decoration: none;
+}
+.xei-cmt-login-type-select > div > a.btn-qq-login {
+    background: url('../images/qq_login_32.png') no-repeat;
+    background-color: #1388EC;
+    border: solid 1px #076EC5;
+}
+.xei-cmt-login-type-select > div > a.btn-weibo-login {
+    background: url('../images/btn_login_weibo.png') no-repeat;
+}
+.xei-cmt-login-type-select > div > a.btn-visitor-login {
+    background: url('../images/default_avatar.gif') no-repeat;
+    background-color: #009a61;
+    border: solid 1px #05925D;
+    background-size: contain;
+}
+/* 游客评论表单样式 */
+.xei-cmt-visitor-post-form {
+    display: none;
+}
+.xei-cmt-form-group {
+    margin: 10px 0;
+}
+.xei-cmt-form-group label {
+    width: 20%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.xei-cmt-form-group input[type="text"] {
+    padding: 7px 10px;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    transition: all 0.2s;
+    width: 66%;
+    display: inline-block;
+}
+.xei-cmt-form-group input:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+
+.xei-cmt-form-group input[type="button"] {
+    margin-left: 21%;
+    padding: 8px 20px;
+    background-color: #39f;
+    border: solid 1px #278BEE;
+    border-radius: 4px;
+    color: white;
+}
+.xei-cmt-form-group input[type="button"]:hover {
+    background-color: #2284E6;
+}
+.xei-cmt-form-group .required-tip {
+    color: #F00;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.xei-cmt-visitor-post-form .top-post-tip {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.xei-cmt-form-group .visitor-form-post-tip {
+    margin-left: 6px;
+    color: red;
+}
+
+/* 分页 */
+#xei-cmt-wrapper .xei-cmt-page {
+    margin: 20px 10px;
+}
+#xei-cmt-wrapper .xei-cmt-page > a {
+    padding: 0 4px;
+    color: #d32;
+}
+#xei-cmt-wrapper .xei-cmt-page > a:hover {
+    text-decoration: underline;
+}
+#xei-cmt-wrapper .xei-cmt-page > span {
+    padding: 0 4px;
+    color: #6B6B6B;
 }
