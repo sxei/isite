@@ -143,6 +143,45 @@ span.cnzz-wrapper {
 	76%{stroke-dashoffset: 0;stroke-dasharray: 20;stroke:#D302D6;}
 	100%{stroke-dashoffset: 1000;stroke-dasharray: 20;stroke:green;}
 }
+.jump-tip {
+    position: fixed;
+    width: 400px;
+    left: 50%;
+    top: 0;
+    background: #FFF;
+    color: #000;
+    text-shadow: none;
+    padding: 16px 28px;
+    border: solid 1px #A4A4A4;
+    border-top: none;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-left: -200px;
+    font-size: 18px;
+    transform: translateY(-100%);
+    transition: all .4s;
+    z-index: 100;
+}
+.jump-tip p {
+    margin: 4px 0 12px 0;
+    font-weight: bold;
+}
+.jump-tip a {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    color: #444;
+    font-size: 36px;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+}
+.jump-tip a:hover {
+    text-decoration: none;
+    background: #D8D5D5;
+}
 	</style>
 </head>
 <body>
@@ -168,11 +207,36 @@ span.cnzz-wrapper {
 		</svg> -->
 		<a href="http://blog.haoji.me/" class="go-blog">进入博客</a>
 	</div>
+    <script type="text/javascript">
+    ;(function()
+    {
+           if(/from=xa/g.test(location.href))
+        {
+            var dom = document.createElement('div');
+            dom.className = 'jump-tip';
+            dom.innerHTML = '<p>温馨提示：</p>为了便于记忆，即日起本站开始启用全新域名：http://haoji.me (好记么)，旧域名会自动跳转至新域名！<a href="javascript:;">×</a>';
+            dom.querySelector('a').addEventListener('click', function(e)
+            {
+                dom.style.transform = 'translateY(-110%)';
+            });
+            setTimeout(function()
+            {
+                dom.style.transform = 'translateY(-110%)';
+            }, 10*1000);
+            document.body.appendChild(dom);
+            setTimeout(function()
+            {
+                dom.style.transform = 'translateY(0%)';
+            }, 200);
+        }
+    })();
+    </script>
 	<footer>
 		<span>© 2016-2017 <a href="http://haoji.me/">好记么</a></span> 
 		<a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16002604号-1</a> 
 		<a href="http://haoji.me/link.html">友情链接</a> 
 		<script src="//s19.cnzz.com/z_stat.php?id=1270741665&web_id=1270741665"></script>
 	</footer>
+
 </body>
 </html>

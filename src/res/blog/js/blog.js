@@ -438,3 +438,29 @@ function updatePassword()
 		}
 	});
 }
+
+
+
+;(function()
+{
+	   if(/from=xa/g.test(location.href))
+    {
+        var dom = document.createElement('div');
+        dom.className = 'jump-tip';
+        dom.innerHTML = '<p>温馨提示：</p>为了便于记忆，即日起本站开始启用全新域名：http://haoji.me (好记么)，旧域名会自动跳转至新域名！<a href="javascript:;">×</a>';
+        dom.querySelector('a').addEventListener('click', function(e)
+        {
+            dom.style.transform = 'translateY(-110%)';
+        });
+        setTimeout(function()
+        {
+            dom.style.transform = 'translateY(-110%)';
+        }, 10*1000);
+        document.body.appendChild(dom);
+        setTimeout(function()
+        {
+            dom.style.transform = 'translateY(0%)';
+        }, 200);
+    }
+})();
+
