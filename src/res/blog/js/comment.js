@@ -10,7 +10,7 @@
 	}
 
 	var protocol = 'http';
-	var domain = 'liuxianan.com'; // 这个将来要处理一下
+	var domain = 'haoji.me'; // 这个将来要处理一下
 	var imagePrefix = `//res.${domain}/blog/images/`;
 	var ajaxPrefix = `//blog.${domain}`;
 	var defaultAvatar = `${imagePrefix}default_avatar.gif`; // 默认头像
@@ -247,6 +247,8 @@
 
 	function qqLogin()
 	{
+		alert('由于域名更换，QQ暂未审核通过，请稍等几天再尝试QQ登录，您可以先用微博登录！');
+		return;
 		openWindow(`https://graph.qq.com/oauth2.0/authorize?response_type=token&client_id=${qqAppId}&redirect_uri=${encodeURIComponent(qqAuthPath)}&state=ssss`);
 	}
 

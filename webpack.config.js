@@ -82,7 +82,7 @@ module.exports = config;
 
 
 
-
+// 获取某个路径的绝对路径
 function getAbsolutePath(tempPath)
 {
 	return path.resolve(__dirname, tempPath);
@@ -117,8 +117,12 @@ function getHtmlWebpackPlugins()
 			// 查找有没有对应的入口chunk，有的话push进去
 			var chunk = filePath.replace(/^src\//g, '').replace(/\.html$/g, '');
 			var chunks = [];
-			chunks.push('res/bundle/common');
-			if(config.entry[chunk]) chunks.push(chunk);
+			
+			if(config.entry[chunk])
+			{
+				chunks.push('res/bundle/common');
+				chunks.push(chunk);
+			}
 			
 			plugins.push(new HtmlWebpackPlugin(
 			{

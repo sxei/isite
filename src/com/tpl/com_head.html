@@ -1,13 +1,17 @@
 ﻿	<% 
 		var config = require('config');
 		var title = title || config.siteName;
-		var desc = desc || title;
 		var merge = merge || false; // merge 表示是否合并标题
+		title = title + (merge ? ('-' + config.siteName) : '');
+		var desc = desc || title;
 	%>
-	<title><%= title %><%= merge?('-'+config.siteName):''%></title>
-	<meta charset="utf-8">
+	<title><%= title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8"/>
+	<meta name="renderer" content="webkit">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="description" content="<%= desc %>">
-	<link rel="shortcut icon" href="//<%= config.domain %>/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="//<%= config.resSitePath %>/lib/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//<%= config.resSitePath %>/lib/bootstrap/3.3.1/css/bootstrap-theme.css">
+	<link rel="icon" href="<%=config.websiteHomePage%>favicon.png" type="image/png">
+	<link rel="stylesheet" href="<%= config.resSitePath %>lib/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<%= config.resSitePath %>lib/bootstrap/3.3.1/css/bootstrap-theme.css">

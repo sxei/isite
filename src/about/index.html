@@ -1,15 +1,11 @@
+<% 
+	var config = require('config');
+%>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta charset="utf-8"/>
-	<!-- 指定360等国产浏览器使用webkit内核 -->
-	<meta name="renderer" content="webkit">
-	<meta name="description" content="柳夏南的个人网站">
-	<meta name="keys" content="个人网站,官网,官方网站,博客,个人博客,liuxianan,柳夏南">
-	<link rel="shortcut icon" href="http://liuxianan.com/favicon.ico" type="image/x-icon">
-	<title>关于-柳夏南的个人网站</title>
+	<%= require('tpl/com_head.html')({title: '关于', merge: true}) %>
+
 	<style type="text/css">
 body{font-family: 'Microsoft Yahei'; font-size: 16px; background: #FEFFF1; margin: 0; padding: 0;}
 body{padding: 0 20px;}
@@ -45,16 +41,16 @@ body{padding: 0 20px;}
 	<div class="wrapper">
 		<img src="http://image.liuxianan.com" class="avatar"/>
 		<div>
-			<a href="http://liuxianan.com" style="margin-right:10px;">返回首页</a>
-			<a href="http://blog.liuxianan.com" style="margin-right:10px;">返回博客</a>
-			<a href="http://liuxianan.com/msgboard.html">给我留言</a>
+			<a href="<%=config.websiteHomePage%>" style="margin-right:10px;">返回首页</a>
+			<a href="<%=config.blogHomePage%>" style="margin-right:10px;">返回博客</a>
+			<a href="<%=config.websiteHomePage%>msgboard.html">给我留言</a>
 		</div>
 		<h1>关于我</h1>
 		<div>
 			<p>92年生，13年毕业，屌丝程序员一枚，常用网名：小茗同学。</p>
 			<p>联系邮箱：<span class="mail"></span></p>
-			<p>github: <a href="https://github.com/liuxianan">@sxei</a></p>
-			<p>微博：<a href="http://weibo.com/liuxianan">@低调程序员</a></p>
+			<p>github: <a href="<%=config.github%>">@sxei</a></p>
+			<p>微博：<a href="<%=config.weibo%>">@低调程序员</a></p>
 		</div>
 		<h1>关于本站</h1>
 		<div>
@@ -80,7 +76,7 @@ body{padding: 0 20px;}
 		</div> -->
 	</div>
 	<div class="cnzz-wrapper">
-		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257135263'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257135263' type='text/javascript'%3E%3C/script%3E"));</script>
+		<script src="//s19.cnzz.com/z_stat.php?id=1270741665&web_id=1270741665"></script>
 	</div>
 </body>
 </html>

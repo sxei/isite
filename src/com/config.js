@@ -2,10 +2,14 @@
 var config = 
 {
 	protocol: 'http', // 协议，为将来升级https预留
-	domain: 'liuxianan.com', // 主站域名
-	// domain: 'xiaoming.com', // 主站域名
-	siteName: '柳夏南的小窝' // 主站名称
+	domain: 'haoji.me', // 主站域名
+	siteName: '好记么', // 主站名称
+	weibo: 'http://weibo.com/liuxianan',
+	github: 'https://github.com/sxei',
+	cnzz: '1270741665'
 };
 // 资源站点路径
-config.resSitePath = '//res.' + config.domain;
+config.websiteHomePage = `${config.protocol}://${config.domain}/`;
+config.resSitePath = `${config.protocol}://res.${config.domain}/`;
+config.blogHomePage = `${config.protocol}://blog.${config.domain}/`;
 module.exports = config;
