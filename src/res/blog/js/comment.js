@@ -14,7 +14,7 @@
 	var imagePrefix = `//res.${domain}/blog/images/`;
 	var ajaxPrefix = `//blog.${domain}`;
 	var defaultAvatar = `${imagePrefix}default_avatar.gif`; // 默认头像
-	var weiboAppId = '3077921064'; // 微博appId
+	var weiboAppId = '593718136'; // 微博appId
 	var weiboAuthPath= `${protocol}://blog.${domain}/auth_weibo`; // 微博鉴权回调地址
 	var qqAppId = '101439209'; // QQ appId
 	var qqAuthPath = `${protocol}://blog.${domain}/auth_qq`; // QQ 回调地址
