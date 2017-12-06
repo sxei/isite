@@ -1,7 +1,7 @@
 ;(function()
 {
-	// 本评论库依赖jQuery、xei、jBox 3个外部库
-	//TODO 邮箱提醒，旧数据导入、代码压缩
+	// 本评论库依赖jQuery、jBox、xei 3个外部库
+	//TODO 邮箱提醒
 
 	if(!window.jQuery || !window.xei || !window.jBox)
 	{
@@ -28,12 +28,14 @@
 
 	var commentType = target[0].dataset.commentType;
 	var commentKey = target[0].dataset.commentKey;
+	var commentDesc = target[0].dataset.commentDesc || '评论';
 	var cookieSortType = 'sort_type';
 	var sortType = xei.getCookie(cookieSortType, 'newly'); // 排序方式
 	var commentCount = 0; // 评论总条数
 	var isSuperAdmin = xei.getCookie('BSESSIONID', '') !== '';
 	var loginModal = null;
 	var currentReplyId = null;
+	var maxCommentDeep = 5; // 评论最多展示的深度，超过的采用回复的方式显示
 	// 默认当前用户信息，通过 userInfo.id 是否为空来判断用户是否登录
 	var userInfo = 
 	{
@@ -65,7 +67,7 @@
 			getReplyBoxHtml() +
 			`<div class="xei-cmt-top">
 				<a href="javascript:;" class="xei-cmt-count">
-					<span>0</span>条评论
+					<span>0</span>条${commentDesc}
 				</a>
 				<div class="xei-cmt-sort">
 					<a href="javascript:;" data-sort-type="early" class="${sortType=='early'?'current':''}">最早</a>
@@ -74,7 +76,7 @@
 				</div>
 			</div>
 			<div class="xei-cmt-comments">
-				<p class="comment-tip">正在加载评论</p>
+				<p class="comment-tip">正在加载${commentDesc}</p>
 			</div>`;
 		var target = $('#xei-cmt-wrapper');
 		target.html(html);
@@ -247,8 +249,6 @@
 
 	function qqLogin()
 	{
-		//alert('由于域名更换，QQ暂未审核通过，请稍等几天再尝试QQ登录，您可以先用微博登录！');
-		//return;
 		openWindow(`https://graph.qq.com/oauth2.0/authorize?response_type=token&client_id=${qqAppId}&redirect_uri=${encodeURIComponent(qqAuthPath)}&state=ssss`);
 	}
 
@@ -284,19 +284,21 @@
 			target.html(html);
 		});
 
-		function renderComment(list, isRoot)
+		// 渲染所有评论，deep和parent是可选参数
+		function renderComment(list, deep, parent)
 		{
-			isRoot = isRoot == undefined ? true : isRoot;
+			deep = deep == undefined ? 1 : deep;
 			if(!list || !list.length) return '';
-			var html = `<ul ${isRoot?'':'class="xei-cmt-children-wrapper"'}>`;
+			let deepFlag = deep <= maxCommentDeep;
+			var html = deepFlag ? `<ul ${deep==1?'':'class="xei-cmt-children-wrapper"'}>` : '';
 			for(var i=0; i<list.length; i++)
 			{
 				var item = list[i];
-				html += getCommentHtml(item, true);
-				html += renderComment(item.children, false);
-				html += '</li>';
+				html += getCommentHtml(item, deepFlag, deepFlag ? null : parent);
+				html += renderComment(item.children, deep + 1, item);
+				html += deepFlag ? '</li>' : '';
 			}
-			html += '</ul>';
+			html += deepFlag ? '</ul>' : '';
 			return html;
 		}
 
@@ -419,8 +421,8 @@
 		$('#xei-cmt-wrapper .xei-cmt-count span').html(commentCount);
 	}
 
-	// noEnd表示是否不需要</li> 结尾
-	function getCommentHtml(item, noEnd)
+	// noEnd表示是否不需要</li> 结尾，只有deep比较大的时候parent才会有值
+	function getCommentHtml(item, noEnd, parent)
 	{
 		return `
 			<li class="xei-cmt-comment" data-cmt-id="${item.id}">
@@ -432,9 +434,9 @@
 					</div>
 					<div class="xei-cmt-comment-body">
 						<div class="xei-cmt-comment-header">
-							<a href="javascript:;">${item.userName || ''}</a>
+							<a href="${item.userWebsite || 'javascript:;'}" target="_blank">${item.userName || ''}</a>
 						</div>
-						<p>${replaceCommentFace(item.content)}</p>
+						<p>${parent?('<span class="xei-cmt-content-reply">回复 <a href="'+(parent.userWebsite||'javascript:;')+'" target="_blank">'+parent.userName+'</a>：</span>'):''} ${replaceCommentFace(item.content)}</p>
 						<div class="xei-cmt-comment-footer">
 							<span class="xei-cmt-time" title="${xei.formatDate(item.commentTime)}">${xei.formatDateToFriendly(item.commentTime)}</span>
 							<a href="javascript:;" data-reply-id="${item.id}">

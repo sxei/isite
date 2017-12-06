@@ -293,6 +293,12 @@
 #xei-cmt-wrapper .xei-cmt-comment-header > a {
     color: #d32;
 }
+#xei-cmt-wrapper .xei-cmt-content-reply {
+    color: #999;
+}
+#xei-cmt-wrapper .xei-cmt-content-reply a {
+    color: #999;
+}
 #xei-cmt-wrapper .xei-cmt-comment-body > p {
     font-size: 13px;
     line-height: 1.5em;
