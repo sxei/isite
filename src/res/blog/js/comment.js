@@ -294,7 +294,7 @@
 			for(var i=0; i<list.length; i++)
 			{
 				var item = list[i];
-				html += getCommentHtml(item, deepFlag, deepFlag ? null : parent);
+				html += getCommentHtml(item, deepFlag, deep, deepFlag ? null : parent);
 				html += renderComment(item.children, deep + 1, item);
 				html += deepFlag ? '</li>' : '';
 			}
@@ -388,16 +388,27 @@
 		ajax('/add_comment', params, function(resp)
 		{
 			textarea.blur();
-			if(parentId) // 如果是二级评论
+			if(parentId) // 如果是二级评论或者二级以上评论
 			{
 				var li = $(textarea).parents('li.xei-cmt-comment:first');
-				var target = li.children('ul');
-				if(!target.length)
+				var deep = parseInt(li[0].dataset.cmtDeep);
+				if(deep < maxCommentDeep) 
 				{
-					target = $('<ul class="xei-cmt-children-wrapper"></ul>');
-					target.appendTo(li);
+					var target = li.children('ul');
+					if(!target.length)
+					{
+						target = $('<ul class="xei-cmt-children-wrapper"></ul>');
+						target.appendTo(li);
+					}
+					addCommentToDom(target, resp.comment, deep + 1);
 				}
-				addCommentToDom(target, resp.comment);
+				else
+				{
+					var target = li.parent();
+					var a = li.find('> .xei-cmt-item > .xei-cmt-avatar > a');
+					var obj = {userWebsite: a.attr('href'), userName: a.attr('title')};
+					addCommentToDom(target, resp.comment, deep + 1, obj);
+				}
 				$(textarea).parent().parent().remove();
 			}
 			else
@@ -409,7 +420,7 @@
 					$('#xei-cmt-wrapper .xei-cmt-comments').html('<ul></ul>');
 					target = $('#xei-cmt-wrapper .xei-cmt-comments > ul');
 				}
-				addCommentToDom(target, resp.comment);
+				addCommentToDom(target, resp.comment, 1);
 			}
 			updateCommentCount(++commentCount);
 		});
@@ -422,10 +433,10 @@
 	}
 
 	// noEnd表示是否不需要</li> 结尾，只有deep比较大的时候parent才会有值
-	function getCommentHtml(item, noEnd, parent)
+	function getCommentHtml(item, noEnd, deep, parent)
 	{
 		return `
-			<li class="xei-cmt-comment" data-cmt-id="${item.id}">
+			<li class="xei-cmt-comment" data-cmt-id="${item.id}" data-cmt-deep="${deep}">
 				<div class="xei-cmt-item">
 					<div class="xei-cmt-avatar">
 						<a href="${item.userWebsite || 'javascript:;'}" title="${item.userName}" target="_blank">
@@ -685,9 +696,9 @@
 		return text.replace(/\[qq_(\d+?)\]/g, `<img src="${imagePrefix}face/qq/qq_$1.gif"/>`);
 	}
 
-	function addCommentToDom(target, item)
+	function addCommentToDom(target, item, deep, parent)
 	{
-		var html = $(getCommentHtml(item));
+		var html = $(getCommentHtml(item, false, deep, parent));
 		html.hide(); // 先隐藏
 		// 如果是一级评论、并且是按照最新排序，往前插入
 		if(sortType == 'newly' && item.parentId == null) target.prepend(html);
