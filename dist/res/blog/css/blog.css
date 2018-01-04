@@ -2084,8 +2084,11 @@ body.search-page {
 }
 /* 图片添加border */
 .markdown-body img {
-    border: solid 1px #ccc;
+    border: solid 1px #eee;
     border-radius: 3px;
+    max-width: initial;
+    background: #e6e6e6;
+    box-sizing: content-box;
 }
 /* pre标签设置 */
 .markdown-body .highlight pre, .markdown-body pre {
