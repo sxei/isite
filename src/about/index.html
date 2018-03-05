@@ -28,12 +28,8 @@ body{padding: 0 20px;}
     border-radius: 50%;
     border: solid 3px #59B2FE;
 }
-.mail {
-    display: inline-block;
+#email {
     vertical-align: middle;
-    width: 150px;
-    height: 32px;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAgCAYAAADwkoGKAAAEAklEQVR4Xu2bP+hOURjHvz+ZhWwmk0FJBjYMisFiUBYZUEoxKJIkG1EmpWSwS7GwIGVksJEMFoOFgUSSnjrf+vZ0zr3vfe897+++3eedfu/985xzvs/nPH/O228F8QkFKiiwUsFmmAwFEGAFBFUUCLCqyBpGA6xgoIoCAVYVWcNogBUMVFEgwKoiaxgdK1iHATxy7vkKYA+AD+76WgCvAVwG8Er+ft7TvWq3r62eU1m+18cG1mYA5sR3AI4B+COSlu4FACPkbkxgEZwzCa6SXOcB7BLwAqwlB4uOPwfgGoDdaT0nATxLMGxN1/Y7OHxqs3fuix4ejjUA7gA4DcBS4D4AZwF8TynP7j1MYzSlwhx0em0dgNsAtgH4CYD37gF4UEirBvYtmbuule9fdRp5PYaw4XHyGl8HcEke2gngrXxXH/TxbRbrLhGLg2+QWoeL+SzOsWvqLPt+V96hnZsClz1zNEWhvwkqg8iEobMMZIqhz/9rqLHawHqZxnqT5lKyyxrLgNgkDvNr43hbnEa6/iFs5KDSMXSD2AYmVASc9239pvG8vi3GynnAUiBykGhKYzFtEUAjlC3UinOLFL+ScxmBPJg2eQJMYWyMxwD2AvjdAywDhnPZAeAJgFOpQfBQ2vcXct/m5dO3d6h/xvToa8M3Erkx1eGM/tw8vGfrfpo2wI8U/bv4trGhmQcsrYFydZFe+yaT127Ow0exPyVIciBSBLMzJFgmNFOTpo+22k1Ti48E1qFS+CY7Q9hoq01L9/X6+zTfLr5ddbA0r/vQaQ6xRTH6rM8skBGLqdI6RXPIxZQ6+6RCiuNThY2ZA0LrGEv/B9Lc6ZC21GvjDWFDdTRAbNMdyRzF5KIq39W5LiVYGmlyOVmjj4GVE8nXJfq9T/Fujmaq+ALgRKaQZ/Rpi85mqw2sWRzYZsNHiklGrFkOLLV2YSrUVOLrOL9DZwFLU6t3BAv246npYC3iHax1oXWQ9ikVxaVUaKUBa8t5bdSssZYmFTL0a8fCmuZCKhw/us5Mz6mY5qwjtLSZA7UJLEajja7jtGOMnD2FR5sCW0epUNdutS3a+IiV63jbbORqG9+dct3srGftCpcKLO3qmAr1eII733eJ5nx7bjuAG3Km5X/WaQJLayWeux1MZ0wWVawT1MNWdciVzDmW1kf8iekQAG6SXMT1oPS1wSMSQkNNhzjHWhWwimcWA93wJ+pNZv0OHWgKYWYoBbocNww1ZpOdXNuvzzOk+4i3iLnFGB0UGBtYnLr/yaOUQjssNR5dpAJjBWuRGsRYFRQIsCqIGiYR//4VENRRICJWHV0nbzXAmjwCdQQIsOroOnmrAdbkEagjQIBVR9fJWw2wJo9AHQH+A8XHHT+wzslmAAAAAElFTkSuQmCC);
 }
 	</style>
 </head>
@@ -48,7 +44,7 @@ body{padding: 0 20px;}
 		<h1>关于我</h1>
 		<div>
 			<p>92年生，13年毕业，屌丝程序员一枚，常用网名：小茗同学。</p>
-			<p>联系邮箱：<span class="mail"></span></p>
+			<p>联系邮箱：<img id="email"></img>（此为图片，不可复制）</p>
 			<p>github: <a href="<%=config.github%>">@sxei</a></p>
 			<p>微博：<a href="<%=config.weibo%>">@低调程序员</a></p>
 		</div>
@@ -75,6 +71,29 @@ body{padding: 0 20px;}
 			</ul>
 		</div> -->
 	</div>
+	<script type="text/javascript">
+		function dataURLtoBlob(dataurl) {
+            var arr = dataurl.split(','),
+                mime = arr[0].match(/:(.*?);/)[1],
+                bstr = atob(arr[1]),
+                len = bstr.length,
+                u8arr = new Uint8Array(len);
+            while (len--) u8arr[len] = bstr.charCodeAt(len);
+            return new Blob([u8arr], {type: mime});
+        }
+		;(function() {
+			var canvas = document.createElement('canvas');
+	        canvas.width = 120;
+	        canvas.height = 22;
+	        var ctx = canvas.getContext('2d');
+	        ctx.font = '16px 微软雅黑';
+	        ctx.fillStyle = '#337ab7';
+	        ctx.fillText('me@haoji.me',0,16);
+	        var base64 = canvas.toDataURL("image/png");
+	        var blob = dataURLtoBlob(base64);
+	        document.getElementById('email').src = URL.createObjectURL(blob);
+	    })();
+	</script>
 	<div class="cnzz-wrapper">
 		<script src="//s19.cnzz.com/z_stat.php?id=1270741665&web_id=1270741665"></script>
 	</div>
