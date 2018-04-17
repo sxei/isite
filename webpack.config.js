@@ -7,7 +7,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var fs = require('fs');
 
-var copyFolders = ['res', 'test']; // 需要被直接复制的文件夹
+var copyFolders = ['res', 'test', 'www']; // 需要被直接复制的文件夹
 var config = {
 	//页面入口文件配置
 	entry: getEntries(),

@@ -8,11 +8,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="utf-8"/>
 	<meta name="renderer" content="webkit">
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!-- <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
 	<meta name="description" content="欢迎访问好记么！史上最好记的域名，好记么？">
 	<meta name="keys" content="好记么,小茗同学,个人网站,官网,官方网站,博客,个人博客,it,web,前端,码农,程序员,js,css3,html5,java,android,es6,webpack,gulp,vue">
 	<!-- 百度站长认证 http://ziyuan.baidu.com/ -->
     <meta name="baidu-site-verification" content="u5RYqY90qn" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style type="text/css">
 html, body{width: 100%; height: 100%;}
 body {
@@ -21,12 +22,16 @@ body {
     background: white;
     margin: 0;
     padding: 0;
-    background: #333;
     color: #ddd;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 a {
-	color: #fc0;
+	color: #4d4d4d;
 	text-decoration: none;
     transition: all .25s;
     -moz-transition: all .25s;
@@ -36,46 +41,54 @@ a:hover {
     color: #f90;
 	text-decoration: underline;
 }
-header {
+.navbar {
     height: 50px;
     line-height: 50px;
-    background-color: #222;
-    padding: 0px 16px;
+    background-color: #41ABF7;
     font-size: 16px;
-    border-bottom: solid 1px #fc0;
+    box-shadow: 0px 1px 3px rgb(0, 0, 0);
 }
-header > ul {
+.navbar ul {
     margin: 0;
     padding: 0;
     display: inline-block;
     margin-left: 25px;
 }
-header > ul > li {
+.navbar ul > li {
     display: inline-block;
     margin: 0 6px;
 }
-header img {
+.navbar img {
     width: 36px;
     vertical-align: middle;
     margin-right: 8px;
     border-radius: 3px;
 }
-
-footer {
+.navbar a {
+    color: white;
+}
+.container {
+    width: 1220px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.footer {
     position: fixed;
     bottom: 0;
-    color: white;
-    height: 50px;
+    color: #CACACA;
     width: 100%;
     text-align: center;
     background-color: #222;
-    line-height: 50px;
     font-size: 16px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    border-top: solid 3px #fc0;
+    border-top: solid 3px #41abf7;
 }
-footer a {
-    color: #fff;
+.footer a {
+    color: #CACACA;
+}
+.footer > div {
+    margin: 16px 0;
 }
 .center-btn-wrapper {
     width: 100%;
@@ -105,10 +118,7 @@ a.go-blog:hover {
     transition: none;
     text-shadow: 1px 1px 1px #000;
 }
-.big {
-	font-size: 100px;
-	color: #fc0;
-}
+
 /* 手机适配 */
 @media screen and (max-width: 768px) {
 	.center-btn-wrapper {
@@ -118,32 +128,6 @@ a.go-blog:hover {
 /* 暂时隐藏CNZZ统计按钮 */
 span.cnzz-wrapper {
     display: none;
-}
-#svg 
-{
-	display: block;
-	margin: 0 auto;
-}
-#svg path
-{
-	/*虚线长度足够长，至少要大于整个path的长度*/
-	stroke-dasharray: 3498;
-	-webkit-animation: dash 15s linear infinite alternate;
-	animation: dash 15s linear infinite alternate;
-}
-@-webkit-keyframes dash
-{
-	0%{stroke-dashoffset: 3498;stroke-dasharray: 3498;stroke:red;}
-	75{stroke-dashoffset: 0;stroke-dasharray: 3498;stroke:#206D01;}
-	76%{stroke-dashoffset: 0;stroke-dasharray: 20;stroke:#D302D6;}
-	100%{stroke-dashoffset: 1000;stroke-dasharray: 20;stroke:green;}
-}
-@keyframes dash
-{
-	0%{stroke-dashoffset: 3498;stroke-dasharray: 3498;stroke:red;}
-	75{stroke-dashoffset: 0;stroke-dasharray: 3498;stroke:#206D01;}
-	76%{stroke-dashoffset: 0;stroke-dasharray: 20;stroke:#D302D6;}
-	100%{stroke-dashoffset: 1000;stroke-dasharray: 20;stroke:green;}
 }
 .jump-tip {
     position: fixed;
@@ -184,31 +168,228 @@ span.cnzz-wrapper {
     text-decoration: none;
     background: #D8D5D5;
 }
+.icon-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.icon-wrapper * {
+    transition: .2s ease-in-out;
+}
+.icon-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.icon-wrapper > .item {
+    float: left;
+    width: 240px;
+    height: 324px;
+    position: relative;
+    color: white;
+}
+.icon-wrapper > .item:before, .icon-wrapper > .item:after{
+    content: '';
+    display: block;
+    clear: both;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+.icon-wrapper > .item:after{
+    top: auto;
+    bottom: 0px;
+}
+.icon-wrapper > .item >.bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+}
+.icon-item-bg-1 {
+    background: #00acde;
+}
+.icon-item-bg-2 {
+    background: #4275f5;
+}
+.icon-item-bg-3 {
+    background: #ff1377;
+}
+.icon-item-bg-4 {
+    background: #4275f5;
+}
+.icon-item-bg-5 {
+    background: #00acde;
+}
+
+.icon-wrapper > .item > .core {
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-left: -40px;
+}
+.icon-wrapper > .item > .core > .fa {
+    font-size: 48px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+}
+.icon-wrapper > .item > .core > span {
+    font-size: 18px;
+}
+.icon-wrapper > .item > .desc {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    padding: 0 40px;
+    opacity: 0;
+    font-size: 14px;
+}
+.icon-wrapper > .item:hover .bg {
+    opacity: 1;
+}
+.icon-wrapper > .item:hover .core {
+    top: 15%;
+}
+.icon-wrapper > .item:hover .desc {
+    top: 50%;
+    opacity: 1;
+}
+.big-logo {
+    font-size: 100px;
+    color: #ff1377;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    z-index: 1;
+}
+.big-logo .small {
+    display: block;
+    font-size: 28px;
+    color: #ff1377;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border-top: solid 2px #ff1377;
+    text-align: center;
+    opacity: 0;
+}
+@keyframes big-logo-animate {
+    0% {
+        opacity: 0;
+        transform: translateY(-80%) translateX(-50%)
+    }
+
+    45% {
+        opacity: 1;
+        transform: translateY(-50%) translateX(-50%)
+    }
+    55% {
+        left: 50%;
+        top: 50%;
+        opacity: 1;
+        font-size: 100px;
+        transform: translateY(-50%) translateX(-50%)
+    }
+    100% {
+        left: 50%;
+        top: 20%;
+        font-size: 80px;
+        transform: translateY(-50%) translateX(-50%)
+    }
+}
+@keyframes icon-wrapper-animate {
+    0% {
+        opacity: 0;
+        transform: translateX(10%) translateY(-50%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) translateY(-50%)
+    }
+}
+@keyframes domain-animate {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+.big-logo-animate {
+    animation-name: big-logo-animate;
+    animation-duration: 2s;
+    animation-fill-mode: both
+}
+.icon-wrapper-animate {
+    animation-name: icon-wrapper-animate;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+.domain-animate {
+    animation-name: domain-animate;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
 	</style>
 </head>
 <body>
-	<header>
-		<span><img src="//haoji.me/favicon.png"/><a href="//haoji.me/">好记么</a></span>
-		<ul>
-			<li><a href="http://blog.haoji.me/">博客</a></li>
-			<li><a href="http://weibo.com/liuxianan">微博</a></li>
-			<li><a href="https://github.com/sxei">github</a></li>
-			<li><a href="http://demo.haoji.me">demo</a></li>
-			<li><a href="http://haoji.me/msgboard.html">留言</a></li>
-			<li><a href="http://about.haoji.me">关于</a></li>
-		</ul>
-	</header>
-	<div class="center-btn-wrapper">
-		<div class="big">好记么</div>
-		<div><a href="//haoji.me">( https://haoji.me )</a></div>
-		<!-- <svg id="svg" width="370" height="370" xmlns="http://www.w3.org/2000/svg">
-			<g>
-				<title>Layer 1</title>
-				<path id="svg_8" d="m29.5,49c0,0 142,1 142,1c0,0 1,-38 1,-38c0,0 27,1 26.5,1c0.5,0 1.5,37 1,37c0.5,0 138.5,0 138,0c0.5,0 2.5,26 3.5,25c1,-1 -142,-1 -142.5,-1c0.5,0 -1.5,34 -2,34c0.5,0 126.5,-1 126.5,-1c0,0 0,197 -0.5,197c0.5,0 -26.5,27 -26.5,27c0,0 -65,-1 -65,-1c0,0 -6,-31 -6,-31c0,0 55,3 55,3c0,0 14,-9 13.5,-9c0.5,0 5.5,-11 5.5,-11c0,0 -2,-152 -2.5,-152c0.5,0 -55.5,0 -56,0c0.5,0 12.5,16 12,16c0.5,0 -27.5,38 -28,38c0.5,0 50.5,-1 50,-1c0.5,0 -1.5,22 -1.5,22c0,0 -75,0 -75.5,0c0.5,0 -2.5,35 -2.5,35c0,-6 89,0 89,0c0,0 -2,23 -2.5,23c0.5,0 -85.5,-2 -86,-2c0.5,0 2.5,66 2,66c0.5,0 -25.5,-3 -26,-3c0.5,0 1.5,-62 1,-62c0.5,0 -87.5,1 -87.5,1c0,0 0,-30 -0.5,-30c-0.5,11 92.5,5 87,0c0.5,8 1.5,-26 1,-26c0.5,0 -77.5,-1 -78,-1c0.5,0 1.5,-26 1,-26c0.5,0 48.5,3 48,3c0.5,0 -22.5,-32 -23,-32c0.5,0 20.5,-12 20.5,-12c0,0 30,32 29.5,32c0.5,0 -15.5,13 -15.5,13c0,0 44,0 44,0c0,0 31,-52 31,-52c0,0 -158,-2 -158,-2c0,0 1,203 0.5,203c0.5,0 -26.5,-2 -27,-2c0.5,0 3.5,-226 3,-226c0.5,0 123.5,3 123,3c0.5,0 0.5,-34 0,-34c0.5,0 -144.5,0 -145,0c0.5,0 2.5,-25 2.5,-25z" fill-opacity="null" stroke-opacity="null" stroke-width="3" stroke="#41ABF7" fill="none"/>
-			</g>
-		</svg> -->
-		<a href="http://blog.haoji.me/" class="go-blog">进入博客</a>
-	</div>
+	<header class="navbar">
+        <div class="container">
+            <span><img src="/favicon.png"/><a href="/">好记么</a></span>
+            <ul>
+                <li><a href="http://blog.haoji.me/">博客</a></li>
+                <li><a href="http://weibo.com/liuxianan">微博</a></li>
+                <li><a href="https://github.com/sxei">github</a></li>
+                <li><a href="http://demo.haoji.me">demo</a></li>
+                <li><a href="http://haoji.me/msgboard.html">留言</a></li>
+                <li><a href="http://about.haoji.me">关于</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="big-logo big-logo-animate"><span>好记么</span><span class="small domain-animate">http://haoji.me</span></div>
+        <div class="icon-wrapper icon-wrapper-animate">
+            <a class="item" href="http://tool.haoji.me" target="_blank">
+                <div class="bg icon-item-bg-1"></div>
+                <div class="core"><i class="fa fa-wrench"></i><span>工具</span></div>
+                <div class="desc">好记的工具，主要收录一些自己平时写的小工具，例如格式化、编码转换、拼音转换等，大部分内容暂为空，有待完善。</div>
+            </a>
+            <a class="item" href="http://demo.haoji.me" target="_blank">
+                <div class="bg icon-item-bg-2"></div>
+                <div class="core"><i class="fa fa-html5"></i><span>Demo</span></div>
+                <div class="desc">好记的Demo，主要是自己写的各类前端demo集合，不断完善中。</div>
+            </a>
+            <a class="item" href="http://blog.haoji.me" target="_blank">
+                <div class="bg icon-item-bg-3"></div>
+                <div class="core"><i class="fa fa-pencil"></i><span>博客</span></div>
+                <div class="desc">好记的博客，个人博客频道，主要记录工作生活中的一些笔记、随想，也是本站最重要的部分。</div>
+            </a>
+            <a class="item" href="http://file.haoji.me" target="_blank">
+                <div class="bg icon-item-bg-4"></div>
+                <div class="core"><i class="fa fa-file-o"></i><span>云文件</span></div>
+                <div class="desc">好记的云文件，主要用于存放一些公共文件和私人文件，暂时也很简单，有待完善。</div>
+            </a>
+            <a class="item" href="javascript:alert('更多子频道有待完善之后再补充到这里来，敬请期待！')">
+                <div class="bg icon-item-bg-5"></div>
+                <div class="core"><i class="fa fa-th"></i><span>更多</span></div>
+                <div class="desc">其它还有很多子频道，如游戏、聊天、音乐等等，基本上都是写了一半未完成，有待完善之后再统一放到这里来。</div>
+            </a>
+        </div>
+    </div>
     <script type="text/javascript">
     ;(function()
     {
@@ -233,11 +414,22 @@ span.cnzz-wrapper {
         }
     })();
     </script>
-	<footer>
-		<span>© 2016-2018 <a href="//haoji.me/">好记么</a></span>
-		<a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16002604号-3</a> 
-		<a href="//haoji.me/link.html">友情链接</a>
-		<script src="//s19.cnzz.com/z_stat.php?id=1270741665"></script>
+	<footer class="footer">
+        <div>
+            <a href="/">首页</a>
+            <a href="http://about.haoji.me">关于本站</a>
+            <a href="/link.html">友情链接</a> 
+            <a href="/msgboard.html">留言</a>
+            <a href="http://weibo.com/liuxianan/">微博</a>
+            <a href="http://www.cnblogs.com/liuxianan/">博客园</a>
+            <a href="https://github.com/sxei/">github</a>
+            <a href="http://demo.haoji.me">demo</a>
+            <span class="cnzz-wrapper"><script src="//s19.cnzz.com/z_stat.php?id=1270741665"></script></span>
+        </div>
+        <div>
+            <span>© 2016-2018 <a href="//haoji.me">haoji.me</a> All Rights Reserved</span> 
+            <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16002604-3</a> 
+        </div>
 	</footer>
 
 </body>
