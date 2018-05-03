@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+	<%= require('tpl/com_head.html')({title: '汉字拼音互转', merge: true}) %>
+
+	<style>
+	textarea[name="content"] {
+		font-family: "courier new";
+		font-size: 16px;
+		tab-size: 4;
+		color: #000;
+	}
+	.alert-success .red {
+	    color: #B20000;
+	    margin: 0 5px;
+	}
+	h3 {
+		background-color: #3199E4;
+		color: white;
+		padding: 4px 8px;
+		border-radius: 5px;
+	}
+	</style>
+
+</head>
+<body>
+	<%= require('tpl/com_nav.html')({menus: require('../menus'), pageName: 'pinyin'}) %>
+
+	<div class="container">
+		<h2 class="page-title">汉字拼音互转</h2>
+		<h3>汉字转拼音：</h3>
+		<div class="row">
+			<div class="col-md-12">
+				<textarea id="input_content" class="form-control" style="height:120px;" placeholder="请在这里输入汉字">大家好，我是小茗同学！</textarea>
+			</div>
+			<div class="col-md-12">
+				<div style="margin-top: 12px;">
+					输出拼音：
+					<label><input type="radio" name="output_type" checked="checked" value="0"/>带声调拼音</label>
+					<label><input type="radio" name="output_type" value="1"/>不带声调拼音</label>
+					<label><input type="radio" name="output_type" value="2"/>首字母</label>
+					<!--<label style="margin-left: 15px;"><input id="format_json_new_line" type="checkbox" checked="checked"/>支持多音字</label>-->
+				</div>
+				<textarea id="output_content" class="form-control" style="height:120px;" placeholder="这里显示结果拼音" readonly></textarea>
+			</div>
+		</div>
+
+		<h3>拼音转汉字：</h3>
+		<p>这里仅仅是简单的返回某个拼音所有可能的汉字组合。</p>
+		<div class="row">
+			<div class="col-md-2">
+				<textarea id="input_pinyin" class="form-control" style="height:50px;" placeholder="请在这里输入单个拼音">zhang</textarea>
+			</div>
+			<div class="col-md-10">
+				<textarea id="output_hanzi" class="form-control" style="height:50px;" placeholder="这里显示所有可能的汉字列表" readonly></textarea>
+			</div>
+		</div>
+
+		<h3>获取带声调的拼音：</h3>
+		<p>由于带声调的字母属于特殊字符，不方便输入，本工具可以将类似<code>xu3e</code>的字符串转换成类似<code>xúe</code>的带声调的拼音，将声调用数字放在需要加声调的字母后面，比如第三声就用3表示。</p>
+		<div class="row">
+			<div class="col-md-6">
+				<textarea id="input_notone" class="form-control" style="height:100px;" placeholder="请在这里输入不带声调的拼音">xia3o mi2ng to2ng xu2e</textarea>
+			</div>
+			<div class="col-md-6">
+				<textarea id="output_withtone" class="form-control" style="height:100px;" placeholder="这里显示结果" readonly></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<%= require('tpl/com_footer.html')() %>
+	<script type="text/javascript" src="./asset/pinyinjs/dict/pinyin_dict_withtone.js"></script>
+	<script type="text/javascript" src="./asset/pinyinjs/pinyinUtil.js"></script>
+</body>
+</html>

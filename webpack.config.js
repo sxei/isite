@@ -31,7 +31,7 @@ var config = {
 			// 小于8kb的图片直接采用base64方式引入
 			{test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
 			// html采用ejs模板，所以用ejs加载器
-			{test: /\.html$/, loader: 'ejs-loader'}
+			{test: /\.(html|ejs)$/, loader: 'ejs-loader'}
 		]
 	},
 	//其它解决方案配置
@@ -112,10 +112,10 @@ function getHtmlWebpackPlugins()
 	scanFolderSync('src', function(filePath)
 	{
 		if(checkIsCopyFolder(filePath)) return;
-		if(filePath.endsWith('index.html'))
+		if(/index\.(html|ejs)$/g.test(filePath))
 		{
 			// 查找有没有对应的入口chunk，有的话push进去
-			var chunk = filePath.replace(/^src\//g, '').replace(/\.html$/g, '');
+			var chunk = filePath.replace(/^src\//g, '').replace(/\.(html|ejs)$/g, '');
 			var chunks = [];
 			
 			if(config.entry[chunk])
@@ -128,7 +128,7 @@ function getHtmlWebpackPlugins()
 			{
 				title: 'test title',
 				template: getAbsolutePath(filePath),　
-				filename: getAbsolutePath(filePath.replace(/^src/g, 'dist')),
+				filename: getAbsolutePath(filePath.replace(/^src/g, 'dist').replace(/\.ejs$/g, '\.html')),
 				inject: true, // JS注入页面
 				chunks: chunks
 			}));

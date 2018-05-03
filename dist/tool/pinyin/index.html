@@ -2,22 +2,34 @@
 <html>
 <head lang="zh-CN">
 		
-	<title>JSON格式化-好记么</title>
+	<title>汉字拼音互转-好记么</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="utf-8"/>
 	<meta name="renderer" content="webkit">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="JSON格式化-好记么">
+	<meta name="description" content="汉字拼音互转-好记么">
 	<link rel="icon" href="http://haoji.me/favicon.png" type="image/png">
 	<link rel="stylesheet" href="http://res.haoji.me/lib/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://res.haoji.me/lib/bootstrap/3.3.1/css/bootstrap-theme.css">
 
 	<style>
-	.form-inline{margin: 20px 0;}
-	#result{font-size: 20px; color: red;}
-	#make_idcard select{width: 180px;  display: inline-block;}
-	#idcard_list{resize:none;height: 500px;}
+	textarea[name="content"] {
+		font-family: "courier new";
+		font-size: 16px;
+		tab-size: 4;
+		color: #000;
+	}
+	.alert-success .red {
+	    color: #B20000;
+	    margin: 0 5px;
+	}
+	h3 {
+		background-color: #3199E4;
+		color: white;
+		padding: 4px 8px;
+		border-radius: 5px;
+	}
 	</style>
 
 <link href="//res.liuxianan.com/bundle/common.css?v=d64a6f24" rel="stylesheet"></head>
@@ -49,7 +61,7 @@
 								<ul class="dropdown-menu">
 									
 										
-										<li class="active" >
+										<li  >
 											<a href="/json-format/" class="nav-menu-item-icon"  >
 												<i class="fa fa-thumbs-up"></i>JSON格式化
 											</a>
@@ -109,7 +121,7 @@
 										</li>
 									
 										
-										<li  >
+										<li class="active" >
 											<a href="/pinyin/" class="nav-menu-item-icon"  >
 												<i class="fa fa-"></i>汉语拼音互转
 											</a>
@@ -145,7 +157,7 @@
 				<li><a href="//haoji.me">首页</a></li>
 				<li><a href="//tool.haoji.me">工具</a></li>
 				
-					<li class="active">JSON格式化</li>
+					<li class="active">汉语拼音互转</li>
 				
 			</ol>
 		</section>
@@ -153,80 +165,43 @@
 
 
 	<div class="container">
-		<h2 class="page-title">身份证</h2>
+		<h2 class="page-title">汉字拼音互转</h2>
+		<h3>汉字转拼音：</h3>
 		<div class="row">
 			<div class="col-md-12">
-				<ul class="nav nav-tabs">
-					<li class="active"><a href="#idcard_validate" data-toggle="tab">身份证校验</a></li>
-					<li><a href="#make_idcard" data-toggle="tab">批量生成身份证</a></li>
-				</ul>
-				<div class="tab-content">
-					<div id="idcard_validate" class="tab-pane active">
-						<h2>本功能可以校验身份证是否合法，以及获取身份证号码相关信息。暂不清楚公安系统是否对日期有做校验，以及是否允许农历存在，如2月30日，所以本校验工具不会校验生日。</h2>
-						<div class="form-inline">
-							<div class="form-group">
-								<label for="input_idcard">身份证号</label>
-								<input type="text" class="form-control" id="input_idcard" placeholder="请输入要校验的身份证号">
-							</div>
-							<a href="javascript:;" class="btn btn-primary" id="btn_validate">校验</a>
-							<a href="javascript:;" class="btn btn-default" id="btn_random_idcard">随机生成一个</a>
-						</div>
-						<div>
-							<label>校验结果：</label><span id="validate_result"></span>
-						</div>
-					</div>
-					<div id="make_idcard" class="tab-pane">
-						<div class="form-horizontal" style="margin-top: 20px;">
-							<div class="form-group">
-								<label for="province_list" class="col-sm-2 control-label">籍贯</label>
-								<div class="col-sm-10">
-									<select id="province_list" class="form-control">
-										<option value="">--省(随机)--</option>
-									</select>
-									<select id="city_list" class="form-control">
-										<option value="">--市(随机)--</option>
-									</select>
-									<select id="county_list" class="form-control">
-										<option value="">--县(随机)--</option>
-									</select>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="province_list" class="col-sm-2 control-label">生日</label>
-								<div class="col-sm-10">
-									<select id="year_list" class="form-control">
-										<option value="">--年(随机)--</option>
-									</select>
-									<select id="month_list" class="form-control">
-										<option value="">--月(随机)--</option>
-									</select>
-									<select id="date_list" class="form-control">
-										<option value="">--日(随机)--</option>
-									</select>
-									<span>提示：日期未做30、31以及闰年判断，请自行保证日期正确</span>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="make_idcard_count" class="col-sm-2 control-label">生成个数</label>
-								<div class="col-sm-4">
-									<input type="number" id="make_idcard_count" class="form-control" value="50" style="width:100px" placeholder="请输入要生成的个数"/>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="province_list" class="col-sm-2 control-label"></label>
-								<div class="col-sm-10">
-									<a href="javascript:;" class="btn btn-primary" id="btn_batch_make_idcard">生成</a>
-								</div>
-							</div>
-							<div class="form-group mt-lg">
-								<label for="province_list" class="col-sm-2 control-label">结果</label>
-								<div class="col-sm-10">
-									<textarea id="idcard_list" class="form-control" readonly></textarea>
-								</div>
-							</div>
-						</div>						
-					</div>
+				<textarea id="input_content" class="form-control" style="height:120px;" placeholder="请在这里输入汉字">大家好，我是小茗同学！</textarea>
+			</div>
+			<div class="col-md-12">
+				<div style="margin-top: 12px;">
+					输出拼音：
+					<label><input type="radio" name="output_type" checked="checked" value="0"/>带声调拼音</label>
+					<label><input type="radio" name="output_type" value="1"/>不带声调拼音</label>
+					<label><input type="radio" name="output_type" value="2"/>首字母</label>
+					<!--<label style="margin-left: 15px;"><input id="format_json_new_line" type="checkbox" checked="checked"/>支持多音字</label>-->
 				</div>
+				<textarea id="output_content" class="form-control" style="height:120px;" placeholder="这里显示结果拼音" readonly></textarea>
+			</div>
+		</div>
+
+		<h3>拼音转汉字：</h3>
+		<p>这里仅仅是简单的返回某个拼音所有可能的汉字组合。</p>
+		<div class="row">
+			<div class="col-md-2">
+				<textarea id="input_pinyin" class="form-control" style="height:50px;" placeholder="请在这里输入单个拼音">zhang</textarea>
+			</div>
+			<div class="col-md-10">
+				<textarea id="output_hanzi" class="form-control" style="height:50px;" placeholder="这里显示所有可能的汉字列表" readonly></textarea>
+			</div>
+		</div>
+
+		<h3>获取带声调的拼音：</h3>
+		<p>由于带声调的字母属于特殊字符，不方便输入，本工具可以将类似<code>xu3e</code>的字符串转换成类似<code>xúe</code>的带声调的拼音，将声调用数字放在需要加声调的字母后面，比如第三声就用3表示。</p>
+		<div class="row">
+			<div class="col-md-6">
+				<textarea id="input_notone" class="form-control" style="height:100px;" placeholder="请在这里输入不带声调的拼音">xia3o mi2ng to2ng xu2e</textarea>
+			</div>
+			<div class="col-md-6">
+				<textarea id="output_withtone" class="form-control" style="height:100px;" placeholder="这里显示结果" readonly></textarea>
 			</div>
 		</div>
 	</div>
@@ -235,6 +210,7 @@
 	<script src="http://res.haoji.me/lib/jquery/2.1.1/jquery.js"></script>
 	<script src="http://res.haoji.me/lib/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="http://res.haoji.me/lib/xei/xei.js"></script>
-	<script type="text/javascript" src="asset/all_city_codes.js"></script>
-<script type="text/javascript" src="//res.liuxianan.com/bundle/common.js?v=b01df54c"></script><script type="text/javascript" src="/idcard/index.js?v=cf2fe6d1"></script></body>
+	<script type="text/javascript" src="./asset/pinyinjs/dict/pinyin_dict_withtone.js"></script>
+	<script type="text/javascript" src="./asset/pinyinjs/pinyinUtil.js"></script>
+<script type="text/javascript" src="//res.liuxianan.com/bundle/common.js?v=b01df54c"></script><script type="text/javascript" src="/pinyin/index.js?v=f6d2a3e6"></script></body>
 </html>

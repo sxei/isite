@@ -1,6 +1,6 @@
 # haoji.me源码
 
-http://haoji.me 站点源码，除了blog子域名大部分均开源于此，会陆陆续续将大部分代码都放在这里。
+http://haoji.me 站点源码，除了blog子域名大部分均开源于此，后续我会陆陆续续将大部分代码都放在这里。
 
 # webpack配置说明
 
@@ -17,4 +17,4 @@ http://haoji.me 站点源码，除了blog子域名大部分均开源于此，会
 
 # 构建说明
 
-开始时运行`run-dev.bat`，打包时，先运行`run-build.bat`，然后运行`run-gulp.bat`。
+开发时运行`run-dev.bat`，打包时，先运行`run-build.bat`，然后运行`run-gulp.bat`。

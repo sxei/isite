@@ -1,1 +1,1 @@
-webpackJsonp([3],{8:function(o,n,i){i(0),console.log("this is page 1"),console.log($(window).width())}},[8]);
+webpackJsonp([4],{8:function(o,n,i){i(0),console.log("this is page 1"),console.log($(window).width())}},[8]);
