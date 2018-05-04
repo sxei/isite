@@ -41,6 +41,7 @@ var config = {
 		extensions: ['.js', '.json', '.scss'],
 		// 别名
 		alias: {
+			com: getAbsolutePath('./src/com'),
 			tpl: getAbsolutePath('./src/com/tpl'),
 			config: getAbsolutePath('./src/com/config'),
 			tool: getAbsolutePath('./src/tool'),

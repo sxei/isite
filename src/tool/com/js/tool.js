@@ -1,3 +1,4 @@
+//require('../../../com/css/common.css');
 require('../css/tool.css');
 
 function notice(info)

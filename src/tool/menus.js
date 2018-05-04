@@ -1,5 +1,6 @@
 var menu = 
 [
+	{name: '工具首页', subName: '工具'},
 	{
 		name: '格式化', // 有二级菜单的可以没有value值
 		children: 
@@ -13,7 +14,7 @@ var menu =
 		name: '编码/转换',
 		children: 
 		[
-			{name: 'base64编码', value: 'base64'},
+			{name: 'base64编码转换', value: 'base64'},
 			{name: '任意进制转换', value: 'jinzhi'},
 			{name: 'URL编码', value: 'url-encode'},
 			{name: 'MD5加密', value: 'md5'},
@@ -21,6 +22,6 @@ var menu =
 		]
 	},
 	{name: '身份证', value: 'idcard'},
-	{name: 'API调用', value: '/post.liuxianan.com', _blank: true},
+	{name: 'API调用', value: '/post.haoji.me', _blank: true},
 ];
 module.exports = menu;

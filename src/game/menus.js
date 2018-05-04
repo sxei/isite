@@ -1,5 +1,6 @@
 var menu = 
 [
+	{name: '游戏首页', subName: '游戏'},
 	{
 		name: '经典小游戏', // 有二级菜单的可以没有value值
 		children: 

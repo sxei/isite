@@ -27,13 +27,10 @@
 
 			<div class="collapse navbar-collapse" id="top_navbar">
 				<ul class="nav navbar-nav nav-hover-dropdown">
-					<li class="dropdown">
-						<a href="//tool.<%=config.domain%>">首页</a>
-					</li>
 					<% menus.forEach((menu) => { %>
 						<li class="dropdown">
 							<% if(!menu.children) { %>
-								<a href="/<%= menu.value %>/" <%= menu._blank ? 'target="_blank"' : '' %> ><%=menu.name%></a>
+								<a href="/<%= menu.value ? (menu.value+'/') : '' %>" <%= menu._blank ? 'target="_blank"' : '' %> ><%=menu.name%></a>
 							<% } else { %>
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 									<%= menu.name %> <span class="caret"></span>
@@ -53,7 +50,7 @@
 					<% }); %>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="//tool.<%=config.domain%>">工具首页</a></li>
+					<li><a href="/"><%= menus[0].name %></a></li>
 				</ul>
 			</div>
 		</div>
@@ -63,7 +60,7 @@
 		<section>
 			<ol class="breadcrumb">
 				<li><a href="//<%=config.domain%>">首页</a></li>
-				<li><a href="//tool.<%=config.domain%>">工具</a></li>
+				<li><a href="/"><%= menus[0].subName %></a></li>
 				<% if(pageName != 'index') { %>
 					<li class="active"><%=menuMap[pageName]%></li>
 				<% } %>

@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html>
 <head lang="zh-CN">
 		
-	<title>看emoji猜成语-好记么</title>
+	<title>MD5加密-好记么</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="utf-8"/>
 	<meta name="renderer" content="webkit">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="看emoji猜成语-好记么">
+	<meta name="description" content="MD5加密-好记么">
 	<link rel="icon" href="http://haoji.me/favicon.png" type="image/png">
 	<link rel="stylesheet" href="http://res.haoji.me/lib/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://res.haoji.me/lib/bootstrap/3.3.1/css/bootstrap-theme.css">
@@ -35,7 +34,33 @@
 		text-shadow: 1px 1px 1px #e2dddd;
 	}
 	</style>
-	<link href="./asset/emoji_sprite.css" rel="stylesheet">
+	<style>
+	#btn
+	{
+		width: 400px;
+		height: 400px;
+		border: dashed 2px rgba(226, 89, 247, 0.87);
+		margin: 20px 0px;
+		background-color: rgba(174, 255, 187, 0.64);
+		text-align: center;
+		line-height: 400px;
+	}
+	#result
+	{
+		width: 100%;
+		height: 400px;
+		resize: none;
+		border-radius: 5px;
+		box-shadow: 0 0 11px #15A8FA;
+		border: solid 1px #15A8FA;
+		margin-top: 15px;
+		padding: 10px 12px;
+	}
+	.allow_drop
+	{
+		border: solid 1px green !important;
+	}
+	</style>
 <link href="//res.liuxianan.com/bundle/common.css?v=d64a6f24" rel="stylesheet"></head>
 <body>
 	
@@ -56,21 +81,35 @@
 					
 						<li class="dropdown">
 							
-								<a href="/"  >游戏首页</a>
+								<a href="/"  >工具首页</a>
 							
 						</li>
 					
 						<li class="dropdown">
 							
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-									经典小游戏 <span class="caret"></span>
+									格式化 <span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
 									
 										
 										<li  >
-											<a href="/2048/" class="nav-menu-item-icon"  >
-												<i class="fa fa-thumbs-up"></i>2048
+											<a href="/json-format/" class="nav-menu-item-icon"  >
+												<i class="fa fa-thumbs-up"></i>JSON格式化
+											</a>
+										</li>
+									
+										 <li class="divider"></li> 
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>CSS格式化
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/#/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>HTML格式化
 											</a>
 										</li>
 									
@@ -81,14 +120,42 @@
 						<li class="dropdown">
 							
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-									Flash小游戏 <span class="caret"></span>
+									编码/转换 <span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
 									
 										
 										<li  >
-											<a href="/maifu/" class="nav-menu-item-icon"  >
-												<i class="fa fa-"></i>十面埋伏
+											<a href="/base64/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>base64编码转换
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/jinzhi/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>任意进制转换
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/url-encode/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>URL编码
+											</a>
+										</li>
+									
+										
+										<li class="active" >
+											<a href="/md5/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>MD5加密
+											</a>
+										</li>
+									
+										
+										<li  >
+											<a href="/pinyin/" class="nav-menu-item-icon"  >
+												<i class="fa fa-"></i>汉语拼音互转
 											</a>
 										</li>
 									
@@ -98,19 +165,19 @@
 					
 						<li class="dropdown">
 							
-								<a href="/find-province/"  >找省份</a>
+								<a href="/idcard/"  >身份证</a>
 							
 						</li>
 					
 						<li class="dropdown">
 							
-								<a href="/emoji-phrase/"  >看emoji猜成语</a>
+								<a href="//post.haoji.me/" target="_blank" >API调用</a>
 							
 						</li>
 					
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/">游戏首页</a></li>
+					<li><a href="/">工具首页</a></li>
 				</ul>
 			</div>
 		</div>
@@ -120,9 +187,9 @@
 		<section>
 			<ol class="breadcrumb">
 				<li><a href="//haoji.me">首页</a></li>
-				<li><a href="/">游戏</a></li>
+				<li><a href="/">工具</a></li>
 				
-					<li class="active">看emoji猜成语</li>
+					<li class="active">MD5加密</li>
 				
 			</ol>
 		</section>
@@ -130,16 +197,14 @@
 
 
 	<div class="container">
-		<h1>看emoji猜成语😁</h1>
-		<div>
-			<div>
-				<a href="javascript:;" id="gen" class="btn btn-primary">随机生成</a>
-				<a href="javascript:;" id="see" class="btn btn-success">查看答案</a>
-				<a href="javascript:;" id="guess" class="btn btn-warning">输入答案</a>
+		<h2 class="page-title">MD5加密</h2>
+		<div class="row">
+			<div class="col-md-6">
+				<textarea id="input" class="form-control" style="height: 400px;" placeholder="输入字符串">大家好，我是小茗同学！</textarea>
 			</div>
-			<div id="emoji_wrapper" style="margin-top:12px;"></div>
-			<div id="answer"></div>
-			<div class="emoji" style="visibility:hidden;"></div>
+			<div class="col-md-6">
+				<textarea id="output" class="form-control" style="height: 400px;" placeholder="输出MD5"></textarea>
+			</div>
 		</div>
 	</div>
 	
@@ -147,11 +212,6 @@
 	<script src="http://res.haoji.me/lib/jquery/2.1.1/jquery.js"></script>
 	<script src="http://res.haoji.me/lib/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<script src="http://res.haoji.me/lib/xei/xei.js"></script>
-	<script type="text/javascript" src="asset/pinyin_dict_withtone.js"></script>
-	<script type="text/javascript" src="asset/pinyinUtil.js"></script>
-
-	<script type="text/javascript">
-	
-	</script>
-<script type="text/javascript" src="//res.liuxianan.com/bundle/common.js?v=4c495441"></script><script type="text/javascript" src="/emoji-phrase/index.js?v=37942353"></script></body>
+	<script type="text/javascript" src="./asset/md5.js"></script>
+<script type="text/javascript" src="//res.liuxianan.com/bundle/common.js?v=4c495441"></script><script type="text/javascript" src="/md5/index.js?v=ab494023"></script></body>
 </html>

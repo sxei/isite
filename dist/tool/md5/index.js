@@ -1,0 +1,1 @@
+webpackJsonp([2],{12:function(n,t,i){function o(n){(n=n||$("#input").val())&&$("#output").val(hex_md5(n))}i(0),$(function(){$("#input").on("input",function(n){o()}),$("#input").on("paste",function(n){o(n.originalEvent.clipboardData.getData("text"))}),o()})}},[12]);
