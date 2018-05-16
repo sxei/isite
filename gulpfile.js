@@ -34,11 +34,11 @@ gulp.task('js', function()
 		'./src/res/blog/plugin/clipboard/1.5.12/clipboard.js',
 		'./src/res/lib/xei/xei.js',
 		'./src/res/blog/js/blog.js',
-		'./src/res/blog/js/comment.js',
+		//'./src/res/blog/js/comment.js',
 	];
 	gulp.src(js)
 		.pipe(concat('main.js')) // 合并
-		.pipe(babel()) // 翻译ES6
+		//.pipe(babel()) // 翻译ES6
 		.pipe(uglify()) // 压缩JS
 		.pipe(gulp.dest('./dist/res/blog/js/'));
 });
