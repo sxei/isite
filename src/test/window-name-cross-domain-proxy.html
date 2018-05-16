@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>window.name跨域代理</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 假设这是通过调用某个接口返回的数据
+		var data = {code: 0, text: '处理成功！'};
+		window.name = JOSN.stringify(data);
+	</script>
+</body>
+</html>
