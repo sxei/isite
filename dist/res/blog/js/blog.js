@@ -216,7 +216,8 @@ $(function()
 			function refreshScroll()
 			{
 				// 这里注意，比较新的浏览器 document.body.scrollTop 一直都返回0
-				var top = document.documentElement.scrollTop;
+				// var top = document.documentElement.scrollTop;
+				var top = window.pageYOffset;
 				if(top <= 100) $('.markdown-nav-wrapper').addClass('hide');
 				else if(localStorage[storageId]!='false') $('.markdown-nav-wrapper').removeClass('hide');
 			}

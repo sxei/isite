@@ -1,25 +1,25 @@
 {
-  "name": "liuxianan.com",
+  "name": "haoji.me",
   "version": "1.0.0",
-  "description": "liuxianan.com网站源码",
+  "description": "haoji.me网站源码",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liuxianan/liuxianan.com.git"
+    "url": "git+https://github.com/sxei/isite.git"
   },
   "keywords": [
     "webpack",
     "demo"
   ],
-  "author": "liuxianan",
+  "author": "sxei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liuxianan/liuxianan.com/issues"
+    "url": "https://github.com/sxei/isite/issues"
   },
-  "homepage": "https://github.com/liuxianan/liuxianan.com#readme",
+  "homepage": "https://github.com/sxei/isite#readme",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.1",
@@ -37,6 +37,7 @@
     "file-loader": "^0.11.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",

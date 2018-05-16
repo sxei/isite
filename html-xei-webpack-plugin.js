@@ -4,7 +4,7 @@ function HtmlXeiWebpackPlugin(options)
 {
 	
 }
-var domain = 'res.liuxianan.com';
+var domain = 'res.haoji.me';
 //var domain = 'res.xiaoming.com';
 
 HtmlXeiWebpackPlugin.prototype.apply = function(compiler)
