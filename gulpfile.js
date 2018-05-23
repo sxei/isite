@@ -59,7 +59,7 @@ gulp.task('default', function()
 {
 	gulp.run('css', 'js', 'comment');
 	// 监听文件变化
-	gulp.watch('./src/res/blog', function() {
+	gulp.watch('./src/res/blog/**', function() {
 		gulp.run('css', 'js', 'comment');
 	});
 });
