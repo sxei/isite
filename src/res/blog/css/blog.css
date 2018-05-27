@@ -345,7 +345,7 @@ pre > code {
     display: inline-block;
     margin: 0 2px;
     padding: 0 10px;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .top_nav_left li a:hover {
     background-color: #0B5D97;
@@ -1048,7 +1048,7 @@ body.pdf-mode {
 }
 .markdown-nav-sidebar {
     position: absolute;
-    height: 420px;
+    height: 500px;
     border-left: solid 1px #eaeaea;
     left: 5px;
     width: 0px;
@@ -1085,7 +1085,7 @@ body.pdf-mode {
     padding: 10px 12px;
     margin-bottom: 10px;
     border-radius: 5px;
-    height: 420px;
+    height: 500px;
     overflow-y: auto;
     border: solid 1px #ddd;
     border-left: none;
