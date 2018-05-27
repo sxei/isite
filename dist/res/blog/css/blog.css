@@ -345,7 +345,7 @@ pre > code {
     display: inline-block;
     margin: 0 2px;
     padding: 0 10px;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .top_nav_left li a:hover {
     background-color: #0B5D97;
@@ -695,14 +695,14 @@ ul.xei-drowdown-menu > li > ul > li > a:hover {
 .tag-panel .tag {
     float: left;
     background-color: #41ABF7;
-    margin: 2px 6px;
+    margin: 2px 1px;
     padding: 5px 5px;
-    border-radius: 3px;
+    /* border-radius: 3px; */
     color: #FFF;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.47);
     position: relative;
 }
-.tag-panel .tag:after {
+/* .tag-panel .tag:after {
     content: '';
     width: 0;
     height: 0;
@@ -713,11 +713,17 @@ ul.xei-drowdown-menu > li > ul > li > a:hover {
     border-left: solid 10px #41ABF7;
     border-top: solid 15px transparent;
     border-bottom: solid 15px transparent;
-}
-/*大于等于21的tag不显示，也就是最多显示20个*/
-.tag-panel .tag:nth-child(n+21) {
-    display: none;
-}
+} */
+.tag-panel .tag:nth-child(10n+0) {background-color: #4A4A4A;}
+.tag-panel .tag:nth-child(10n+1) {background-color: #428BCA;}
+.tag-panel .tag:nth-child(10n+2) {background-color: #5CB85C;}
+.tag-panel .tag:nth-child(10n+3) {background-color: #D9534F;}
+.tag-panel .tag:nth-child(10n+4) {background-color: #567E95;}
+.tag-panel .tag:nth-child(10n+5) {background-color: #B433FF;}
+.tag-panel .tag:nth-child(10n+6) {background-color: #00ABA9;}
+.tag-panel .tag:nth-child(10n+7) {background-color: #B37333;}
+.tag-panel .tag:nth-child(10n+8) {background-color: #FF6600;}
+.tag-panel .tag:nth-child(10n+9) {background-color: #D8B303;}
 /* 最后一个是更多 */
 .tag-panel .tag:last-child {
     display: block;
@@ -1042,7 +1048,7 @@ body.pdf-mode {
 }
 .markdown-nav-sidebar {
     position: absolute;
-    height: 420px;
+    height: 500px;
     border-left: solid 1px #eaeaea;
     left: 5px;
     width: 0px;
@@ -1079,7 +1085,7 @@ body.pdf-mode {
     padding: 10px 12px;
     margin-bottom: 10px;
     border-radius: 5px;
-    height: 420px;
+    height: 500px;
     overflow-y: auto;
     border: solid 1px #ddd;
     border-left: none;
