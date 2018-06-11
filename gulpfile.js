@@ -22,7 +22,7 @@ gulp.task('css', function()
 	gulp.src(css)
 		.pipe(concat('main.css')) // 合并
 		.pipe(cleanCSS()) // 压缩
-		.pipe(gulp.dest('./dist/res/blog/css'))
+		.pipe(gulp.dest('./dist/res/blog/css')) // 输出
 });
 
 // 合并压缩JS
@@ -40,7 +40,7 @@ gulp.task('js', function()
 		.pipe(concat('main.js')) // 合并
 		//.pipe(babel()) // 翻译ES6
 		.pipe(uglify()) // 压缩JS
-		.pipe(gulp.dest('./dist/res/blog/js/'));
+		.pipe(gulp.dest('./dist/res/blog/js/')); // 输出
 });
 
 // 压缩comment.js

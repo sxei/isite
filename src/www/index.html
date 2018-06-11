@@ -42,6 +42,7 @@ a:hover {
 	text-decoration: underline;
 }
 .navbar {
+    min-width: 1220px;
     height: 50px;
     line-height: 50px;
     background-color: #41ABF7;
@@ -83,6 +84,7 @@ a:hover {
     font-size: 16px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     border-top: solid 3px #41abf7;
+    min-width: 1220px;
 }
 .footer a {
     color: #CACACA;
@@ -170,8 +172,8 @@ span.cnzz-wrapper {
 }
 .icon-wrapper {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 10px;
+    top: 200px;
 }
 .icon-wrapper * {
     transition: .2s ease-in-out;
@@ -269,8 +271,8 @@ span.cnzz-wrapper {
     color: #ff1377;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    top: 0%;
+    transform: translateY(0%) translateX(-50%);
     left: 50%;
     z-index: 1;
 }
@@ -286,35 +288,35 @@ span.cnzz-wrapper {
 @keyframes big-logo-animate {
     0% {
         opacity: 0;
+        top: 50%;
         transform: translateY(-80%) translateX(-50%)
     }
 
     45% {
         opacity: 1;
+        top: 50%;
         transform: translateY(-50%) translateX(-50%)
     }
-    55% {
-        left: 50%;
-        top: 50%;
+    60% {
+        top: 0%;
         opacity: 1;
         font-size: 100px;
         transform: translateY(-50%) translateX(-50%)
     }
     100% {
-        left: 50%;
-        top: 20%;
+        top: 0;
         font-size: 80px;
-        transform: translateY(-50%) translateX(-50%)
+        transform: translateY(0%) translateX(-50%)
     }
 }
 @keyframes icon-wrapper-animate {
     0% {
         opacity: 0;
-        transform: translateX(10%) translateY(-50%)
+        transform: translateX(10%)
     }
     100% {
         opacity: 1;
-        transform: translateX(0%) translateY(-50%)
+        transform: translateX(0%)
     }
 }
 @keyframes domain-animate {
@@ -342,7 +344,24 @@ span.cnzz-wrapper {
     animation-name: domain-animate;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 2s;
+    animation-delay: 1.2s;
+}
+.outer-container {
+    position: absolute;
+    top: 0;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.inner-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.content-container {
+    width: 1220px;
+    height: 520px;
+    margin: 0 auto;
+    position: relative;
 }
 	</style>
 </head>
@@ -362,34 +381,38 @@ span.cnzz-wrapper {
             </ul>
         </div>
     </header>
-    <div class="container">
-        <div class="big-logo big-logo-animate"><span>好记么</span><span class="small domain-animate">http://haoji.me</span></div>
-        <div class="icon-wrapper icon-wrapper-animate">
-            <a class="item" href="http://tool.haoji.me" target="_blank">
-                <div class="bg icon-item-bg-1"></div>
-                <div class="core"><i class="fa fa-wrench"></i><span>工具</span></div>
-                <div class="desc">好记的工具，主要收录一些自己平时写的小工具，例如格式化、编码转换、拼音转换等，大部分内容暂为空，有待完善。</div>
-            </a>
-            <a class="item" href="http://demo.haoji.me" target="_blank">
-                <div class="bg icon-item-bg-2"></div>
-                <div class="core"><i class="fa fa-html5"></i><span>Demo</span></div>
-                <div class="desc">好记的Demo，主要是自己写的各类前端demo集合，不断完善中。</div>
-            </a>
-            <a class="item" href="http://blog.haoji.me" target="_blank">
-                <div class="bg icon-item-bg-3"></div>
-                <div class="core"><i class="fa fa-pencil"></i><span>博客</span></div>
-                <div class="desc">好记的博客，个人博客频道，主要记录工作生活中的一些笔记、随想，也是本站最重要的部分。</div>
-            </a>
-            <a class="item" href="http://file.haoji.me" target="_blank">
-                <div class="bg icon-item-bg-4"></div>
-                <div class="core"><i class="fa fa-file-o"></i><span>云文件</span></div>
-                <div class="desc">好记的云文件，主要用于存放一些公共文件和私人文件，暂时也很简单，有待完善。</div>
-            </a>
-            <a class="item" href="javascript:alert('更多子频道有待完善之后再补充到这里来，敬请期待！')">
-                <div class="bg icon-item-bg-5"></div>
-                <div class="core"><i class="fa fa-th"></i><span>更多</span></div>
-                <div class="desc">其它还有很多子频道，如游戏、聊天、音乐等等，基本上都是写了一半未完成，有待完善之后再统一放到这里来。</div>
-            </a>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="content-container">
+                <div class="big-logo big-logo-animate"><span>好记么</span><span class="small domain-animate">http://haoji.me</span></div>
+                <div class="icon-wrapper icon-wrapper-animate">
+                    <a class="item" href="http://tool.haoji.me" target="_blank">
+                        <div class="bg icon-item-bg-1"></div>
+                        <div class="core"><i class="fa fa-wrench"></i><span>工具</span></div>
+                        <div class="desc">好记的工具，主要收录一些自己平时写的小工具，例如格式化、编码转换、拼音转换等，大部分内容暂为空，有待完善。</div>
+                    </a>
+                    <a class="item" href="http://demo.haoji.me" target="_blank">
+                        <div class="bg icon-item-bg-2"></div>
+                        <div class="core"><i class="fa fa-html5"></i><span>Demo</span></div>
+                        <div class="desc">好记的Demo，主要是自己写的各类前端demo集合，不断完善中。</div>
+                    </a>
+                    <a class="item" href="http://blog.haoji.me" target="_blank">
+                        <div class="bg icon-item-bg-3"></div>
+                        <div class="core"><i class="fa fa-pencil"></i><span>博客</span></div>
+                        <div class="desc">好记的博客，个人博客频道，主要记录工作生活中的一些笔记、随想，也是本站最重要的部分。</div>
+                    </a>
+                    <a class="item" href="http://file.haoji.me" target="_blank">
+                        <div class="bg icon-item-bg-4"></div>
+                        <div class="core"><i class="fa fa-file-o"></i><span>云文件</span></div>
+                        <div class="desc">好记的云文件，主要用于存放一些公共文件和私人文件，暂时也很简单，有待完善。</div>
+                    </a>
+                    <a class="item" href="javascript:alert('更多子频道有待完善之后再补充到这里来，敬请期待！')">
+                        <div class="bg icon-item-bg-5"></div>
+                        <div class="core"><i class="fa fa-th"></i><span>更多</span></div>
+                        <div class="desc">其它还有很多子频道，如游戏、聊天、音乐等等，基本上都是写了一半未完成，有待完善之后再统一放到这里来。</div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
