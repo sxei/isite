@@ -1346,8 +1346,8 @@ body.search-page {
     text-shadow: 1px 1px 1px black;
 }
 .markdown-body code {
-    background: #D78508;
-    color: white;
+    color: #c7254e;
+    background: #f9f2f4;
     margin: 0 2px;
 }
 /* A标签添加左右外边距 */
