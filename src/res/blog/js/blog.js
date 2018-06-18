@@ -132,7 +132,8 @@ $(function()
 			});
 			function refresh()
 			{
-				var top = document.body.scrollTop;
+				var top = window.pageYOffset;
+				// var top = document.body.scrollTop;
 				var target = undefined;
 				for(var i=0; i< list.length; i++)
 				{
