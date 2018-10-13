@@ -1358,9 +1358,11 @@ body.search-page {
 .markdown-body img {
     border: solid 1px #eee;
     border-radius: 3px;
-    max-width: initial;
+    /* max-width: initial; */
     background: #e6e6e6;
     box-sizing: content-box;
+    max-width: 100%;
+    height: auto !important;
 }
 /* pre标签设置 */
 .markdown-body .highlight pre, .markdown-body pre {
