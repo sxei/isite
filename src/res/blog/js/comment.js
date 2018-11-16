@@ -310,7 +310,7 @@
 				if(i+1 == current) temp += `<span>${current}</span>`;
 				else temp += `<a href="javascript:;" data-page="${i+1}">${i+1}</a>`;
 			}
-			return html = `
+			return `
 				<div class="xei-cmt-page">
 					<a href="javascript:;" data-page="1">首页</a>
 					${temp}
