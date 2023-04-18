@@ -30,7 +30,7 @@
     "babel-register": "^6.22.0",
     "babel-runtime": "^6.25.0",
     "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.28.0",
+    "css-loader": "^6.7.3",
     "ejs-loader": "^0.3.0",
     "extract-loader": "^0.1.0",
     "extract-text-webpack-plugin": "^2.1.0",
